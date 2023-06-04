@@ -17,7 +17,7 @@ New-Item -ItemType Directory -Path $tmp | Push-Location
 
 # 繝・Φ繝昴Λ繝ｪ繝輔か繝ｫ繝蜷阪ｒ繝・Φ繝昴Λ繝ｪ繝輔か繝ｫ繝縺ｮmoduleimporter.txt縺ｫ菫晏ｭ・
 $nm = $env:TEMP | Join-Path -ChildPath "moduleimporter.txt"
-Set-Content -Path $nm -Value $tmp
+Set-Content -Path $nm -Value $tmp -Force
 
 echo $nm
 
@@ -31,16 +31,16 @@ $newestnm = ""
 $newestlwt = 0
 foreach ($item in $items) {
 	if($newestnm -eq ""){
-		$newestnm = $item.Name
+		$newestnm = $item.FullName
 		$newestlwt = $item.LastWriteTime
 		echo "init"
 	}
 	if($newestlwt -lt $item.LastWriteTime){
-		$newestnm = $item.Name
+		$newestnm = $item.FullName
 		$newestlwt = $item.LastWriteTime
 		echo "update!"
 	}
-	echo $item.Name
+	echo $item.FullName
 	echo $item.LastWriteTime
 }
 echo "newest---"
@@ -48,7 +48,7 @@ echo $newestnm
 echo $newestlwt 
 
 # 譛譁ｰ繧｢繝ｼ繧ｫ繧､繝悶・ZIP隗｣蜃・
-Expand-Archive -Path $newestnm -DestinationPath $nm
+Expand-Archive -Path $newestnm -DestinationPath $tmp
 
 # 隗｣蜃阪＠縺溘ヵ繧｡繧､繝ｫ縺ｮ譁・ｭ励さ繝ｼ繝牙､画鋤 to SJIS
 $files = Get-ChildItem -Path $nm -Include "*.bas","*.cls","*.frm","*.frx","*.bat" -Recurse
