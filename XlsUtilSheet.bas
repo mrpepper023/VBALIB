@@ -300,9 +300,9 @@ Public Function WiseOpen(path, ByRef closeflag)
     closeflag = False
     
     fname = fso.GetFileName(path)
-    For Each f In Workbooks
-        If fname = f.Name Then
-            Set WiseOpen = f
+    For Each F In Workbooks
+        If fname = F.Name Then
+            Set WiseOpen = F
             GoTo exitwiseopen
         End If
     Next
@@ -387,9 +387,9 @@ End Function
 
 Private Sub test_FindSheetPrefix()
 
-    a = FindSheetPrefix("RAW")
-    For i = LBound(a) To UBound(a)
-        Debug.Print a(i)
+    A = FindSheetPrefix("RAW")
+    For i = LBound(A) To UBound(A)
+        Debug.Print A(i)
     Next
 
 End Sub

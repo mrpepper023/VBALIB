@@ -59,8 +59,13 @@ Sub Utf8ToSjis(a_sFrom, a_sTo)
     '// データ書き込み
     streamWrite.WriteText sText
     
+    fnm = a_sFrom
+    If InStr(fnm, "\") > 0 Then
+        fnm = Right(fnm, Len(fnm) - InStrRev(fnm, "\"))
+    End If
+        
     '// 保存
-    streamWrite.SaveToFile a_sTo, 2 'adSaveCreateOverWrite
+    streamWrite.SaveToFile a_sTo & fnm, 2 'adSaveCreateOverWrite
     
     '// クローズ
     streamRead.Close
@@ -92,17 +97,22 @@ Sub SjisToUtf8(a_sFrom, a_sTo)
     '// データ書き込み
     streamWrite.WriteText sText
     
-    streamWrite.Position = 0
+    streamWrite.position = 0
     streamWrite.Type = 1 'adTypeBinary
-    streamWrite.Position = 3
+    streamWrite.position = 3
     Dim byteData() As Byte
     byteData = streamWrite.Read
     streamWrite.Close '一旦ストリームを閉じる（リセット）
     streamWrite.Open 'ストリームを開く
     streamWrite.Write byteData
     
+    fnm = a_sFrom
+    If InStr(fnm, "\") > 0 Then
+        fnm = Right(fnm, Len(fnm) - InStrRev(fnm, "\"))
+    End If
+    
     '// 保存
-    streamWrite.SaveToFile a_sTo, 2 'adSaveCreateOverWrite
+    streamWrite.SaveToFile a_sTo & fnm, 2 'adSaveCreateOverWrite
     
     '// クローズ
     streamRead.Close
@@ -256,8 +266,8 @@ Private Sub GetFileListRecur(ByRef arr, ByRef fso, ByVal folder, ByRef ext)
         End If
     Next
   
-    For Each D In folder.SubFolders
-        GetFileListRecur arr, fso, D, ext
+    For Each d In folder.SubFolders
+        GetFileListRecur arr, fso, d, ext
     Next
 
 End Sub
@@ -291,8 +301,8 @@ Private Sub GetFileListRegexRecur(ByRef arr, ByRef fso, ByVal folder, ByVal recu
     Next
   
     If recur Then
-        For Each D In folder.SubFolders
-            GetFileListRegexRecur arr, fso, D, recur, re
+        For Each d In folder.SubFolders
+            GetFileListRegexRecur arr, fso, d, recur, re
         Next
     End If
 

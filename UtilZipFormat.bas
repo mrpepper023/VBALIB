@@ -57,11 +57,11 @@ Public Function GetCrc32&(A$)
     GetCrc32 = Not R
 End Function
 
-Public Function GetCrc32FromFile&(Path$)
+Public Function GetCrc32FromFile&(path$)
     Dim R&, i&, B As Byte, FL&
     If Crc32Table(255) = 0 Then InitCrc32Table
-    FL = FileLen(Path)
-    Open Path For Binary Lock Read As #2
+    FL = FileLen(path)
+    Open path For Binary Lock Read As #2
     R = Not 0
     For i = 1 To FL
         Get #2, , B
@@ -109,7 +109,7 @@ Private Sub WriteZipHeader(F%, ZH As ZipHeader)
 End Sub
 
 Public Sub MakeZip(Zip$, Files$())
-    Dim ZHS() As ZipHeader, ZHLen%, i%, J&, FL&, Path$, Name$, B As Byte
+    Dim ZHS() As ZipHeader, ZHLen%, i%, J&, FL&, path$, Name$, B As Byte
     Dim DT As Date, DS&, DL&
     
     On Error Resume Next
@@ -120,8 +120,8 @@ Public Sub MakeZip(Zip$, Files$())
     ReDim ZHS(ZHLen - 1)
     
     For i = 0 To ZHLen - 1
-        Path = Files(i)
-        Name = Path_GetFileName(Path)
+        path = Files(i)
+        Name = Path_GetFileName(path)
         FL = FileLen(Files(i))
         DT = FileDateTime(Files(i))
         With ZHS(i)
@@ -130,19 +130,19 @@ Public Sub MakeZip(Zip$, Files$())
             .compression = 0
             .dos_time = GetDosTime(DT)
             .dos_date = GetDosDate(DT)
-            .crc32 = GetCrc32FromFile(Path)
+            .crc32 = GetCrc32FromFile(path)
             .compressed_size = FL
             .uncompressed_size = FL
             .filename_length = LenB(StrConv(Name, vbFromUnicode))
             .extra_field_length = 0
             .fname_ = Name
-            .attrs_ = GetAttr(Path)
+            .attrs_ = GetAttr(path)
             .pos_ = Seek(1) - 1
         End With
         Put #1, , CStr("PK" & Chr(3) & Chr(4))
         WriteZipHeader 1, ZHS(i)
         Put #1, , Name
-        Open Path For Binary Lock Read As #2
+        Open path For Binary Lock Read As #2
         For J = 1 To FL
             Get #2, , B
             Put #1, , B
