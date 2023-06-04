@@ -5,10 +5,10 @@ set "THIS_PATH=%~f0"
 set "PARAM_1=%~1"
 PowerShell.exe -Command "iex -Command ((gc \"%THIS_PATH:`=``%\") -join \"`n\")"
 exit /b %errorlevel%
--- 縺薙・1縺､荳翫・陦後∪縺ｧ繝舌ャ繝√ヵ繧｡繧､繝ｫ
+-- この1つ上の行までバッチファイル
 ') | sv -Name TempVar
 
-# 縺薙％縺九ｉPowerShell繧ｹ繧ｯ繝ｪ繝励ヨ
+# ここからPowerShellスクリプト
 Convert-Path .
 pause
 
