@@ -1,5 +1,19 @@
 Attribute VB_Name = "PortMacro"
-Private Type GUID_TYPE
+'=========================================================================================
+'PortMacro 20230604
+'
+'UtilFileは主にファイル操作を扱う、Excel VBAに依存しないコードを集めたもの
+'=========================================================================================
+'GitHubからダウンロードしたzipからzip-extract.batで前処理したファイルをインポートする
+'Public Sub MyImportTask()
+'GitHubへエクスポートする（特定マシン専用）
+'Public Sub MyExportTask()
+'指定フォルダからマクロをインポートする
+'Public Sub ImportAll(a_sModulePath)
+'指定フォルダからマクロをエクスポートする
+'Public Sub ExportAll(sPath)
+'=========================================================================================
+Private Type GUID_TYPEW
     Data1 As Long
     Data2 As Integer
     Data3 As Integer
@@ -249,6 +263,8 @@ End Sub
 
 
 Public Sub MyExportTask()
+    dstpath = "D:\Dropbox (個人用)\★個人PJ\●vbasuper\VBALIB\"
+    If Dir(dstpath) = "" Then End
 
     'マ☆テンポラリフォルダ生成
     temp = MyCreateTempFolder
@@ -261,7 +277,6 @@ Public Sub MyExportTask()
     searchAllFile temp, sArModule
     
     'マ☆決まったフォルダにコピー
-    dstpath = "D:\Dropbox (個人用)\★個人PJ\●vbasuper\VBALIB\"
     For i = LBound(sArModule) To UBound(sArModule)
         MySjisToUtf8 sArModule(i), dstpath
         Debug.Print sArModule(i)
@@ -377,7 +392,7 @@ Private Sub searchAllFile(a_sFolder, s_ArFile())
 End Sub
 
 
-Sub ExportAll(sPath)
+Public Sub ExportAll(sPath)
     Dim module                  As Object      '// モジュール
     Dim moduleList              As Object     '// VBAプロジェクトの全モジュール
     Dim extension                                   '// モジュールの拡張子
