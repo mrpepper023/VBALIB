@@ -2,16 +2,16 @@ Attribute VB_Name = "PptClip"
 Function GetTextClip()
     Dim CB As New DataObject
     With CB
-        .GetFromClipboard   ''ƒNƒŠƒbƒvƒ{[ƒh‚©‚çDataObject‚Éƒf[ƒ^‚ğæ“¾‚·‚é
-        GetTextClip = .GetText     ''DataObject‚Ìƒf[ƒ^‚ğ•Ï”‚Éæ“¾‚·‚é
+        .GetFromClipboard   ''ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‹ã‚‰DataObjectã«ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—ã™ã‚‹
+        GetTextClip = .GetText     ''DataObjectã®ãƒ‡ãƒ¼ã‚¿ã‚’å¤‰æ•°ã«å–å¾—ã™ã‚‹
     End With
 End Function
 
 Function SetTextClip(Optional text = "yokomizo" & vbLf & "michio")
     Dim CB As New DataObject
     With CB
-        .SetText text       ''•Ï”‚Ìƒf[ƒ^‚ğDataObject‚ÉŠi”[‚·‚é
-        .PutInClipboard     ''DataObject‚Ìƒf[ƒ^‚ğƒNƒŠƒbƒvƒ{[ƒh‚ÉŠi”[‚·‚é
+        .SetText text       ''å¤‰æ•°ã®ãƒ‡ãƒ¼ã‚¿ã‚’DataObjectã«æ ¼ç´ã™ã‚‹
+        .PutInClipboard     ''DataObjectã®ãƒ‡ãƒ¼ã‚¿ã‚’ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«æ ¼ç´ã™ã‚‹
     End With
     SetTextClip = text
 End Function
@@ -81,9 +81,9 @@ Sub sortbykpi(ByRef dict_key_and_kpi, ByRef sorted_arraylist, Optional descflag 
 End Sub
 
 
-Sub ˆêŸŒ³“\•t()
+Sub ä¸€æ¬¡å…ƒè²¼ä»˜()
     result = TextTo2DArray(GetTextClip())
-    '’†g•\¦ƒTƒ“ƒvƒ‹
+    'ä¸­èº«è¡¨ç¤ºã‚µãƒ³ãƒ—ãƒ«
     If IsArray(result) Then
         For r = LBound(result, 1) To UBound(result, 1)
             Debug.Print r & "," & 0 & ": " & result(r, 0)
@@ -91,10 +91,10 @@ Sub ˆêŸŒ³“\•t()
     Else
         End
     End If
-    '}Œ`ƒŠƒXƒgƒAƒbƒv
+    'å›³å½¢ãƒªã‚¹ãƒˆã‚¢ãƒƒãƒ—
     Set selecttable = analize_selection("findtable")
     If selecttable.Count > 0 Then
-        '‘I‘ğ”ÍˆÍ‚Í•\
+        'é¸æŠç¯„å›²ã¯è¡¨
         num = LBound(result, 1)
         For Each t In selecttable
             For r = 1 To selecttable(t).Table.Rows.Count
@@ -111,7 +111,7 @@ Sub ˆêŸŒ³“\•t()
         Next
 skip:
     Else
-        '‘I‘ğ”ÍˆÍ‚Í‚»‚êˆÈŠO
+        'é¸æŠç¯„å›²ã¯ãã‚Œä»¥å¤–
         Set targetboxes = analize_selection("hastextframe")
         Set dict_name_to_position = CreateObject("scripting.dictionary")
         Set sortedkey = CreateObject("system.collections.arraylist")
@@ -136,7 +136,7 @@ skip:
 End Sub
 
 
-Sub ƒvƒƒpƒeƒB‘()
+Sub ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£æ›¸è¾¼()
     Set dict = CreateObject("scripting.dictionary")
     texts = Split(GetTextClip(), vbLf)
     Set minikeys = CreateObject("system.collections.arraylist")
@@ -172,7 +172,7 @@ Sub ƒvƒƒpƒeƒB‘()
     Set dict = Nothing
 End Sub
 
-Sub ƒvƒƒpƒeƒB“Ç()
+Sub ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£èª­è¾¼()
     Set dict = analize_selection("get")
     text = ""
     Set colsd = CreateObject("scripting.dictionary")
@@ -194,7 +194,7 @@ Sub ƒvƒƒpƒeƒB“Ç()
             If dict(minidict).exists(k) Then
                 text = text & dict(minidict)(k) & vbTab
             Else
-                text = text & "å³" & vbTab
+                text = text & "èŸ²" & vbTab
             End If
         Next
         text = text & vbCrLf
@@ -224,17 +224,17 @@ End Function
 
     
 
-Sub ƒGƒCƒŠƒAƒXR_C()
-    “ñŸŒ³ƒGƒCƒŠƒAƒX“\•t True
+Sub ã‚¨ã‚¤ãƒªã‚¢ã‚¹R_C()
+    äºŒæ¬¡å…ƒã‚¨ã‚¤ãƒªã‚¢ã‚¹è²¼ä»˜ True
 End Sub
-Sub ƒGƒCƒŠƒAƒXC_R()
-    “ñŸŒ³ƒGƒCƒŠƒAƒX“\•t False
+Sub ã‚¨ã‚¤ãƒªã‚¢ã‚¹C_R()
+    äºŒæ¬¡å…ƒã‚¨ã‚¤ãƒªã‚¢ã‚¹è²¼ä»˜ False
 End Sub
 
 
-Private Sub “ñŸŒ³ƒGƒCƒŠƒAƒX“\•t(order_R_C)
+Private Sub äºŒæ¬¡å…ƒã‚¨ã‚¤ãƒªã‚¢ã‚¹è²¼ä»˜(order_R_C)
     result = TextTo2DArray(GetTextClip())
-    '’†g•\¦ƒTƒ“ƒvƒ‹
+    'ä¸­èº«è¡¨ç¤ºã‚µãƒ³ãƒ—ãƒ«
     If IsArray(result) Then
         For r = LBound(result, 1) To UBound(result, 1)
             For c = LBound(result, 2) To UBound(result, 2)
@@ -245,7 +245,7 @@ Private Sub “ñŸŒ³ƒGƒCƒŠƒAƒX“\•t(order_R_C)
         End
     End If
     
-    '‚QŒn—ñ‚ğæ“¾
+    'ï¼’ç³»åˆ—ã‚’å–å¾—
     Dim kwdrow(), kwdcol()
     kwdrows = 0
     For r = LBound(result, 1) To UBound(result, 1)
@@ -279,12 +279,12 @@ Private Sub “ñŸŒ³ƒGƒCƒŠƒAƒX“\•t(order_R_C)
         End If
     Next
     
-    '}Œ`ƒŠƒXƒgƒAƒbƒv
+    'å›³å½¢ãƒªã‚¹ãƒˆã‚¢ãƒƒãƒ—
     Set selecttable = analize_selection("findtable")
     Set activenotetextrange = GetActiveSlide().NotesPage.Shapes.Placeholders(2).TextFrame.TextRange
 
     If selecttable.Count > 0 Then
-        '‘I‘ğ”ÍˆÍ‚Í•\
+        'é¸æŠç¯„å›²ã¯è¡¨
         aliasnum = &H100
         num = LBound(result, 1)
         For Each t In selecttable

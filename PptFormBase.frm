@@ -6,7 +6,7 @@ Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} PptFormBase
    ClientTop       =   465
    ClientWidth     =   9975
    OleObjectBlob   =   "PptFormBase.frx":0000
-   StartUpPosition =   1  'ƒI[ƒi[ ƒtƒH[ƒ€‚Ì’†‰›
+   StartUpPosition =   1  'ã‚ªãƒ¼ãƒŠãƒ¼ ãƒ•ã‚©ãƒ¼ãƒ ã®ä¸­å¤®
 End
 Attribute VB_Name = "PptFormBase"
 Attribute VB_GlobalNameSpace = False
@@ -20,16 +20,16 @@ Private argument As Object
 
 
 Public Function UI(ByRef arg) As Object
-    'ˆø”‚ÉƒIƒuƒWƒFƒNƒg‚ğ—p‚¢‚éê‡
+    'å¼•æ•°ã«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ç”¨ã„ã‚‹å ´åˆ
     Set argument = arg
     
-    'Œ‹‰Ê‚ÌƒvƒŒ[ƒXƒzƒ‹ƒ_
+    'çµæœã®ãƒ—ãƒ¬ãƒ¼ã‚¹ãƒ›ãƒ«ãƒ€
     Set result = CreateObject("scripting.dictionary")
     flag = False
     
     Me.Show
     
-    'Œ‹‰Ê‚Ì•Ô‹p
+    'çµæœã®è¿”å´
     If Not flag Then Set result = Nothing
     Set UI = result
     Set result = Nothing

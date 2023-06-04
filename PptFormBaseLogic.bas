@@ -1,7 +1,7 @@
 Attribute VB_Name = "PptFormBaseLogic"
 Public CF_str1
 
-Sub ƒtƒH[ƒ€ŒÄ‚Ño‚µ()
+Sub ãƒ•ã‚©ãƒ¼ãƒ å‘¼ã³å‡ºã—()
     
     Set temp = CreateObject("scripting.dictionary")
     Set result = MyFormBase.UI(temp)

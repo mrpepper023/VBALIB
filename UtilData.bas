@@ -2,24 +2,24 @@ Attribute VB_Name = "UtilData"
 '=========================================================================================
 'UtilData 20230527
 '
-'UtilData‚Íå‚Éƒf[ƒ^‚ğˆµ‚¤AExcel VBA‚ÉˆË‘¶‚µ‚È‚¢ƒR[ƒh‚ğW‚ß‚½‚à‚Ì
+'UtilDataã¯ä¸»ã«ãƒ‡ãƒ¼ã‚¿ã‚’æ‰±ã†ã€Excel VBAã«ä¾å­˜ã—ãªã„ã‚³ãƒ¼ãƒ‰ã‚’é›†ã‚ãŸã‚‚ã®
 '=========================================================================================
-'‘g‚İ‚İ‚ÌƒXƒJƒ‰Œ^‚Æ‚»‚Ì‘½ŸŒ³”z—ñA‚¨‚æ‚ÑADictionary‚ÆArrayList‚ğ•¶š—ñ‚É‚·‚é
+'çµ„ã¿è¾¼ã¿ã®ã‚¹ã‚«ãƒ©å‹ã¨ãã®å¤šæ¬¡å…ƒé…åˆ—ã€ãŠã‚ˆã³ã€Dictionaryã¨ArrayListã‚’æ–‡å­—åˆ—ã«ã™ã‚‹
 'Public Function Serialize(ByRef v) As String
-'‘g‚İ‚İ‚ÌƒXƒJƒ‰Œ^‚Æ‚»‚Ì‘½ŸŒ³”z—ñA‚¨‚æ‚ÑADictionary‚ÆArrayList‚ğ•¶š—ñ‚©‚ç–ß‚·
+'çµ„ã¿è¾¼ã¿ã®ã‚¹ã‚«ãƒ©å‹ã¨ãã®å¤šæ¬¡å…ƒé…åˆ—ã€ãŠã‚ˆã³ã€Dictionaryã¨ArrayListã‚’æ–‡å­—åˆ—ã‹ã‚‰æˆ»ã™
 'Public Function Deserialize(ByRef sstr) As Variant
-'w’è‚µ‚½ƒfƒŠƒ~ƒ^‚Æ\a`\n,\\‚Ü‚Å‚ğƒGƒXƒP[ƒv‚·‚é
+'æŒ‡å®šã—ãŸãƒ‡ãƒªãƒŸã‚¿ã¨\aï½\n,\\ã¾ã§ã‚’ã‚¨ã‚¹ã‚±ãƒ¼ãƒ—ã™ã‚‹
 'Public Function EscapeDelim(txt, delim)
-'w’è‚µ‚½ƒfƒŠƒ~ƒ^‚Æ\a`\n,\\‚Ü‚Å‚ğƒGƒXƒP[ƒv‚µ‚½•¶š—ñ‚ğƒfƒŠƒ~ƒ^‚Å˜AŒ‹‚µ‚½‚à‚Ì‚ğ•ªŠ„‚·‚é
+'æŒ‡å®šã—ãŸãƒ‡ãƒªãƒŸã‚¿ã¨\aï½\n,\\ã¾ã§ã‚’ã‚¨ã‚¹ã‚±ãƒ¼ãƒ—ã—ãŸæ–‡å­—åˆ—ã‚’ãƒ‡ãƒªãƒŸã‚¿ã§é€£çµã—ãŸã‚‚ã®ã‚’åˆ†å‰²ã™ã‚‹
 'Public Function EscapedSplit(txt, delim)
-'‘½ŸŒ³”z—ñ‚ÌŸŒ³”‚ğ“¾‚é
+'å¤šæ¬¡å…ƒé…åˆ—ã®æ¬¡å…ƒæ•°ã‚’å¾—ã‚‹
 'Public Function GetDimension(ByRef ArrayData)
 '=========================================================================================
 
 
-'ƒVƒŠƒAƒ‰ƒCƒY^ƒfƒVƒŠƒAƒ‰ƒCƒY
-'ƒGƒXƒP[ƒv•t‚«Split
-'ƒGƒXƒP[ƒvˆ—
+'ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚ºï¼ãƒ‡ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚º
+'ã‚¨ã‚¹ã‚±ãƒ¼ãƒ—ä»˜ãSplit
+'ã‚¨ã‚¹ã‚±ãƒ¼ãƒ—å‡¦ç†
 
 Private Sub test_ser_deser()
 
@@ -38,10 +38,10 @@ Private Sub test_ser_deser()
     st = Serialize(DT)
     Debug.Print st
     
-    '2‰ñŒÄ‚Ô‚Ì‚ÍƒeƒXƒg‚Ìê‡‚Ì‚İ
-    '2‰ñŒÄ‚Ô‚Ì‚ÍÀ—p“I‚Å‚È‚¢‚ªAÀÛ‚É‚Íª–{‚Íí‚ÉDICTIONARY‚¾‚Æv‚¤‚Ì‚ÅAƒIƒuƒWƒFƒNƒgŒˆ‚ß‘Å‚¿‚Å—Ç‚¢‚Í‚¸
+    '2å›å‘¼ã¶ã®ã¯ãƒ†ã‚¹ãƒˆã®å ´åˆã®ã¿
+    '2å›å‘¼ã¶ã®ã¯å®Ÿç”¨çš„ã§ãªã„ãŒã€å®Ÿéš›ã«ã¯æ ¹æœ¬ã¯å¸¸ã«DICTIONARYã ã¨æ€ã†ã®ã§ã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆæ±ºã‚æ‰“ã¡ã§è‰¯ã„ã¯ãš
     If IsObject(Deserialize(st)) Then
-        Set vl = Deserialize(st) '‚Ó‚Â‚¤‚Í‚±‚ê‚Å
+        Set vl = Deserialize(st) 'ãµã¤ã†ã¯ã“ã‚Œã§
     Else
         vl = Deserialize(st)
     End If
@@ -57,17 +57,17 @@ Public Function Serialize(ByRef v) As String
     
     SerializeRecur result, v
     
-    Serialize = Left(result, Len(result) - 1) 'ÅŒã‚ÌƒfƒŠƒ~ƒ^‚ğíœ‚·‚é
+    Serialize = Left(result, Len(result) - 1) 'æœ€å¾Œã®ãƒ‡ãƒªãƒŸã‚¿ã‚’å‰Šé™¤ã™ã‚‹
 
 End Function
 
     Private Sub SerializeRecur(ByRef result, ByRef v)
     
         Select Case TypeName(v)
-        Case "IRegExp2" '‘Î‰‚·‚é‚©‚Ç‚¤‚©–À‚¢’†(Šm‚©‚ÉƒvƒŒƒRƒ“ƒpƒCƒ‹‚Ì³‹K•\Œ»‚ğ”z—ñ‚Æ‚©‚É‚µ‚Ü‚Á‚Ä‚¨‚«‚½‚¢ƒP[ƒX‚Í‚ ‚éj
+        Case "IRegExp2" 'å¯¾å¿œã™ã‚‹ã‹ã©ã†ã‹è¿·ã„ä¸­(ç¢ºã‹ã«ãƒ—ãƒ¬ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã®æ­£è¦è¡¨ç¾ã‚’é…åˆ—ã¨ã‹ã«ã—ã¾ã£ã¦ãŠããŸã„ã‚±ãƒ¼ã‚¹ã¯ã‚ã‚‹ï¼‰
         
         Case "Dictionary"
-            'Œ^–¼A—v‘f”AiƒL[A’lj~—v‘f”
+            'å‹åã€è¦ç´ æ•°ã€ï¼ˆã‚­ãƒ¼ã€å€¤ï¼‰Ã—è¦ç´ æ•°
             result = result + TypeName(v) + "|"
             result = result + CStr(v.Count) + "|"
             For Each k In v
@@ -75,15 +75,15 @@ End Function
                 SerializeRecur result, v.Item(k)
             Next
         Case "ArrayList"
-            'Œ^–¼A—v‘f”A’l~—v‘f”
+            'å‹åã€è¦ç´ æ•°ã€å€¤Ã—è¦ç´ æ•°
             result = result + TypeName(v) + "|"
             result = result + CStr(v.Count) + "|"
             For Each k In v
                 SerializeRecur result, k
             Next
         
-        '”z—ñ‚ÌƒVƒŠƒAƒ‰ƒCƒY‚Í‚·‚×‚Ä“¯‚¶Œ`
-        'Œ^–¼AŸŒ³”i—v‘f”—ñ‹“jA’l~ƒ®—v‘f”—ñ‹“iSerializeRecurWithLoopj
+        'é…åˆ—ã®ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚ºã¯ã™ã¹ã¦åŒã˜å½¢
+        'å‹åã€æ¬¡å…ƒæ•°ï¼ˆè¦ç´ æ•°åˆ—æŒ™ï¼‰ã€å€¤Ã—Î è¦ç´ æ•°åˆ—æŒ™ï¼ˆSerializeRecurWithLoopï¼‰
         Case "Variant()"
             result = result + TypeName(v) + "|"
             result = result + MultiDimArray2String(v) + "|"
@@ -130,44 +130,44 @@ End Function
             SerializeRecurWithLoop result, v
         
         Case "String"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             result = result + TypeName(v) + "|" + EscapeDelim(CStr(v), "|") + "|"
         Case "Date"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             result = result + TypeName(v) + "|" + CStr(v) + "|"
         Case "Byte"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             result = result + TypeName(v) + "|" + CStr(v) + "|"
         Case "Currency"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             result = result + TypeName(v) + "|" + CStr(v) + "|"
         Case "Long"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             result = result + TypeName(v) + "|" + CStr(v) + "|"
         Case "Integer"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             result = result + TypeName(v) + "|" + CStr(v) + "|"
         Case "Double"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             result = result + TypeName(v) + "|" + CStr(v) + "|"
         Case "Single"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             result = result + TypeName(v) + "|" + CStr(v) + "|"
         Case "Boolean"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             result = result + TypeName(v) + "|" + CStr(v) + "|"
         Case "Empty"
-            'Œ^–¼
+            'å‹å
             result = result + TypeName(v) + "|"
         Case "Nothing"
             'Object
-            'Œ^–¼
+            'å‹å
             result = result + TypeName(v) + "|"
         Case "Null"
-            'Œ^–¼
+            'å‹å
             result = result + TypeName(v) + "|"
         Case Else
-            Debug.Print "–¢‘Î‰‚ÌŒ^‚ğ”­Œ©F" & TypeName(v)
+            Debug.Print "æœªå¯¾å¿œã®å‹ã‚’ç™ºè¦‹ï¼š" & TypeName(v)
         End Select
         
     End Sub
@@ -188,14 +188,14 @@ End Function
 
     Private Sub DeserializeRecur(ByRef obj, ByRef token, ByRef ind)
     
-        'token(ind)‚ğQÆ‚µ‚Â‚Âobj‚ğ\’z‚·‚é
+        'token(ind)ã‚’å‚ç…§ã—ã¤ã¤objã‚’æ§‹ç¯‰ã™ã‚‹
         stype = token(ind)
         ind = ind + 1
         Select Case stype
-        Case "IRegExp2" '‘Î‰‚·‚é‚©‚Ç‚¤‚©–À‚¢’†
+        Case "IRegExp2" 'å¯¾å¿œã™ã‚‹ã‹ã©ã†ã‹è¿·ã„ä¸­
         
         Case "Dictionary"
-            'Œ^–¼A—v‘f”AiƒL[A’lj~—v‘f”
+            'å‹åã€è¦ç´ æ•°ã€ï¼ˆã‚­ãƒ¼ã€å€¤ï¼‰Ã—è¦ç´ æ•°
             Set obj = CreateObject("scripting.dictionary")
             cnt = CLng(token(ind))
             ind = ind + 1
@@ -206,7 +206,7 @@ End Function
             Next
         
         Case "ArrayList"
-            'Œ^–¼A—v‘f”A’l~—v‘f”
+            'å‹åã€è¦ç´ æ•°ã€å€¤Ã—è¦ç´ æ•°
             Set obj = CreateObject("system.collections.arraylist")
             cnt = CLng(token(ind))
             ind = ind + 1
@@ -215,8 +215,8 @@ End Function
                 obj.Add k
             Next
         
-        '”z—ñ‚ÌƒfƒVƒŠƒAƒ‰ƒCƒY‚Í‚·‚×‚Ä“¯‚¶Œ`
-        'Œ^–¼AŸŒ³”i—v‘f”—ñ‹“jA’l~ƒ®—v‘f”—ñ‹“iDeserializeRecurWithLoopj
+        'é…åˆ—ã®ãƒ‡ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚ºã¯ã™ã¹ã¦åŒã˜å½¢
+        'å‹åã€æ¬¡å…ƒæ•°ï¼ˆè¦ç´ æ•°åˆ—æŒ™ï¼‰ã€å€¤Ã—Î è¦ç´ æ•°åˆ—æŒ™ï¼ˆDeserializeRecurWithLoopï¼‰
         Case "Variant()"
             obj = String2MultiDimArray_Variant(token(ind))
             ind = ind + 1
@@ -263,61 +263,61 @@ End Function
             DeserializeRecurWithLoop obj, token, ind
             
         Case "String"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             obj = token(ind)
             ind = ind + 1
         Case "Date"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             v = token(ind)
             ind = ind + 1
             obj = CDate(v)
         Case "Byte"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             v = token(ind)
             ind = ind + 1
             obj = CByte(v)
         Case "Currency"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             v = token(ind)
             ind = ind + 1
             obj = CCur(v)
         Case "Long"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             v = token(ind)
             ind = ind + 1
             obj = CLng(v)
         Case "Integer"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             v = token(ind)
             ind = ind + 1
             obj = CInt(v)
         Case "Double"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             v = token(ind)
             ind = ind + 1
             obj = CDbl(v)
         Case "Single"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             v = token(ind)
             ind = ind + 1
             obj = CSng(v)
         Case "Boolean"
-            'Œ^–¼A’l
+            'å‹åã€å€¤
             v = token(ind)
             ind = ind + 1
             obj = CBool(v)
         Case "Empty"
-            'Œ^–¼
+            'å‹å
             obj = Empty
         Case "Nothing"
             'Object
-            'Œ^–¼
+            'å‹å
             Set obj = Nothing
         Case "Null"
-            'Œ^–¼
+            'å‹å
             obj = Null
         Case Else
-            Debug.Print "–¢‘Î‰‚ÌŒ^‚ğ”­Œ©F" & stype
+            Debug.Print "æœªå¯¾å¿œã®å‹ã‚’ç™ºè¦‹ï¼š" & stype
         End Select
     
     End Sub
@@ -348,8 +348,8 @@ Public Function EscapeDelim(txt, delim)
 
 End Function
 
-' ƒGƒXƒP[ƒvƒV[ƒPƒ“ƒX•t‚«‚ÌSplit
-' \ƒfƒŠƒ~ƒ^, \\(92), \a(7), \b(8), \t(9), \n(10), \v(11), \f(12), \r(13)
+' ã‚¨ã‚¹ã‚±ãƒ¼ãƒ—ã‚·ãƒ¼ã‚±ãƒ³ã‚¹ä»˜ãã®Split
+' \ãƒ‡ãƒªãƒŸã‚¿, \\(92), \a(7), \b(8), \t(9), \n(10), \v(11), \f(12), \r(13)
 Public Function EscapedSplit(txt, delim)
     
     Set temp = CreateObject("system.collections.arraylist")
@@ -370,7 +370,7 @@ Public Function EscapedSplit(txt, delim)
             Case "f": w = w + Chr(12)
             Case "r": w = w + Chr(13)
             Case Else
-                Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+                Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
             End Select
             esc = False
         Else
@@ -400,10 +400,10 @@ Private Sub test_escapedsplit()
 End Sub
 
 
-'serializer‚Å‘Î‰‚·‚×‚«ƒf[ƒ^Œ^
+'serializerã§å¯¾å¿œã™ã¹ããƒ‡ãƒ¼ã‚¿å‹
 Private Sub test_typename()
 
-    'Color‚ÍLong
+    'Colorã¯Long
     reg = RGB(255, 255, 255)
     Debug.Print TypeName(reg)
 
@@ -468,11 +468,11 @@ Private Sub test_typename()
     'Empty
     Debug.Print TypeName(noexist)
     
-    'Empty ‚à‘ã“ü‰Â”\
+    'Empty ã‚‚ä»£å…¥å¯èƒ½
     dat = Empty
     Debug.Print TypeName(dat)
     
-    'NothingiSet•¶‚ª•K—vj
+    'Nothingï¼ˆSetæ–‡ãŒå¿…è¦ï¼‰
     Set dat = Nothing
     Debug.Print TypeName(dat)
     
@@ -480,7 +480,7 @@ Private Sub test_typename()
     dat = Null
     Debug.Print TypeName(dat)
 
-    'Object() ‚â VARIANT() ‚Å‚Í—v‘f‚²‚Æ‚ÉŒ^‚ªˆá‚¤‰Â”\«‚ª‚ ‚é
+    'Object() ã‚„ VARIANT() ã§ã¯è¦ç´ ã”ã¨ã«å‹ãŒé•ã†å¯èƒ½æ€§ãŒã‚ã‚‹
     Dim A(1 To 6) As Object
     Set A(1) = CreateObject("scripting.dictionary")
     Set A(2) = CreateObject("system.collections.arraylist")
@@ -495,7 +495,7 @@ Private Sub test_typename()
     Debug.Print "4: " & TypeName(A(4))
     Debug.Print "5: " & TypeName(A(5))
 
-    'šscripting.dictionary‚ÌƒL[‚ğCstr‚Å‹­§“I‚É•¶š—ñ‚É‚·‚é‚ç‚Á‚Ï[‚Æ‚©
+    'â˜…scripting.dictionaryã®ã‚­ãƒ¼ã‚’Cstrã§å¼·åˆ¶çš„ã«æ–‡å­—åˆ—ã«ã™ã‚‹ã‚‰ã£ã±ãƒ¼ã¨ã‹
     
     dat = CStr("testtest")
     Debug.Print dat
@@ -550,7 +550,7 @@ Private Function String2MultiDimArray(ByRef sstr) As Variant
     str2 = Split(sstr, "(")
     dimensions = Val(str2(0))
     ReDim vals(0 To dimensions * 2 - 1)
-    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     valstr = Split(Left(str2(1), Len(str2(1)) - 1), ",")
     For i = 0 To dimensions * 2 - 1
         vals(i) = Val(valstr(i))
@@ -560,18 +560,18 @@ Private Function String2MultiDimArray(ByRef sstr) As Variant
 
 End Function
 
-'-- ©“®‚±‚±‚©‚ç ------------------------------------------------------------------------
-'-- ©“®‚±‚±‚©‚ç ------------------------------------------------------------------------
-'-- ©“®‚±‚±‚©‚ç ------------------------------------------------------------------------
-'-- ©“®‚±‚±‚©‚ç ------------------------------------------------------------------------
-'-- ©“®‚±‚±‚©‚ç ------------------------------------------------------------------------
+'-- è‡ªå‹•ã“ã“ã‹ã‚‰ ------------------------------------------------------------------------
+'-- è‡ªå‹•ã“ã“ã‹ã‚‰ ------------------------------------------------------------------------
+'-- è‡ªå‹•ã“ã“ã‹ã‚‰ ------------------------------------------------------------------------
+'-- è‡ªå‹•ã“ã“ã‹ã‚‰ ------------------------------------------------------------------------
+'-- è‡ªå‹•ã“ã“ã‹ã‚‰ ------------------------------------------------------------------------
 
 Private Function String2MultiDimArray_Variant(ByRef sstr) As Variant
 
     str2 = Split(sstr, "(")
     dimensions = Val(str2(0))
     ReDim vals(0 To dimensions * 2 - 1)
-    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     valstr = Split(Left(str2(1), Len(str2(1)) - 1), ",")
     For i = 0 To dimensions * 2 - 1
         vals(i) = Val(valstr(i))
@@ -586,7 +586,7 @@ Private Function String2MultiDimArray_Object(ByRef sstr) As Variant
     str2 = Split(sstr, "(")
     dimensions = Val(str2(0))
     ReDim vals(0 To dimensions * 2 - 1)
-    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     valstr = Split(Left(str2(1), Len(str2(1)) - 1), ",")
     For i = 0 To dimensions * 2 - 1
         vals(i) = Val(valstr(i))
@@ -601,7 +601,7 @@ Private Function String2MultiDimArray_String(ByRef sstr) As Variant
     str2 = Split(sstr, "(")
     dimensions = Val(str2(0))
     ReDim vals(0 To dimensions * 2 - 1)
-    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     valstr = Split(Left(str2(1), Len(str2(1)) - 1), ",")
     For i = 0 To dimensions * 2 - 1
         vals(i) = Val(valstr(i))
@@ -616,7 +616,7 @@ Private Function String2MultiDimArray_Byte(ByRef sstr) As Variant
     str2 = Split(sstr, "(")
     dimensions = Val(str2(0))
     ReDim vals(0 To dimensions * 2 - 1)
-    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     valstr = Split(Left(str2(1), Len(str2(1)) - 1), ",")
     For i = 0 To dimensions * 2 - 1
         vals(i) = Val(valstr(i))
@@ -631,7 +631,7 @@ Private Function String2MultiDimArray_Long(ByRef sstr) As Variant
     str2 = Split(sstr, "(")
     dimensions = Val(str2(0))
     ReDim vals(0 To dimensions * 2 - 1)
-    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     valstr = Split(Left(str2(1), Len(str2(1)) - 1), ",")
     For i = 0 To dimensions * 2 - 1
         vals(i) = Val(valstr(i))
@@ -646,7 +646,7 @@ Private Function String2MultiDimArray_Integer(ByRef sstr) As Variant
     str2 = Split(sstr, "(")
     dimensions = Val(str2(0))
     ReDim vals(0 To dimensions * 2 - 1)
-    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     valstr = Split(Left(str2(1), Len(str2(1)) - 1), ",")
     For i = 0 To dimensions * 2 - 1
         vals(i) = Val(valstr(i))
@@ -661,7 +661,7 @@ Private Function String2MultiDimArray_Double(ByRef sstr) As Variant
     str2 = Split(sstr, "(")
     dimensions = Val(str2(0))
     ReDim vals(0 To dimensions * 2 - 1)
-    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     valstr = Split(Left(str2(1), Len(str2(1)) - 1), ",")
     For i = 0 To dimensions * 2 - 1
         vals(i) = Val(valstr(i))
@@ -676,7 +676,7 @@ Private Function String2MultiDimArray_Single(ByRef sstr) As Variant
     str2 = Split(sstr, "(")
     dimensions = Val(str2(0))
     ReDim vals(0 To dimensions * 2 - 1)
-    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     valstr = Split(Left(str2(1), Len(str2(1)) - 1), ",")
     For i = 0 To dimensions * 2 - 1
         vals(i) = Val(valstr(i))
@@ -691,7 +691,7 @@ Private Function String2MultiDimArray_Boolean(ByRef sstr) As Variant
     str2 = Split(sstr, "(")
     dimensions = Val(str2(0))
     ReDim vals(0 To dimensions * 2 - 1)
-    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     valstr = Split(Left(str2(1), Len(str2(1)) - 1), ",")
     For i = 0 To dimensions * 2 - 1
         vals(i) = Val(valstr(i))
@@ -706,7 +706,7 @@ Private Function String2MultiDimArray_Date(ByRef sstr) As Variant
     str2 = Split(sstr, "(")
     dimensions = Val(str2(0))
     ReDim vals(0 To dimensions * 2 - 1)
-    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     valstr = Split(Left(str2(1), Len(str2(1)) - 1), ",")
     For i = 0 To dimensions * 2 - 1
         vals(i) = Val(valstr(i))
@@ -721,7 +721,7 @@ Private Function String2MultiDimArray_Currency(ByRef sstr) As Variant
     str2 = Split(sstr, "(")
     dimensions = Val(str2(0))
     ReDim vals(0 To dimensions * 2 - 1)
-    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If Right(str2(1), 1) <> ")" Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     valstr = Split(Left(str2(1), Len(str2(1)) - 1), ",")
     For i = 0 To dimensions * 2 - 1
         vals(i) = Val(valstr(i))
@@ -731,17 +731,17 @@ Private Function String2MultiDimArray_Currency(ByRef sstr) As Variant
 
 End Function
 
-'nŸŒ³”z—ñ‚ğì‚éBbounds(0...dimensions*2-1)‚ÉALBound, UBound‚ÌƒŠƒXƒg‚ğ“ü‚ê‚é‚±‚Æ
-'ì‚éŒ^‚ªVariant()‚Ìê‡
-Private Function CreateMultiDimArray_Variant(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğVariant‚Éû‚ß‚Ä•Ô‚·‚Ì‚ÅVariant‚ÅOK
+'næ¬¡å…ƒé…åˆ—ã‚’ä½œã‚‹ã€‚bounds(0...dimensions*2-1)ã«ã€LBound, UBoundã®ãƒªã‚¹ãƒˆã‚’å…¥ã‚Œã‚‹ã“ã¨
+'ä½œã‚‹å‹ãŒVariant()ã®å ´åˆ
+Private Function CreateMultiDimArray_Variant(ByRef bounds) As Variant 'ã“ã“ã¯é…åˆ—ã‚’Variantã«åã‚ã¦è¿”ã™ã®ã§Variantã§OK
 
     Dim temp
 
-    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     dimension = (UBound(bounds) + 1) \ 2
     Select Case dimension
     Case 0
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     Case 1
         ReDim temp(bounds(0) To bounds(1)) As Variant
     Case 2
@@ -791,24 +791,24 @@ Private Function CreateMultiDimArray_Variant(ByRef bounds) As Variant '‚±‚±‚Í”z—
     Case 24
         ReDim temp(bounds(0) To bounds(1), bounds(2) To bounds(3), bounds(4) To bounds(5), bounds(6) To bounds(7), bounds(8) To bounds(9), bounds(10) To bounds(11), bounds(12) To bounds(13), bounds(14) To bounds(15), bounds(16) To bounds(17), bounds(18) To bounds(19), bounds(20) To bounds(21), bounds(22) To bounds(23), bounds(24) To bounds(25), bounds(26) To bounds(27), bounds(28) To bounds(29), bounds(30) To bounds(31), bounds(32) To bounds(33), bounds(34) To bounds(35), bounds(36) To bounds(37), bounds(38) To bounds(39), bounds(40) To bounds(41), bounds(42) To bounds(43), bounds(44) To bounds(45), bounds(46) To bounds(47)) As Variant
     Case Else
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     End Select
 
     CreateMultiDimArray_Variant = temp
 
 End Function
 
-'nŸŒ³”z—ñ‚ğì‚éBbounds(0...dimensions*2-1)‚ÉALBound, UBound‚ÌƒŠƒXƒg‚ğ“ü‚ê‚é‚±‚Æ
-'ì‚éŒ^‚ªObject()‚Ìê‡
-Private Function CreateMultiDimArray_Object(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğVariant‚Éû‚ß‚Ä•Ô‚·‚Ì‚ÅVariant‚ÅOK
+'næ¬¡å…ƒé…åˆ—ã‚’ä½œã‚‹ã€‚bounds(0...dimensions*2-1)ã«ã€LBound, UBoundã®ãƒªã‚¹ãƒˆã‚’å…¥ã‚Œã‚‹ã“ã¨
+'ä½œã‚‹å‹ãŒObject()ã®å ´åˆ
+Private Function CreateMultiDimArray_Object(ByRef bounds) As Variant 'ã“ã“ã¯é…åˆ—ã‚’Variantã«åã‚ã¦è¿”ã™ã®ã§Variantã§OK
 
     Dim temp
 
-    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     dimension = (UBound(bounds) + 1) \ 2
     Select Case dimension
     Case 0
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     Case 1
         ReDim temp(bounds(0) To bounds(1)) As Object
     Case 2
@@ -858,24 +858,24 @@ Private Function CreateMultiDimArray_Object(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ
     Case 24
         ReDim temp(bounds(0) To bounds(1), bounds(2) To bounds(3), bounds(4) To bounds(5), bounds(6) To bounds(7), bounds(8) To bounds(9), bounds(10) To bounds(11), bounds(12) To bounds(13), bounds(14) To bounds(15), bounds(16) To bounds(17), bounds(18) To bounds(19), bounds(20) To bounds(21), bounds(22) To bounds(23), bounds(24) To bounds(25), bounds(26) To bounds(27), bounds(28) To bounds(29), bounds(30) To bounds(31), bounds(32) To bounds(33), bounds(34) To bounds(35), bounds(36) To bounds(37), bounds(38) To bounds(39), bounds(40) To bounds(41), bounds(42) To bounds(43), bounds(44) To bounds(45), bounds(46) To bounds(47)) As Object
     Case Else
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     End Select
 
     CreateMultiDimArray_Object = temp
 
 End Function
 
-'nŸŒ³”z—ñ‚ğì‚éBbounds(0...dimensions*2-1)‚ÉALBound, UBound‚ÌƒŠƒXƒg‚ğ“ü‚ê‚é‚±‚Æ
-'ì‚éŒ^‚ªString()‚Ìê‡
-Private Function CreateMultiDimArray_String(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğVariant‚Éû‚ß‚Ä•Ô‚·‚Ì‚ÅVariant‚ÅOK
+'næ¬¡å…ƒé…åˆ—ã‚’ä½œã‚‹ã€‚bounds(0...dimensions*2-1)ã«ã€LBound, UBoundã®ãƒªã‚¹ãƒˆã‚’å…¥ã‚Œã‚‹ã“ã¨
+'ä½œã‚‹å‹ãŒString()ã®å ´åˆ
+Private Function CreateMultiDimArray_String(ByRef bounds) As Variant 'ã“ã“ã¯é…åˆ—ã‚’Variantã«åã‚ã¦è¿”ã™ã®ã§Variantã§OK
 
     Dim temp
 
-    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     dimension = (UBound(bounds) + 1) \ 2
     Select Case dimension
     Case 0
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     Case 1
         ReDim temp(bounds(0) To bounds(1)) As String
     Case 2
@@ -925,24 +925,24 @@ Private Function CreateMultiDimArray_String(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ
     Case 24
         ReDim temp(bounds(0) To bounds(1), bounds(2) To bounds(3), bounds(4) To bounds(5), bounds(6) To bounds(7), bounds(8) To bounds(9), bounds(10) To bounds(11), bounds(12) To bounds(13), bounds(14) To bounds(15), bounds(16) To bounds(17), bounds(18) To bounds(19), bounds(20) To bounds(21), bounds(22) To bounds(23), bounds(24) To bounds(25), bounds(26) To bounds(27), bounds(28) To bounds(29), bounds(30) To bounds(31), bounds(32) To bounds(33), bounds(34) To bounds(35), bounds(36) To bounds(37), bounds(38) To bounds(39), bounds(40) To bounds(41), bounds(42) To bounds(43), bounds(44) To bounds(45), bounds(46) To bounds(47)) As String
     Case Else
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     End Select
 
     CreateMultiDimArray_String = temp
 
 End Function
 
-'nŸŒ³”z—ñ‚ğì‚éBbounds(0...dimensions*2-1)‚ÉALBound, UBound‚ÌƒŠƒXƒg‚ğ“ü‚ê‚é‚±‚Æ
-'ì‚éŒ^‚ªByte()‚Ìê‡
-Private Function CreateMultiDimArray_Byte(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğVariant‚Éû‚ß‚Ä•Ô‚·‚Ì‚ÅVariant‚ÅOK
+'næ¬¡å…ƒé…åˆ—ã‚’ä½œã‚‹ã€‚bounds(0...dimensions*2-1)ã«ã€LBound, UBoundã®ãƒªã‚¹ãƒˆã‚’å…¥ã‚Œã‚‹ã“ã¨
+'ä½œã‚‹å‹ãŒByte()ã®å ´åˆ
+Private Function CreateMultiDimArray_Byte(ByRef bounds) As Variant 'ã“ã“ã¯é…åˆ—ã‚’Variantã«åã‚ã¦è¿”ã™ã®ã§Variantã§OK
 
     Dim temp
 
-    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     dimension = (UBound(bounds) + 1) \ 2
     Select Case dimension
     Case 0
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     Case 1
         ReDim temp(bounds(0) To bounds(1)) As Byte
     Case 2
@@ -992,24 +992,24 @@ Private Function CreateMultiDimArray_Byte(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğ
     Case 24
         ReDim temp(bounds(0) To bounds(1), bounds(2) To bounds(3), bounds(4) To bounds(5), bounds(6) To bounds(7), bounds(8) To bounds(9), bounds(10) To bounds(11), bounds(12) To bounds(13), bounds(14) To bounds(15), bounds(16) To bounds(17), bounds(18) To bounds(19), bounds(20) To bounds(21), bounds(22) To bounds(23), bounds(24) To bounds(25), bounds(26) To bounds(27), bounds(28) To bounds(29), bounds(30) To bounds(31), bounds(32) To bounds(33), bounds(34) To bounds(35), bounds(36) To bounds(37), bounds(38) To bounds(39), bounds(40) To bounds(41), bounds(42) To bounds(43), bounds(44) To bounds(45), bounds(46) To bounds(47)) As Byte
     Case Else
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     End Select
 
     CreateMultiDimArray_Byte = temp
 
 End Function
 
-'nŸŒ³”z—ñ‚ğì‚éBbounds(0...dimensions*2-1)‚ÉALBound, UBound‚ÌƒŠƒXƒg‚ğ“ü‚ê‚é‚±‚Æ
-'ì‚éŒ^‚ªLong()‚Ìê‡
-Private Function CreateMultiDimArray_Long(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğVariant‚Éû‚ß‚Ä•Ô‚·‚Ì‚ÅVariant‚ÅOK
+'næ¬¡å…ƒé…åˆ—ã‚’ä½œã‚‹ã€‚bounds(0...dimensions*2-1)ã«ã€LBound, UBoundã®ãƒªã‚¹ãƒˆã‚’å…¥ã‚Œã‚‹ã“ã¨
+'ä½œã‚‹å‹ãŒLong()ã®å ´åˆ
+Private Function CreateMultiDimArray_Long(ByRef bounds) As Variant 'ã“ã“ã¯é…åˆ—ã‚’Variantã«åã‚ã¦è¿”ã™ã®ã§Variantã§OK
 
     Dim temp
 
-    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     dimension = (UBound(bounds) + 1) \ 2
     Select Case dimension
     Case 0
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     Case 1
         ReDim temp(bounds(0) To bounds(1)) As Long
     Case 2
@@ -1059,24 +1059,24 @@ Private Function CreateMultiDimArray_Long(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğ
     Case 24
         ReDim temp(bounds(0) To bounds(1), bounds(2) To bounds(3), bounds(4) To bounds(5), bounds(6) To bounds(7), bounds(8) To bounds(9), bounds(10) To bounds(11), bounds(12) To bounds(13), bounds(14) To bounds(15), bounds(16) To bounds(17), bounds(18) To bounds(19), bounds(20) To bounds(21), bounds(22) To bounds(23), bounds(24) To bounds(25), bounds(26) To bounds(27), bounds(28) To bounds(29), bounds(30) To bounds(31), bounds(32) To bounds(33), bounds(34) To bounds(35), bounds(36) To bounds(37), bounds(38) To bounds(39), bounds(40) To bounds(41), bounds(42) To bounds(43), bounds(44) To bounds(45), bounds(46) To bounds(47)) As Long
     Case Else
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     End Select
 
     CreateMultiDimArray_Long = temp
 
 End Function
 
-'nŸŒ³”z—ñ‚ğì‚éBbounds(0...dimensions*2-1)‚ÉALBound, UBound‚ÌƒŠƒXƒg‚ğ“ü‚ê‚é‚±‚Æ
-'ì‚éŒ^‚ªInteger()‚Ìê‡
-Private Function CreateMultiDimArray_Integer(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğVariant‚Éû‚ß‚Ä•Ô‚·‚Ì‚ÅVariant‚ÅOK
+'næ¬¡å…ƒé…åˆ—ã‚’ä½œã‚‹ã€‚bounds(0...dimensions*2-1)ã«ã€LBound, UBoundã®ãƒªã‚¹ãƒˆã‚’å…¥ã‚Œã‚‹ã“ã¨
+'ä½œã‚‹å‹ãŒInteger()ã®å ´åˆ
+Private Function CreateMultiDimArray_Integer(ByRef bounds) As Variant 'ã“ã“ã¯é…åˆ—ã‚’Variantã«åã‚ã¦è¿”ã™ã®ã§Variantã§OK
 
     Dim temp
 
-    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     dimension = (UBound(bounds) + 1) \ 2
     Select Case dimension
     Case 0
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     Case 1
         ReDim temp(bounds(0) To bounds(1)) As Integer
     Case 2
@@ -1126,24 +1126,24 @@ Private Function CreateMultiDimArray_Integer(ByRef bounds) As Variant '‚±‚±‚Í”z—
     Case 24
         ReDim temp(bounds(0) To bounds(1), bounds(2) To bounds(3), bounds(4) To bounds(5), bounds(6) To bounds(7), bounds(8) To bounds(9), bounds(10) To bounds(11), bounds(12) To bounds(13), bounds(14) To bounds(15), bounds(16) To bounds(17), bounds(18) To bounds(19), bounds(20) To bounds(21), bounds(22) To bounds(23), bounds(24) To bounds(25), bounds(26) To bounds(27), bounds(28) To bounds(29), bounds(30) To bounds(31), bounds(32) To bounds(33), bounds(34) To bounds(35), bounds(36) To bounds(37), bounds(38) To bounds(39), bounds(40) To bounds(41), bounds(42) To bounds(43), bounds(44) To bounds(45), bounds(46) To bounds(47)) As Integer
     Case Else
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     End Select
 
     CreateMultiDimArray_Integer = temp
 
 End Function
 
-'nŸŒ³”z—ñ‚ğì‚éBbounds(0...dimensions*2-1)‚ÉALBound, UBound‚ÌƒŠƒXƒg‚ğ“ü‚ê‚é‚±‚Æ
-'ì‚éŒ^‚ªDouble()‚Ìê‡
-Private Function CreateMultiDimArray_Double(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğVariant‚Éû‚ß‚Ä•Ô‚·‚Ì‚ÅVariant‚ÅOK
+'næ¬¡å…ƒé…åˆ—ã‚’ä½œã‚‹ã€‚bounds(0...dimensions*2-1)ã«ã€LBound, UBoundã®ãƒªã‚¹ãƒˆã‚’å…¥ã‚Œã‚‹ã“ã¨
+'ä½œã‚‹å‹ãŒDouble()ã®å ´åˆ
+Private Function CreateMultiDimArray_Double(ByRef bounds) As Variant 'ã“ã“ã¯é…åˆ—ã‚’Variantã«åã‚ã¦è¿”ã™ã®ã§Variantã§OK
 
     Dim temp
 
-    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     dimension = (UBound(bounds) + 1) \ 2
     Select Case dimension
     Case 0
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     Case 1
         ReDim temp(bounds(0) To bounds(1)) As Double
     Case 2
@@ -1193,24 +1193,24 @@ Private Function CreateMultiDimArray_Double(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ
     Case 24
         ReDim temp(bounds(0) To bounds(1), bounds(2) To bounds(3), bounds(4) To bounds(5), bounds(6) To bounds(7), bounds(8) To bounds(9), bounds(10) To bounds(11), bounds(12) To bounds(13), bounds(14) To bounds(15), bounds(16) To bounds(17), bounds(18) To bounds(19), bounds(20) To bounds(21), bounds(22) To bounds(23), bounds(24) To bounds(25), bounds(26) To bounds(27), bounds(28) To bounds(29), bounds(30) To bounds(31), bounds(32) To bounds(33), bounds(34) To bounds(35), bounds(36) To bounds(37), bounds(38) To bounds(39), bounds(40) To bounds(41), bounds(42) To bounds(43), bounds(44) To bounds(45), bounds(46) To bounds(47)) As Double
     Case Else
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     End Select
 
     CreateMultiDimArray_Double = temp
 
 End Function
 
-'nŸŒ³”z—ñ‚ğì‚éBbounds(0...dimensions*2-1)‚ÉALBound, UBound‚ÌƒŠƒXƒg‚ğ“ü‚ê‚é‚±‚Æ
-'ì‚éŒ^‚ªSingle()‚Ìê‡
-Private Function CreateMultiDimArray_Single(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğVariant‚Éû‚ß‚Ä•Ô‚·‚Ì‚ÅVariant‚ÅOK
+'næ¬¡å…ƒé…åˆ—ã‚’ä½œã‚‹ã€‚bounds(0...dimensions*2-1)ã«ã€LBound, UBoundã®ãƒªã‚¹ãƒˆã‚’å…¥ã‚Œã‚‹ã“ã¨
+'ä½œã‚‹å‹ãŒSingle()ã®å ´åˆ
+Private Function CreateMultiDimArray_Single(ByRef bounds) As Variant 'ã“ã“ã¯é…åˆ—ã‚’Variantã«åã‚ã¦è¿”ã™ã®ã§Variantã§OK
 
     Dim temp
 
-    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     dimension = (UBound(bounds) + 1) \ 2
     Select Case dimension
     Case 0
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     Case 1
         ReDim temp(bounds(0) To bounds(1)) As Single
     Case 2
@@ -1260,24 +1260,24 @@ Private Function CreateMultiDimArray_Single(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ
     Case 24
         ReDim temp(bounds(0) To bounds(1), bounds(2) To bounds(3), bounds(4) To bounds(5), bounds(6) To bounds(7), bounds(8) To bounds(9), bounds(10) To bounds(11), bounds(12) To bounds(13), bounds(14) To bounds(15), bounds(16) To bounds(17), bounds(18) To bounds(19), bounds(20) To bounds(21), bounds(22) To bounds(23), bounds(24) To bounds(25), bounds(26) To bounds(27), bounds(28) To bounds(29), bounds(30) To bounds(31), bounds(32) To bounds(33), bounds(34) To bounds(35), bounds(36) To bounds(37), bounds(38) To bounds(39), bounds(40) To bounds(41), bounds(42) To bounds(43), bounds(44) To bounds(45), bounds(46) To bounds(47)) As Single
     Case Else
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     End Select
 
     CreateMultiDimArray_Single = temp
 
 End Function
 
-'nŸŒ³”z—ñ‚ğì‚éBbounds(0...dimensions*2-1)‚ÉALBound, UBound‚ÌƒŠƒXƒg‚ğ“ü‚ê‚é‚±‚Æ
-'ì‚éŒ^‚ªBoolean()‚Ìê‡
-Private Function CreateMultiDimArray_Boolean(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğVariant‚Éû‚ß‚Ä•Ô‚·‚Ì‚ÅVariant‚ÅOK
+'næ¬¡å…ƒé…åˆ—ã‚’ä½œã‚‹ã€‚bounds(0...dimensions*2-1)ã«ã€LBound, UBoundã®ãƒªã‚¹ãƒˆã‚’å…¥ã‚Œã‚‹ã“ã¨
+'ä½œã‚‹å‹ãŒBoolean()ã®å ´åˆ
+Private Function CreateMultiDimArray_Boolean(ByRef bounds) As Variant 'ã“ã“ã¯é…åˆ—ã‚’Variantã«åã‚ã¦è¿”ã™ã®ã§Variantã§OK
 
     Dim temp
 
-    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     dimension = (UBound(bounds) + 1) \ 2
     Select Case dimension
     Case 0
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     Case 1
         ReDim temp(bounds(0) To bounds(1)) As Boolean
     Case 2
@@ -1327,24 +1327,24 @@ Private Function CreateMultiDimArray_Boolean(ByRef bounds) As Variant '‚±‚±‚Í”z—
     Case 24
         ReDim temp(bounds(0) To bounds(1), bounds(2) To bounds(3), bounds(4) To bounds(5), bounds(6) To bounds(7), bounds(8) To bounds(9), bounds(10) To bounds(11), bounds(12) To bounds(13), bounds(14) To bounds(15), bounds(16) To bounds(17), bounds(18) To bounds(19), bounds(20) To bounds(21), bounds(22) To bounds(23), bounds(24) To bounds(25), bounds(26) To bounds(27), bounds(28) To bounds(29), bounds(30) To bounds(31), bounds(32) To bounds(33), bounds(34) To bounds(35), bounds(36) To bounds(37), bounds(38) To bounds(39), bounds(40) To bounds(41), bounds(42) To bounds(43), bounds(44) To bounds(45), bounds(46) To bounds(47)) As Boolean
     Case Else
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     End Select
 
     CreateMultiDimArray_Boolean = temp
 
 End Function
 
-'nŸŒ³”z—ñ‚ğì‚éBbounds(0...dimensions*2-1)‚ÉALBound, UBound‚ÌƒŠƒXƒg‚ğ“ü‚ê‚é‚±‚Æ
-'ì‚éŒ^‚ªDate()‚Ìê‡
-Private Function CreateMultiDimArray_Date(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğVariant‚Éû‚ß‚Ä•Ô‚·‚Ì‚ÅVariant‚ÅOK
+'næ¬¡å…ƒé…åˆ—ã‚’ä½œã‚‹ã€‚bounds(0...dimensions*2-1)ã«ã€LBound, UBoundã®ãƒªã‚¹ãƒˆã‚’å…¥ã‚Œã‚‹ã“ã¨
+'ä½œã‚‹å‹ãŒDate()ã®å ´åˆ
+Private Function CreateMultiDimArray_Date(ByRef bounds) As Variant 'ã“ã“ã¯é…åˆ—ã‚’Variantã«åã‚ã¦è¿”ã™ã®ã§Variantã§OK
 
     Dim temp
 
-    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     dimension = (UBound(bounds) + 1) \ 2
     Select Case dimension
     Case 0
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     Case 1
         ReDim temp(bounds(0) To bounds(1)) As Date
     Case 2
@@ -1394,24 +1394,24 @@ Private Function CreateMultiDimArray_Date(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğ
     Case 24
         ReDim temp(bounds(0) To bounds(1), bounds(2) To bounds(3), bounds(4) To bounds(5), bounds(6) To bounds(7), bounds(8) To bounds(9), bounds(10) To bounds(11), bounds(12) To bounds(13), bounds(14) To bounds(15), bounds(16) To bounds(17), bounds(18) To bounds(19), bounds(20) To bounds(21), bounds(22) To bounds(23), bounds(24) To bounds(25), bounds(26) To bounds(27), bounds(28) To bounds(29), bounds(30) To bounds(31), bounds(32) To bounds(33), bounds(34) To bounds(35), bounds(36) To bounds(37), bounds(38) To bounds(39), bounds(40) To bounds(41), bounds(42) To bounds(43), bounds(44) To bounds(45), bounds(46) To bounds(47)) As Date
     Case Else
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     End Select
 
     CreateMultiDimArray_Date = temp
 
 End Function
 
-'nŸŒ³”z—ñ‚ğì‚éBbounds(0...dimensions*2-1)‚ÉALBound, UBound‚ÌƒŠƒXƒg‚ğ“ü‚ê‚é‚±‚Æ
-'ì‚éŒ^‚ªCurrency()‚Ìê‡
-Private Function CreateMultiDimArray_Currency(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğVariant‚Éû‚ß‚Ä•Ô‚·‚Ì‚ÅVariant‚ÅOK
+'næ¬¡å…ƒé…åˆ—ã‚’ä½œã‚‹ã€‚bounds(0...dimensions*2-1)ã«ã€LBound, UBoundã®ãƒªã‚¹ãƒˆã‚’å…¥ã‚Œã‚‹ã“ã¨
+'ä½œã‚‹å‹ãŒCurrency()ã®å ´åˆ
+Private Function CreateMultiDimArray_Currency(ByRef bounds) As Variant 'ã“ã“ã¯é…åˆ—ã‚’Variantã«åã‚ã¦è¿”ã™ã®ã§Variantã§OK
 
     Dim temp
 
-    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     dimension = (UBound(bounds) + 1) \ 2
     Select Case dimension
     Case 0
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     Case 1
         ReDim temp(bounds(0) To bounds(1)) As Currency
     Case 2
@@ -1461,18 +1461,18 @@ Private Function CreateMultiDimArray_Currency(ByRef bounds) As Variant '‚±‚±‚Í”z
     Case 24
         ReDim temp(bounds(0) To bounds(1), bounds(2) To bounds(3), bounds(4) To bounds(5), bounds(6) To bounds(7), bounds(8) To bounds(9), bounds(10) To bounds(11), bounds(12) To bounds(13), bounds(14) To bounds(15), bounds(16) To bounds(17), bounds(18) To bounds(19), bounds(20) To bounds(21), bounds(22) To bounds(23), bounds(24) To bounds(25), bounds(26) To bounds(27), bounds(28) To bounds(29), bounds(30) To bounds(31), bounds(32) To bounds(33), bounds(34) To bounds(35), bounds(36) To bounds(37), bounds(38) To bounds(39), bounds(40) To bounds(41), bounds(42) To bounds(43), bounds(44) To bounds(45), bounds(46) To bounds(47)) As Currency
     Case Else
-        Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+        Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
     End Select
 
     CreateMultiDimArray_Currency = temp
 
 End Function
 
-'-- ©“®‚±‚±‚Ü‚Å ------------------------------------------------------------------------
-'-- ©“®‚±‚±‚Ü‚Å ------------------------------------------------------------------------
-'-- ©“®‚±‚±‚Ü‚Å ------------------------------------------------------------------------
-'-- ©“®‚±‚±‚Ü‚Å ------------------------------------------------------------------------
-'-- ©“®‚±‚±‚Ü‚Å ------------------------------------------------------------------------
+'-- è‡ªå‹•ã“ã“ã¾ã§ ------------------------------------------------------------------------
+'-- è‡ªå‹•ã“ã“ã¾ã§ ------------------------------------------------------------------------
+'-- è‡ªå‹•ã“ã“ã¾ã§ ------------------------------------------------------------------------
+'-- è‡ªå‹•ã“ã“ã¾ã§ ------------------------------------------------------------------------
+'-- è‡ªå‹•ã“ã“ã¾ã§ ------------------------------------------------------------------------
 
 
 Private Sub test_createmultidimarray()
@@ -2153,12 +2153,12 @@ End Sub
             Next
             Next
         Case Else
-            Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+            Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
         End Select
         
     End Sub
     Private Sub DeserializeRecurWithLoop(ByRef obj, ByRef token, ByRef ind)
-        '‚à‚¤”z—ñ‚Ì“ü‚ê•¨‚¾‚¯‚Ío—ˆã‚ª‚Á‚Ä‚¢‚é‘O’ñ
+        'ã‚‚ã†é…åˆ—ã®å…¥ã‚Œç‰©ã ã‘ã¯å‡ºæ¥ä¸ŠãŒã£ã¦ã„ã‚‹å‰æ
         dimensions = GetDimension(obj)
         ReDim lbounds(1 To dimensions)
         ReDim ubounds(1 To dimensions)
@@ -2818,14 +2818,14 @@ End Sub
             Next
             Next
         Case Else
-            Err.Raise Number:=700, Description:="ƒGƒ‰[‚ª”­¶I"
+            Err.Raise Number:=700, Description:="ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"
         End Select
         
     End Sub
     
     
     
-'ã‚ÌƒR[ƒh‚Í©“®¶¬‚µ‚È‚¢‚Æì‚ê‚È‚¢‚Ì‚Å
+'ä¸Šã®ã‚³ãƒ¼ãƒ‰ã¯è‡ªå‹•ç”Ÿæˆã—ãªã„ã¨ä½œã‚Œãªã„ã®ã§
 Private Sub createcode_CreateMultiDimArray()
 
     For N = 1 To 24
@@ -2843,8 +2843,8 @@ Private Sub createcode_CreateMultiDimArray_AS_XXX()
 
     strarr = Split("Variant,Object,String,Byte,Long,Integer,Double,Single,Boolean,Date,Currency", ",")
 
-    Debug.Print "   '”z—ñ‚ÌƒVƒŠƒAƒ‰ƒCƒY‚Í‚·‚×‚Ä“¯‚¶Œ`"
-    Debug.Print "        'Œ^–¼AŸŒ³”i—v‘f”—ñ‹“jA’l~ƒ®—v‘f”—ñ‹“iSerializeRecurWithLoopj"
+    Debug.Print "   'é…åˆ—ã®ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚ºã¯ã™ã¹ã¦åŒã˜å½¢"
+    Debug.Print "        'å‹åã€æ¬¡å…ƒæ•°ï¼ˆè¦ç´ æ•°åˆ—æŒ™ï¼‰ã€å€¤Ã—Î è¦ç´ æ•°åˆ—æŒ™ï¼ˆSerializeRecurWithLoopï¼‰"
 
     For J = LBound(strarr) To UBound(strarr)
         tn = strarr(J)
@@ -2856,8 +2856,8 @@ Private Sub createcode_CreateMultiDimArray_AS_XXX()
     
     Debug.Print ""
         
-    Debug.Print "   '”z—ñ‚ÌƒfƒVƒŠƒAƒ‰ƒCƒY‚Í‚·‚×‚Ä“¯‚¶Œ`"
-    Debug.Print "        'Œ^–¼AŸŒ³”i—v‘f”—ñ‹“jA’l~ƒ®—v‘f”—ñ‹“iDeserializeRecurWithLoopj"
+    Debug.Print "   'é…åˆ—ã®ãƒ‡ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚ºã¯ã™ã¹ã¦åŒã˜å½¢"
+    Debug.Print "        'å‹åã€æ¬¡å…ƒæ•°ï¼ˆè¦ç´ æ•°åˆ—æŒ™ï¼‰ã€å€¤Ã—Î è¦ç´ æ•°åˆ—æŒ™ï¼ˆDeserializeRecurWithLoopï¼‰"
 
     For J = LBound(strarr) To UBound(strarr)
         tn = strarr(J)
@@ -2877,7 +2877,7 @@ Private Sub createcode_CreateMultiDimArray_AS_XXX()
         Print #1, "    str2 = Split(sstr, ""("")"
         Print #1, "    dimensions = Val(str2(0))"
         Print #1, "    ReDim vals(0 To dimensions * 2 - 1)"
-        Print #1, "    If Right(str2(1), 1) <> "")"" Then Err.Raise Number:=700, Description:=""ƒGƒ‰[‚ª”­¶I"""
+        Print #1, "    If Right(str2(1), 1) <> "")"" Then Err.Raise Number:=700, Description:=""ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"""
         Print #1, "    valstr = Split(Left(str2(1), Len(str2(1)) - 1), "","")"
         Print #1, "    For i = 0 To dimensions * 2 - 1"
         Print #1, "        vals(i) = Val(valstr(i))"
@@ -2892,17 +2892,17 @@ Private Sub createcode_CreateMultiDimArray_AS_XXX()
     For J = LBound(strarr) To UBound(strarr)
         tn = strarr(J)
 
-        Print #1, "'nŸŒ³”z—ñ‚ğì‚éBbounds(0...dimensions*2-1)‚ÉALBound, UBound‚ÌƒŠƒXƒg‚ğ“ü‚ê‚é‚±‚Æ"
-        Print #1, "'ì‚éŒ^‚ª" & tn & "()‚Ìê‡"
-        Print #1, "Private Function CreateMultiDimArray_" & tn & "(ByRef bounds) As Variant '‚±‚±‚Í”z—ñ‚ğVariant‚Éû‚ß‚Ä•Ô‚·‚Ì‚ÅVariant‚ÅOK"
+        Print #1, "'næ¬¡å…ƒé…åˆ—ã‚’ä½œã‚‹ã€‚bounds(0...dimensions*2-1)ã«ã€LBound, UBoundã®ãƒªã‚¹ãƒˆã‚’å…¥ã‚Œã‚‹ã“ã¨"
+        Print #1, "'ä½œã‚‹å‹ãŒ" & tn & "()ã®å ´åˆ"
+        Print #1, "Private Function CreateMultiDimArray_" & tn & "(ByRef bounds) As Variant 'ã“ã“ã¯é…åˆ—ã‚’Variantã«åã‚ã¦è¿”ã™ã®ã§Variantã§OK"
         Print #1, ""
         Print #1, "    Dim temp"
         Print #1, ""
-        Print #1, "    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:=""ƒGƒ‰[‚ª”­¶I"""
+        Print #1, "    If LBound(bounds) <> 0 Then Err.Raise Number:=700, Description:=""ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"""
         Print #1, "    dimension = (UBound(bounds) + 1) \ 2"
         Print #1, "    Select Case dimension"
         Print #1, "    Case 0"
-        Print #1, "        Err.Raise Number:=700, Description:=""ƒGƒ‰[‚ª”­¶I"""
+        Print #1, "        Err.Raise Number:=700, Description:=""ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"""
     
         For N = 1 To 24
             Print #1, "    Case " & N
@@ -2914,7 +2914,7 @@ Private Sub createcode_CreateMultiDimArray_AS_XXX()
         Next
     
         Print #1, "    Case Else"
-        Print #1, "        Err.Raise Number:=700, Description:=""ƒGƒ‰[‚ª”­¶I"""
+        Print #1, "        Err.Raise Number:=700, Description:=""ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿï¼"""
         Print #1, "    End Select"
         Print #1, ""
         Print #1, "    CreateMultiDimArray_" & tn & " = temp"

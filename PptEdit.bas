@@ -11,23 +11,23 @@ Private Sub testselection()
 
     With ActiveWindow.Selection
         If .Type = ppSelectionNone Then
-            Debug.Print "‰½‚à‘I‘ð‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ"
+            Debug.Print "ä½•ã‚‚é¸æŠžã•ã‚Œã¦ã„ã¾ã›ã‚“"
         End If
         If .Type >= ppSelectionSlides Then
-            Debug.Print "ƒXƒ‰ƒCƒh‚ª‘I‘ð‚³‚ê‚Ä‚¢‚Ü‚·"
+            Debug.Print "ã‚¹ãƒ©ã‚¤ãƒ‰ãŒé¸æŠžã•ã‚Œã¦ã„ã¾ã™"
         End If
         If .Type >= ppSelectionShapes Then
-            Debug.Print "ƒVƒFƒCƒv‚ª‘I‘ð‚³‚ê‚Ä‚¢‚Ü‚·"
-            Debug.Print "‘I‘ðƒVƒFƒCƒv”F" & .shaperange.Count
+            Debug.Print "ã‚·ã‚§ã‚¤ãƒ—ãŒé¸æŠžã•ã‚Œã¦ã„ã¾ã™"
+            Debug.Print "é¸æŠžã‚·ã‚§ã‚¤ãƒ—æ•°ï¼š" & .shaperange.Count
             For Each sset In .shaperange
-                Debug.Print "‘I‘ðƒVƒFƒCƒv–¼F" & sset.Name
+                Debug.Print "é¸æŠžã‚·ã‚§ã‚¤ãƒ—åï¼š" & sset.Name
                 If sset.HasTextFrame Then
                     Debug.Print "hastext"
                     Debug.Print sset.TextFrame.TextRange.text
                 End If
                 If sset.HasTable Then
                     Debug.Print "hastable"
-                    result = InputBox("•”ä—¦‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢")
+                    result = InputBox("å¹…æ¯”çŽ‡ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„")
                     With sset.Table
                     End With
                 End If
@@ -40,27 +40,27 @@ Private Sub testselection()
             Next
         End If
         If .Type >= ppSelectionText Then
-            Debug.Print "ƒeƒLƒXƒg”ÍˆÍ‚ª‘I‘ð‚³‚ê‚Ä‚¢‚Ü‚·"
+            Debug.Print "ãƒ†ã‚­ã‚¹ãƒˆç¯„å›²ãŒé¸æŠžã•ã‚Œã¦ã„ã¾ã™"
         End If
     End With
 
 End Sub
 
-Sub ƒe[ƒuƒ‹ƒZƒ‹•’²®()
+Sub ãƒ†ãƒ¼ãƒ–ãƒ«ã‚»ãƒ«å¹…èª¿æ•´()
 
     With ActiveWindow.Selection
         If .Type >= ppSelectionShapes Then
-            Debug.Print "ƒVƒFƒCƒv‚ª‘I‘ð‚³‚ê‚Ä‚¢‚Ü‚·"
-            Debug.Print "‘I‘ðƒVƒFƒCƒv”F" & .shaperange.Count
+            Debug.Print "ã‚·ã‚§ã‚¤ãƒ—ãŒé¸æŠžã•ã‚Œã¦ã„ã¾ã™"
+            Debug.Print "é¸æŠžã‚·ã‚§ã‚¤ãƒ—æ•°ï¼š" & .shaperange.Count
             For Each sset In .shaperange
-                Debug.Print "‘I‘ðƒVƒFƒCƒv–¼F" & sset.Name
+                Debug.Print "é¸æŠžã‚·ã‚§ã‚¤ãƒ—åï¼š" & sset.Name
                 If sset.HasTable Then
                     Debug.Print "hastable"
-                    result = InputBox("•”ä—¦‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" & vbLf _
-                    & "—áF1,2,30%,3,F" & vbLf _
-                    & " F¨Œ»Ý‚Ì•‚©‚ç•Ï‚¦‚È‚¢" & vbLf _
-                    & " ”Žš%¨•\‚Ì‘S‘Ì•‚Ì”Žš%" & vbLf _
-                    & " ”Žš¨Žc‚Á‚½‘S‘Ì•‚É‘Î‚µ‚Ä”’l‚Ì”ä—¦‚Å”z•ª" & vbLf _
+                    result = InputBox("å¹…æ¯”çŽ‡ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„" & vbLf _
+                    & "ä¾‹ï¼š1,2,30%,3,F" & vbLf _
+                    & " Fâ†’ç¾åœ¨ã®å¹…ã‹ã‚‰å¤‰ãˆãªã„" & vbLf _
+                    & " æ•°å­—%â†’è¡¨ã®å…¨ä½“å¹…ã®æ•°å­—%" & vbLf _
+                    & " æ•°å­—â†’æ®‹ã£ãŸå…¨ä½“å¹…ã«å¯¾ã—ã¦æ•°å€¤ã®æ¯”çŽ‡ã§é…åˆ†" & vbLf _
                     )
                     If result = False Or Len(Trim(result)) = 0 Then End
                     temp = Split(result, ",")
@@ -98,10 +98,10 @@ Sub ƒe[ƒuƒ‹ƒZƒ‹•’²®()
                     Next
                     
                     If resultsum = 0 Then
-                        MsgBox "”ä—á”z•ª‚Æ‚È‚é—ñ‚ª‚È‚¢‚Ì‚ÅA‰¡•‚ª•Ï‚í‚Á‚Ä‚µ‚Ü‚¢‚Ü‚·"
+                        MsgBox "æ¯”ä¾‹é…åˆ†ã¨ãªã‚‹åˆ—ãŒãªã„ã®ã§ã€æ¨ªå¹…ãŒå¤‰ã‚ã£ã¦ã—ã¾ã„ã¾ã™"
                     End If
                     If fixedwidth > entirewidth Then
-                        MsgBox "ŒÅ’è—v‘f‚¾‚¯‚ÅAŒ³‚Ì‰¡•‚ð’´‚¦‚Ä‚µ‚Ü‚¢‚Ü‚·"
+                        MsgBox "å›ºå®šè¦ç´ ã ã‘ã§ã€å…ƒã®æ¨ªå¹…ã‚’è¶…ãˆã¦ã—ã¾ã„ã¾ã™"
                     End If
                     
                     With sset.Table

@@ -3,89 +3,89 @@ Const DANGERFAST = True
 '=========================================================================================
 'XlsUtilSheet 20230527
 '
-'XlsUtilSheet��
+'XlsUtilSheetは
 '=========================================================================================
-'���[�N�V�[�g�����ɁA���p�ϊ�����֐�
+'ワークシート向けに、半角変換する関数
 'Public Function HanKana(str)
-'�V�[�g�I�u�W�F�N�g�Ɨ�ԍ���n���A�Y����̍ŏI�s�̍s�ԍ����擾����
+'シートオブジェクトと列番号を渡し、該当列の最終行の行番号を取得する
 'Public Function GetMaxRow(ByRef sh, Optional ByVal col = 1)
-'�V�[�g�I�u�W�F�N�g�ƍs�ԍ���n���A�Y���s�̍ŏI��̗�ԍ����擾����
+'シートオブジェクトと行番号を渡し、該当行の最終列の列番号を取得する
 'Public Function GetMaxCol(ByRef sh, Optional ByVal row = 1)
-'�V�[�g�I�u�W�F�N�g��n���A�g�p�����ŏI�s�̍s�ԍ����擾����
+'シートオブジェクトを渡し、使用した最終行の行番号を取得する
 'Public Function GetUsedMaxRow(ByRef sh)
-'�V�[�g�I�u�W�F�N�g��n���A�g�p�����ŏI��̗�ԍ����擾����
+'シートオブジェクトを渡し、使用した最終列の列番号を取得する
 'Public Function GetUsedMaxCol(ByRef sh)
-'�V�[�g�I�u�W�F�N�g�ƍ���E���̒��l�����ɂ���Range�I�u�W�F�N�g��Ԃ�
+'シートオブジェクトと左上右下の直値を元にしてRangeオブジェクトを返す
 'Public Function RectRange(ByRef sheet, ByVal r_top, ByVal c_left, Optional ByVal r_bottom = 0, Optional ByVal c_right = 0)
-'Range�I�u�W�F�N�g��n���āA��ҏW�Z���̑������s��
+'Rangeオブジェクトを渡して、手編集セルの装飾を行う
 'Public Sub DecorateManualCells(ByRef rng, Optional ByVal defval = "")
-'Excel�}�N���̒P���ȍ������F�G���[�������ʓ|�ɂȂ�̂ŁA�o�O���Ƃ�Ă���d�������B
+'Excelマクロの単純な高速化：エラー処理が面倒になるので、バグがとれてから仕込もう。
 'Public Sub FastSetting(flag)
-'�r�W�[���[�v������Ȃ�A���[�v���ł�����Ă�ł���
+'ビジーループがあるなら、ループ内でこれを呼んでおけ
 'Public Sub FastSettingDoEvents(Optional str = "")
-'�ǂ����Ă��~�߂����ꍇ�A������g��
+'どうしても止めたい場合、これを使う
 'Public Sub FastSettingStop(Optional str = "")
-'�R�����g��Statusbar��Immediate Window�ɕ\��
+'コメントをStatusbarとImmediate Windowに表示
 'Public Sub d_print_____(str)
-'A,B,AA,AB�Ȃǂ̗�\�L�̃A���t�@�x�b�g���A1���珇�ɐU������ԍ��ɕϊ�����
+'A,B,AA,ABなどの列表記のアルファベットを、1から順に振った列番号に変換する
 'Public Function addr2col(ByVal str)
-'1���珇�ɐU������ԍ����AA,B,AA,AB�Ȃǂ̗�\�L�̃A���t�@�x�b�g�ɕϊ�����
+'1から順に振った列番号を、A,B,AA,ABなどの列表記のアルファベットに変換する
 'Public Function col2addr(ByVal num)
-'targetstr�̕�����̖`�����Aprefix�ɂȂ��Ă��邩�ǂ����𔻒肷��
+'targetstrの文字列の冒頭が、prefixになっているかどうかを判定する
 'Public Function StartsWith(ByRef targetstr, ByRef prefix)
-'targetstr�̕�����̖������Asuffix�ɂȂ��Ă��邩�ǂ����𔻒肷��
+'targetstrの文字列の末尾が、suffixになっているかどうかを判定する
 'Public Function EndsWith(ByRef targetstr, ByRef suffix)
-'targetstr�̐擪����Aprefix���폜����B�擪����v���Ă��Ȃ���΁Atargetstr�����̂܂ܕԂ�
+'targetstrの先頭から、prefixを削除する。先頭が一致していなければ、targetstrをそのまま返す
 'Public Function RemovePrefix(ByRef targetstr, ByRef prefix)
-'targetstr�̖�������Asuffix���폜����B��������v���Ă��Ȃ���΁Atargetstr�����̂܂ܕԂ�
+'targetstrの末尾から、suffixを削除する。末尾が一致していなければ、targetstrをそのまま返す
 'Public Function RemoveSuffix(ByRef targetstr, ByRef suffix)
-'Excel��p�I�w�肵���t�@�C�����J����Ă���΂��̃u�b�N���A�����Ȃ��΃t�@�C�����J���ău�b�N�𓾂�
+'Excel専用！指定したファイルが開かれていればそのブックを、さもなくばファイルを開いてブックを得る
 'Public Function WiseOpen(path, ByRef closeflag)
-'�����Ŏ��������O�̃V�[�g��T���āA���݂���Ȃ�TRUE�A���݂��Ȃ��Ȃ�FALSE��Ԃ�
+'引数で示した名前のシートを探して、存在するならTRUE、存在しないならFALSEを返す
 'Public Function FindSheet(ByVal str)
-'�����Ŏ��������O�̃V�[�g��T���āA���݂��Ȃ��Ȃ�G���[���b�Z�[�W��\�����Ē��f����
+'引数で示した名前のシートを探して、存在しないならエラーメッセージを表示して中断する
 'Public Sub FindSheet_Trap(ByVal str)
-'����FindSheetRegex������Ă�������
-'pref�Ŏw�肵��������Ŏn�܂閼�O�̃V�[�g���A�z��ϐ��Ɋi�[���ĕԂ�
+'★★FindSheetRegexも作っておきたい
+'prefで指定した文字列で始まる名前のシートを、配列変数に格納して返す
 'Public Function FindSheetPrefix(ByVal pref)
-'�V�[�g�ւ̎Q�Ƃƕ�����i�ƍs�ԍ��j���w�肵�āA����̕�����ƈ�v����\��̂�����������ĕԂ��i������Ȃ��ꍇ��0��Ԃ�
+'シートへの参照と文字列（と行番号）を指定して、特定の文字列と一致する表題のついた列を見つけて返す（見つからない場合は0を返す
 'Public Function FindCol(ByRef sheet, ByRef str, Optional ByVal row = 1)
-'�����V�[�g�̕\��s�̐���������Ă�������
-'����������擾�Ƃ��A�����Ă������B
+'★★シートの表題行の推測も作っておきたい
+'★★列特性取得とか、あってもいい。
 '=========================================================================================
 
 
 
 
-'���[�N�V�[�g�����ɁA���p�ϊ�����֐�
+'ワークシート向けに、半角変換する関数
 Public Function HanKana(str)
 
     HanKana = StrConv(str, vbNarrow)
     
 End Function
 
-'�V�[�g�I�u�W�F�N�g�Ɨ�ԍ���n���A�Y����̍ŏI�s�̍s�ԍ����擾����
+'シートオブジェクトと列番号を渡し、該当列の最終行の行番号を取得する
 Public Function GetMaxRow(ByRef sh, Optional ByVal col = 1)
     
     GetMaxRow = sh.Cells(sh.Cells(sh.Rows.Count, col).row, col).End(xlUp).row
     
 End Function
 
-'�V�[�g�I�u�W�F�N�g�ƍs�ԍ���n���A�Y���s�̍ŏI��̗�ԍ����擾����
+'シートオブジェクトと行番号を渡し、該当行の最終列の列番号を取得する
 Public Function GetMaxCol(ByRef sh, Optional ByVal row = 1)
     
     GetMaxCol = sh.Cells(row, sh.Cells(row, sh.Columns.Count).col).End(xlToLeft).Column
     
-End Function '�V�[�g�I�u�W�F�N�g��n���A�g�p�����ŏI�s�̍s�ԍ����擾����
+End Function 'シートオブジェクトを渡し、使用した最終行の行番号を取得する
 
-'�V�[�g�I�u�W�F�N�g��n���A�g�p�����ŏI�s�̍s�ԍ����擾����
+'シートオブジェクトを渡し、使用した最終行の行番号を取得する
 Public Function GetUsedMaxRow(ByRef sh)
     
     GetUsedMaxRow = sh.UsedRange.Rows(sh.UsedRange.Rows.Count).row
     
 End Function
 
-'�V�[�g�I�u�W�F�N�g��n���A�g�p�����ŏI��̗�ԍ����擾����
+'シートオブジェクトを渡し、使用した最終列の列番号を取得する
 Public Function GetUsedMaxCol(ByRef sh)
     
     GetUsedMaxCol = sh.UsedRange.Columns(sh.UsedRange.Columns.Count).Column
@@ -94,7 +94,7 @@ End Function
 
 
 
-'�V�[�g�I�u�W�F�N�g�ƍ���E���̒��l�����ɂ���Range�I�u�W�F�N�g��Ԃ�
+'シートオブジェクトと左上右下の直値を元にしてRangeオブジェクトを返す
 Public Function RectRange(ByRef sheet, ByVal r_top, ByVal c_left, Optional ByVal r_bottom = 0, Optional ByVal c_right = 0)
 
     If r_bottom = 0 Then r_bottom = r_top
@@ -107,7 +107,7 @@ End Function
 
 
 
-'Range�I�u�W�F�N�g��n���āA��ҏW�Z���̑������s��
+'Rangeオブジェクトを渡して、手編集セルの装飾を行う
 Public Sub DecorateManualCells(ByRef rng, Optional ByVal defval = "")
     
     If Len(defval) > 0 Then
@@ -144,7 +144,7 @@ End Sub
 
 
 
-'Excel�}�N���̒P���ȍ������F�G���[�������ʓ|�ɂȂ�̂ŁA�o�O���Ƃ�Ă���d�������B
+'Excelマクロの単純な高速化：エラー処理が面倒になるので、バグがとれてから仕込もう。
 Public Sub FastSetting(flag)
     If DANGERFAST Then
         If flag Then
@@ -159,7 +159,7 @@ Public Sub FastSetting(flag)
     End If
 End Sub
 
-'�r�W�[���[�v������Ȃ�A���[�v���ł�����Ă�ł���
+'ビジーループがあるなら、ループ内でこれを呼んでおけ
 Public Sub FastSettingDoEvents(Optional str = "")
     
     If Rnd < 0.01 Then
@@ -180,7 +180,7 @@ Public Sub FastSettingDoEvents(Optional str = "")
     
 End Sub
 
-'�ǂ����Ă��~�߂����ꍇ�A������g��
+'どうしても止めたい場合、これを使う
 Public Sub FastSettingStop(Optional str = "")
     
     If Rnd < 0.01 Then
@@ -205,7 +205,7 @@ End Sub
 
 
 
-' �R�����g��Statusbar��Immediate Window�ɕ\��
+' コメントをStatusbarとImmediate Windowに表示
 Public Sub d_print_____(str)
     savedsu = Application.ScreenUpdating
     savedee = Application.EnableEvents
@@ -223,7 +223,7 @@ End Sub
 
 
 
-' A,B,AA,AB�Ȃǂ̗�\�L�̃A���t�@�x�b�g���A1���珇�ɐU������ԍ��ɕϊ�����
+' A,B,AA,ABなどの列表記のアルファベットを、1から順に振った列番号に変換する
 Public Function addr2col(ByVal str)
     On Error GoTo e
     addr2col = ActiveSheet.Range(str & 1).Column
@@ -234,7 +234,7 @@ e:
     addr2col = False
 End Function
 
-'1���珇�ɐU������ԍ����AA,B,AA,AB�Ȃǂ̗�\�L�̃A���t�@�x�b�g�ɕϊ�����
+'1から順に振った列番号を、A,B,AA,ABなどの列表記のアルファベットに変換する
 Public Function col2addr(ByVal num)
     On Error GoTo e
     col2addr = Split(ActiveSheet.Cells(1, num).Address(True, False), "$")(0)
@@ -261,18 +261,18 @@ End Sub
 
 
 
-'targetstr�̕�����̖`�����Aprefix�ɂȂ��Ă��邩�ǂ����𔻒肷��
-' �u���l�}�s�v�u���l�v�Ȃ�TRUE�u�ē���H�v�u���H�v�Ȃ�FALSE
+'targetstrの文字列の冒頭が、prefixになっているかどうかを判定する
+' 「京浜急行」「京浜」ならTRUE「焼肉定食」「肉食」ならFALSE
 Public Function StartsWith(ByRef targetstr, ByRef prefix)
     StartsWith = (Left(targetstr, Len(prefix)) = prefix)
 End Function
-'targetstr�̕�����̖������Asuffix�ɂȂ��Ă��邩�ǂ����𔻒肷��
+'targetstrの文字列の末尾が、suffixになっているかどうかを判定する
 Public Function EndsWith(ByRef targetstr, ByRef suffix)
     EndsWith = (Right(targetstr, Len(suffix)) = suffix)
 End Function
 
-'targetstr�̐擪����Aprefix���폜����B�擪����v���Ă��Ȃ���΁Atargetstr�����̂܂ܕԂ�
-' �u���l�}�s�v�u���l�v�Ȃ�Ԓl�́u�}�s�v
+'targetstrの先頭から、prefixを削除する。先頭が一致していなければ、targetstrをそのまま返す
+' 「京浜急行」「京浜」なら返値は「急行」
 Public Function RemovePrefix(ByRef targetstr, ByRef prefix)
     If StartsWith(targetstr, prefix) Then
         RemovePrefix = Right(targetstr, Len(targetstr) - Len(prefix))
@@ -280,7 +280,7 @@ Public Function RemovePrefix(ByRef targetstr, ByRef prefix)
     End If
     RemovePrefix = targetstr
 End Function
-' targetstr�̖�������Asuffix���폜����B��������v���Ă��Ȃ���΁Atargetstr�����̂܂ܕԂ�
+' targetstrの末尾から、suffixを削除する。末尾が一致していなければ、targetstrをそのまま返す
 Public Function RemoveSuffix(ByRef targetstr, ByRef suffix)
     If EndsWith(targetstr, suffix) Then
         RemoveSuffix = Left(targetstr, Len(targetstr) - Len(suffix))
@@ -291,10 +291,10 @@ End Function
 
 
 
-'�����t�@�C���I�[�v���i���ɊJ���Ă���΂�������Q�Ɓj���ău�b�N�I�u�W�F�N�g��Ԃ�
-'�g�p��Acloseflag���Q�Ƃ���True�Ȃ�t�@�C�������̂𐄏�����
-'�Ȃ��AWiseOpen�͊�{�I�ɓǂݎ���p�ŊJ���i�����Ώۂ����������d�l�őI�Ԃ̂͂��Ԃˁ[�j
-'�Ȃ��AExcel��p
+'賢いファイルオープン（既に開いていればそちらを参照）してブックオブジェクトを返す
+'使用後、closeflagを参照してTrueならファイルを閉じるのを推奨する
+'なお、WiseOpenは基本的に読み取り専用で開く（書込対象をこういう仕様で選ぶのはあぶねー）
+'なお、Excel専用
 Public Function WiseOpen(path, ByRef closeflag)
     Set fso = CreateObject("scripting.filesystemobject")
     closeflag = False
@@ -322,7 +322,7 @@ End Function
 
 Private Sub testwiseopen()
 
-    Set bk = WiseOpen("D:\Users\miyokomizo\Desktop\�ҏW�F���������d����L���E�ؕ��i2021�N3��1���`2022�N2��28���j.xlsx", closeflag)
+    Set bk = WiseOpen("D:\Users\miyokomizo\Desktop\編集：製造原価仕訳日記帳・借方（2021年3月1日～2022年2月28日）.xlsx", closeflag)
     If bk Is Nothing Then End
     
     If closeflag Then bk.Close savechanges:=False
@@ -334,7 +334,7 @@ End Sub
 
 
 
-' �����Ŏ��������O�̃V�[�g��T���āA���݂���Ȃ�TRUE�A���݂��Ȃ��Ȃ�FALSE��Ԃ�
+' 引数で示した名前のシートを探して、存在するならTRUE、存在しないならFALSEを返す
 Public Function FindSheet(ByVal str)
     For Each N In ThisWorkbook.Sheets
         If N.Name = str Then
@@ -346,11 +346,11 @@ Public Function FindSheet(ByVal str)
     FindSheet = False
 End Function
 
-' �����Ŏ��������O�̃V�[�g��T���āA���݂��Ȃ��Ȃ�G���[���b�Z�[�W��\�����Ē��f����
+' 引数で示した名前のシートを探して、存在しないならエラーメッセージを表示して中断する
 Public Sub FindSheet_Trap(ByVal str)
 
     If Not FindSheet(str) Then
-        MsgBox str & "��������܂���"
+        MsgBox str & "が見つかりません"
         End
     End If
 
@@ -360,16 +360,16 @@ Private Sub test_findsheet()
 
     FindSheet_Trap "RAW1"
     FindSheet_Trap "RAW2"
-    FindSheet_Trap "���H�σf�[�^�W�v�ݒ�"
-    FindSheet_Trap "RAW1������"
-    FindSheet_Trap "RAW2������"
+    FindSheet_Trap "加工済データ集計設定"
+    FindSheet_Trap "RAW1処理済"
+    FindSheet_Trap "RAW2処理済"
 
 End Sub
 
 
 
-' pref�Ŏw�肵��������Ŏn�܂閼�O�̃V�[�g���A�z��ϐ��Ɋi�[���ĕԂ�
-' �񋓂���ۂɂ�lbound,ubound���g������
+' prefで指定した文字列で始まる名前のシートを、配列変数に格納して返す
+' 列挙する際にはlbound,uboundを使うこと
 Public Function FindSheetPrefix(ByVal pref)
     Set temp = CreateObject("system.collections.arraylist")
     
@@ -396,8 +396,8 @@ End Sub
 
 
 
-' �V�[�g�ւ̎Q�Ƃƕ�����i�ƍs�ԍ��j���w�肵�āA����̕�����ƈ�v����\��̂�����������ĕԂ�
-' ������Ȃ��ꍇ��0��Ԃ�
+' シートへの参照と文字列（と行番号）を指定して、特定の文字列と一致する表題のついた列を見つけて返す
+' 見つからない場合は0を返す
 Public Function FindCol(ByRef sheet, ByRef str, Optional ByVal row = 1)
     maxc = MaxColumn(sheet, row)
     For i = 1 To maxc
@@ -411,8 +411,8 @@ End Function
 
 Private Sub test_FindCol()
 
-    Debug.Print FindCol(ThisWorkbook.Sheets("���H�σf�[�^�W�v�ݒ�"), "�e�X�g�ݖ�")
-    Debug.Print FindCol(ThisWorkbook.Sheets("���H�σf�[�^�W�v�ݒ�"), "���݂��Ȃ���")
+    Debug.Print FindCol(ThisWorkbook.Sheets("加工済データ集計設定"), "テスト設問")
+    Debug.Print FindCol(ThisWorkbook.Sheets("加工済データ集計設定"), "存在しないよ")
 
 End Sub
 

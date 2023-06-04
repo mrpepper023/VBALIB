@@ -15,28 +15,28 @@ Private Sub analize_shape_backup(ByRef shape, ByRef dictofdict)
 
 '    Debug.Print "BottomRightCell: " & shape.BottomRightCell ''''for excel
 '    Debug.Print "TopLeftCell: " & shape.TopLeftCell '
-'    Debug.Print "Placement: " & shape.Placement 'ƒIƒuƒWƒFƒNƒg‚Æ‚»‚Ì‰º‚É‚ ‚éƒZƒ‹‚Æ‚ÌˆÊ’uŠÖŒW‚ğ•\‚· XlPlacement
+'    Debug.Print "Placement: " & shape.Placement 'ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¨ãã®ä¸‹ã«ã‚ã‚‹ã‚»ãƒ«ã¨ã®ä½ç½®é–¢ä¿‚ã‚’è¡¨ã™ XlPlacement
 
-'    Debug.Print "Callout: " & shape.Callout '‚«o‚µ‚Ì‘®ƒvƒƒpƒeƒB
+'    Debug.Print "Callout: " & shape.Callout 'å¹ãå‡ºã—ã®æ›¸å¼ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£
     Debug.Print "Child: " & shape.Child '
 '    Debug.Print "Parent: " & shape.Parent '
 '    Debug.Print "ParentGroup: " & shape.ParentGroup '
     
 '    Debug.Print "ControlFormat: " & shape.ControlFormat 'for excel?
-    Debug.Print "Application: " & shape.Application 'w’è‚³‚ê‚½ƒIƒuƒWƒFƒNƒg‚ğì¬‚µ‚½ Application ƒIƒuƒWƒFƒNƒg‚ğ•Ô‚µ‚Ü‚·B
-    Debug.Print "Creator: " & shape.Creator 'ƒIƒuƒWƒFƒNƒg‚ªì¬‚³‚ê‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ğ¦‚· 32 ƒrƒbƒg‚Ì®”
-'    Debug.Print "LinkFormat: " & shape.LinkFormat 'ƒŠƒ“ƒN‚³‚ê‚½ OLE ƒIƒuƒWƒFƒNƒg ƒvƒƒpƒeƒB‚ğŠÜ‚Ş LinkFormat ƒIƒuƒWƒFƒNƒg‚ğ•Ô‚µ‚Ü‚·B
+    Debug.Print "Application: " & shape.Application 'æŒ‡å®šã•ã‚ŒãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã—ãŸ Application ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿”ã—ã¾ã™ã€‚
+    Debug.Print "Creator: " & shape.Creator 'ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒä½œæˆã•ã‚ŒãŸã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ç¤ºã™ 32 ãƒ“ãƒƒãƒˆã®æ•´æ•°
+'    Debug.Print "LinkFormat: " & shape.LinkFormat 'ãƒªãƒ³ã‚¯ã•ã‚ŒãŸ OLE ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å«ã‚€ LinkFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿”ã—ã¾ã™ã€‚
     Debug.Print "Decorative: " & shape.Decorative '
 '    Debug.Print "FormControlType: " & shape.FormControlType 'XlFormControl
-'    Debug.Print "OLEFormat: " & shape.OLEFormat 'OLE ƒIƒuƒWƒFƒNƒg ƒvƒƒpƒeƒB‚ğŠÜ‚Ş OLEFormat ƒIƒuƒWƒFƒNƒg
-'    Debug.Print "OnAction: " & shape.OnAction 'ƒNƒŠƒbƒN‚³‚ê‚½‚Æ‚«‚ÉÀs‚·‚éƒ}ƒNƒ‚Ì–¼‘O‚ğİ’è‚µ‚Ü‚·B
+'    Debug.Print "OLEFormat: " & shape.OLEFormat 'OLE ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å«ã‚€ OLEFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
+'    Debug.Print "OnAction: " & shape.OnAction 'ã‚¯ãƒªãƒƒã‚¯ã•ã‚ŒãŸã¨ãã«å®Ÿè¡Œã™ã‚‹ãƒã‚¯ãƒ­ã®åå‰ã‚’è¨­å®šã—ã¾ã™ã€‚
 
     
     Debug.Print "GraphicStyle: " & shape.GraphicStyle '
 '    Debug.Print "GroupItems: " & shape.GroupItems '
     
     Debug.Print "HasChart: " & shape.HasChart '
-'    Debug.Print "Chart: " & shape.Chart 'Chart ƒIƒuƒWƒFƒNƒg
+'    Debug.Print "Chart: " & shape.Chart 'Chart ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 
     Debug.Print "HasSmartArt: " & shape.HasSmartArt '
 '    Debug.Print "SmartArt: " & shape.SmartArt '
@@ -67,40 +67,40 @@ Private Sub analize_shape_backup(ByRef shape, ByRef dictofdict)
     Debug.Print "Visible: " & shape.Visible '
     Debug.Print "ZOrderPosition: " & shape.ZOrderPosition '
 
-    Debug.Print "ConnectionSiteCount: " & shape.ConnectionSiteCount 'w’è‚³‚ê‚½}Œ`‚ÌŒ‹‡“_‚Ì”‚ğæ“¾‚µ‚Ü‚·B
-    Debug.Print "Connector: " & shape.Connector 'True ‚Ìê‡Aw’è‚³‚ê‚½}Œ`‚ÍƒRƒlƒNƒ^
-'    Debug.Print "ConnectorFormat: " & shape.ConnectorFormat 'ConnectorFormat ƒIƒuƒWƒFƒNƒg
+    Debug.Print "ConnectionSiteCount: " & shape.ConnectionSiteCount 'æŒ‡å®šã•ã‚ŒãŸå›³å½¢ã®çµåˆç‚¹ã®æ•°ã‚’å–å¾—ã—ã¾ã™ã€‚
+    Debug.Print "Connector: " & shape.Connector 'True ã®å ´åˆã€æŒ‡å®šã•ã‚ŒãŸå›³å½¢ã¯ã‚³ãƒã‚¯ã‚¿
+'    Debug.Print "ConnectorFormat: " & shape.ConnectorFormat 'ConnectorFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 
-'    Debug.Print "Fill: " & shape.Fill '“h‚è‚Â‚Ô‚µ‚Ì‘®ƒvƒƒpƒeƒB‚ªŠi”[‚³‚ê‚½ FillFormat ƒIƒuƒWƒFƒNƒg‚Ü‚½‚Í ChartFillFormat ƒIƒuƒWƒFƒNƒg
-'    Debug.Print "Line: " & shape.Line 'LineFormat ƒIƒuƒWƒFƒNƒg
+'    Debug.Print "Fill: " & shape.Fill 'å¡—ã‚Šã¤ã¶ã—ã®æ›¸å¼ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ãŒæ ¼ç´ã•ã‚ŒãŸ FillFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¾ãŸã¯ ChartFillFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
+'    Debug.Print "Line: " & shape.Line 'LineFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 
-'    Debug.Print "Glow: " & shape.Glow 'ŒõÊ‘®ƒvƒƒpƒeƒB‚ğŠÜ‚Şw’è‚³‚ê‚½}Œ`‚Ì GlowFormat ƒIƒuƒWƒFƒNƒg
-'    Debug.Print "Reflection: " & shape.Reflection '”½Ë‘®ƒvƒƒpƒeƒB‚ğŠÜ‚Şw’è‚³‚ê‚½}Œ`‚Ì ReflectionFormat ƒIƒuƒWƒFƒNƒg‚ğ•Ô‚µ‚Ü‚·B
-'    Debug.Print "Shadow: " & shape.Shadow 'w’è‚³‚ê‚½}Œ`‚Ì‰e‚Ì‘®‚ğ•\‚· ShadowFormat ƒIƒuƒWƒFƒNƒg
+'    Debug.Print "Glow: " & shape.Glow 'å…‰å½©æ›¸å¼ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å«ã‚€æŒ‡å®šã•ã‚ŒãŸå›³å½¢ã® GlowFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
+'    Debug.Print "Reflection: " & shape.Reflection 'åå°„æ›¸å¼ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å«ã‚€æŒ‡å®šã•ã‚ŒãŸå›³å½¢ã® ReflectionFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿”ã—ã¾ã™ã€‚
+'    Debug.Print "Shadow: " & shape.Shadow 'æŒ‡å®šã•ã‚ŒãŸå›³å½¢ã®å½±ã®æ›¸å¼ã‚’è¡¨ã™ ShadowFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 '    Debug.Print "Model3D: " & shape.Model3D '
-'    Debug.Print "ThreeD: " & shape.ThreeD '3-D Œø‰Ê‘®ƒvƒƒpƒeƒB‚ğŠÜ‚Ş ThreeDFormat ƒIƒuƒWƒFƒNƒg‚ğæ“¾‚µ‚Ü‚·B
+'    Debug.Print "ThreeD: " & shape.ThreeD '3-D åŠ¹æœæ›¸å¼ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å«ã‚€ ThreeDFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚
 
     
-    Debug.Print "LockAspectRatio: " & shape.LockAspectRatio 'True ‚Ìê‡Aw’è‚³‚ê‚½}Œ`‚ÍAƒTƒCƒY‚ğ•ÏX‚µ‚Ä‚àŒ³‚Ì”ä—¦‚ğ•Û‚µ‚Ü‚·B
+    Debug.Print "LockAspectRatio: " & shape.LockAspectRatio 'True ã®å ´åˆã€æŒ‡å®šã•ã‚ŒãŸå›³å½¢ã¯ã€ã‚µã‚¤ã‚ºã‚’å¤‰æ›´ã—ã¦ã‚‚å…ƒã®æ¯”ç‡ã‚’ä¿æŒã—ã¾ã™ã€‚
     Debug.Print "Locked: " & shape.Locked '
 
-'    Debug.Print "Nodes: " & shape.Nodes 'w’è‚µ‚½}Œ`‚ÌŠô‰½Šw“I‚È“Á’¥‚ğ•\‚· ShapeNodes ƒRƒŒƒNƒVƒ‡ƒ“‚ğæ“¾
-'    Debug.Print "PictureFormat: " & shape.PictureFormat '‚±‚ÌƒvƒƒpƒeƒB‚ÍA}‚Ü‚½‚Í OLE ƒIƒuƒWƒFƒNƒg‚ğ•\‚· Shape ƒIƒuƒWƒFƒNƒg‚É‘Î‚µ‚Äg—p‚µ‚Ü‚·B
-    Debug.Print "ShapeStyle: " & shape.ShapeStyle '}Œ`—Ìˆæ‚É‚¨‚¯‚é}Œ`ƒXƒ^ƒCƒ‹‚ğ•\‚· MsoShapeStyleIndex ‚ğæ“¾‚Ü‚½‚Íİ’è‚µ‚Ü‚·B
+'    Debug.Print "Nodes: " & shape.Nodes 'æŒ‡å®šã—ãŸå›³å½¢ã®å¹¾ä½•å­¦çš„ãªç‰¹å¾´ã‚’è¡¨ã™ ShapeNodes ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã‚’å–å¾—
+'    Debug.Print "PictureFormat: " & shape.PictureFormat 'ã“ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã¯ã€å›³ã¾ãŸã¯ OLE ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¡¨ã™ Shape ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«å¯¾ã—ã¦ä½¿ç”¨ã—ã¾ã™ã€‚
+    Debug.Print "ShapeStyle: " & shape.ShapeStyle 'å›³å½¢é ˜åŸŸã«ãŠã‘ã‚‹å›³å½¢ã‚¹ã‚¿ã‚¤ãƒ«ã‚’è¡¨ã™ MsoShapeStyleIndex ã‚’å–å¾—ã¾ãŸã¯è¨­å®šã—ã¾ã™ã€‚
 '    Debug.Print "SoftEdge: " & shape.SoftEdge '
 
-'    Debug.Print "Vertices: " & shape.Vertices 'ƒtƒŠ[ƒtƒH[ƒ€‚Ì’¸“_ (‚¨‚æ‚ÑƒxƒWƒF‹Èü‚ÌƒRƒ“ƒgƒ[ƒ‹ ƒ|ƒCƒ“ƒg) ‚ÌÀ•W‚ğˆê˜A‚ÌÀ•W’l?(À•W’l: “_‚Ì x À•W‚Æ y À•W‚ğ•\‚·’l‚ÌƒyƒABÀ•W‚Ì’l‚Í‘½‚­‚Ì“_‚Ì’l‚ğŠÜ‚Ş 2 ŸŒ³‚Ì”z—ñ‚ÉŠi”[‚³‚ê‚Ü‚·B)‚Æ‚µ‚Ä•Ô‚µ‚Ü‚·B‚±‚ÌƒvƒƒpƒeƒB‚Å•Ô‚³‚ê‚½”z—ñ‚ğAAddCurve ƒƒ\ƒbƒh‚Ü‚½‚Í AddPolyLine ƒƒ\ƒbƒh‚Ìˆø”‚Æ‚µ‚Äw’è‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+'    Debug.Print "Vertices: " & shape.Vertices 'ãƒ•ãƒªãƒ¼ãƒ•ã‚©ãƒ¼ãƒ ã®é ‚ç‚¹ (ãŠã‚ˆã³ãƒ™ã‚¸ã‚§æ›²ç·šã®ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ« ãƒã‚¤ãƒ³ãƒˆ) ã®åº§æ¨™ã‚’ä¸€é€£ã®åº§æ¨™å€¤?(åº§æ¨™å€¤: ç‚¹ã® x åº§æ¨™ã¨ y åº§æ¨™ã‚’è¡¨ã™å€¤ã®ãƒšã‚¢ã€‚åº§æ¨™ã®å€¤ã¯å¤šãã®ç‚¹ã®å€¤ã‚’å«ã‚€ 2 æ¬¡å…ƒã®é…åˆ—ã«æ ¼ç´ã•ã‚Œã¾ã™ã€‚)ã¨ã—ã¦è¿”ã—ã¾ã™ã€‚ã“ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã§è¿”ã•ã‚ŒãŸé…åˆ—ã‚’ã€AddCurve ãƒ¡ã‚½ãƒƒãƒ‰ã¾ãŸã¯ AddPolyLine ãƒ¡ã‚½ãƒƒãƒ‰ã®å¼•æ•°ã¨ã—ã¦æŒ‡å®šã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-'    Debug.Print "TextEffect: " & shape.TextEffect '}Œ`‚Ì“ÁêŒø‰Ê‚Ì‘®ƒvƒƒpƒeƒB‚ğŠÜ‚Ş TextEffectFormat ƒIƒuƒWƒFƒNƒg‚ğæ“¾‚µ‚Ü‚·B
+'    Debug.Print "TextEffect: " & shape.TextEffect 'å›³å½¢ã®ç‰¹æ®ŠåŠ¹æœã®æ›¸å¼ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å«ã‚€ TextEffectFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚
     If shape.HasTextFrame Then
         If shape.TextFrame.HasText Then
-            Debug.Print "TextFrame.TextRange.Text: " & shape.TextFrame.TextRange.text '}Œ`‚Ì”z’u‚¨‚æ‚ÑƒAƒ“ƒJ[‚ÌƒvƒƒpƒeƒB‚Ì’l‚ğŠÜ‚Ş TextFrame ƒIƒuƒWƒFƒNƒg‚ğ•Ô‚µ‚Ü‚·B
-            Debug.Print "TextFrame.MarginTop: " & shape.TextFrame.MarginTop '}Œ`‚Ì”z’u‚¨‚æ‚ÑƒAƒ“ƒJ[‚ÌƒvƒƒpƒeƒB‚Ì’l‚ğŠÜ‚Ş TextFrame ƒIƒuƒWƒFƒNƒg‚ğ•Ô‚µ‚Ü‚·B
-            Debug.Print "TextFrame.MarginLeft: " & shape.TextFrame.MarginLeft '}Œ`‚Ì”z’u‚¨‚æ‚ÑƒAƒ“ƒJ[‚ÌƒvƒƒpƒeƒB‚Ì’l‚ğŠÜ‚Ş TextFrame ƒIƒuƒWƒFƒNƒg‚ğ•Ô‚µ‚Ü‚·B
-            Debug.Print "TextFrame.MarginRight: " & shape.TextFrame.MarginRight '}Œ`‚Ì”z’u‚¨‚æ‚ÑƒAƒ“ƒJ[‚ÌƒvƒƒpƒeƒB‚Ì’l‚ğŠÜ‚Ş TextFrame ƒIƒuƒWƒFƒNƒg‚ğ•Ô‚µ‚Ü‚·B
-            Debug.Print "TextFrame.MarginBottom: " & shape.TextFrame.MarginBottom '}Œ`‚Ì”z’u‚¨‚æ‚ÑƒAƒ“ƒJ[‚ÌƒvƒƒpƒeƒB‚Ì’l‚ğŠÜ‚Ş TextFrame ƒIƒuƒWƒFƒNƒg‚ğ•Ô‚µ‚Ü‚·B
-'        Debug.Print "TextFrame: " & shape.TextFrame '}Œ`‚Ì”z’u‚¨‚æ‚ÑƒAƒ“ƒJ[‚ÌƒvƒƒpƒeƒB‚Ì’l‚ğŠÜ‚Ş TextFrame ƒIƒuƒWƒFƒNƒg‚ğ•Ô‚µ‚Ü‚·B
-'        Debug.Print "TextFrame2: " & shape.TextFrame2 '}Œ`‚ÌƒeƒLƒXƒg‘®‚ªŠÜ‚Ü‚ê‚é TextFrame2 ƒIƒuƒWƒFƒNƒg‚ğæ“¾
+            Debug.Print "TextFrame.TextRange.Text: " & shape.TextFrame.TextRange.text 'å›³å½¢ã®é…ç½®ãŠã‚ˆã³ã‚¢ãƒ³ã‚«ãƒ¼ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®å€¤ã‚’å«ã‚€ TextFrame ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿”ã—ã¾ã™ã€‚
+            Debug.Print "TextFrame.MarginTop: " & shape.TextFrame.MarginTop 'å›³å½¢ã®é…ç½®ãŠã‚ˆã³ã‚¢ãƒ³ã‚«ãƒ¼ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®å€¤ã‚’å«ã‚€ TextFrame ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿”ã—ã¾ã™ã€‚
+            Debug.Print "TextFrame.MarginLeft: " & shape.TextFrame.MarginLeft 'å›³å½¢ã®é…ç½®ãŠã‚ˆã³ã‚¢ãƒ³ã‚«ãƒ¼ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®å€¤ã‚’å«ã‚€ TextFrame ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿”ã—ã¾ã™ã€‚
+            Debug.Print "TextFrame.MarginRight: " & shape.TextFrame.MarginRight 'å›³å½¢ã®é…ç½®ãŠã‚ˆã³ã‚¢ãƒ³ã‚«ãƒ¼ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®å€¤ã‚’å«ã‚€ TextFrame ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿”ã—ã¾ã™ã€‚
+            Debug.Print "TextFrame.MarginBottom: " & shape.TextFrame.MarginBottom 'å›³å½¢ã®é…ç½®ãŠã‚ˆã³ã‚¢ãƒ³ã‚«ãƒ¼ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®å€¤ã‚’å«ã‚€ TextFrame ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿”ã—ã¾ã™ã€‚
+'        Debug.Print "TextFrame: " & shape.TextFrame 'å›³å½¢ã®é…ç½®ãŠã‚ˆã³ã‚¢ãƒ³ã‚«ãƒ¼ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®å€¤ã‚’å«ã‚€ TextFrame ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿”ã—ã¾ã™ã€‚
+'        Debug.Print "TextFrame2: " & shape.TextFrame2 'å›³å½¢ã®ãƒ†ã‚­ã‚¹ãƒˆæ›¸å¼ãŒå«ã¾ã‚Œã‚‹ TextFrame2 ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—
         End If
     End If
 
@@ -124,7 +124,7 @@ Private Sub storeobj(ByRef dictofdict, k, ByRef v)
 End Sub
 
 
-Sub ƒe[ƒuƒ‹“à‚Ì‘I‘ğƒZƒ‹‚ÉƒAƒNƒZƒX‚·‚é—á()
+Sub ãƒ†ãƒ¼ãƒ–ãƒ«å†…ã®é¸æŠã‚»ãƒ«ã«ã‚¢ã‚¯ã‚»ã‚¹ã™ã‚‹ä¾‹()
     Debug.Print "HasTable: " & shape.HasTable '
     If shape.HasTable Then
         For c = 1 To shape.Table.Columns.Count
@@ -138,9 +138,9 @@ Sub ƒe[ƒuƒ‹“à‚Ì‘I‘ğƒZƒ‹‚ÉƒAƒNƒZƒX‚·‚é—á()
 End Sub
 
 Private Sub analize_shape_set(ByRef shape, ByRef dictofdict, Optional parentname = "", Optional trow = -1, Optional tcol = -1)
-    '–¼‘O‚ª‚Â‚¢‚Ä‚¢‚È‚¢ê‡‚Í“P‘Ş
+    'åå‰ãŒã¤ã„ã¦ã„ãªã„å ´åˆã¯æ’¤é€€
     On Error Resume Next
-    prop = shape.Name '¦‚±‚±‚É–¼‘O
+    prop = shape.Name 'â€»ã“ã“ã«åå‰
     If Err.Number <> 0 Then prop = "#N/A"
     Err.Clear
     On Error GoTo 0
@@ -165,7 +165,7 @@ Private Sub analize_shape_set(ByRef shape, ByRef dictofdict, Optional parentname
         shepename = prop
     End If
     
-    'ƒIƒuƒWƒFƒNƒg“Á’è
+    'ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆç‰¹å®š
     If Not dictofdict.exists(shapename) Then
         Exit Sub
     End If
@@ -174,7 +174,7 @@ Private Sub analize_shape_set(ByRef shape, ByRef dictofdict, Optional parentname
     
     For Each k In tgt
         v = tgt(k)
-        If v = "å³" Or v = "“Ç•s”\" Or v = "‘•s”\" Then
+        If v = "èŸ²" Or v = "èª­è¾¼ä¸èƒ½" Or v = "æ›¸è¾¼ä¸èƒ½" Then
             '
         Else
             On Error Resume Next
@@ -205,9 +205,9 @@ Private Sub analize_shape_set(ByRef shape, ByRef dictofdict, Optional parentname
     Next
 End Sub
 Private Sub analize_shape_get(ByRef shape, ByRef dictofdict, Optional parentname = "", Optional trow = -1, Optional tcol = -1)
-    '–¼‘O‚ª‚Â‚¢‚Ä‚¢‚È‚¢ê‡‚Í“P‘Ş
+    'åå‰ãŒã¤ã„ã¦ã„ãªã„å ´åˆã¯æ’¤é€€
     On Error Resume Next
-    prop = shape.Name '¦‚±‚±‚É–¼‘O
+    prop = shape.Name 'â€»ã“ã“ã«åå‰
     If Err.Number <> 0 Then prop = "#N/A"
     Err.Clear
     On Error GoTo 0
@@ -232,12 +232,12 @@ Private Sub analize_shape_get(ByRef shape, ByRef dictofdict, Optional parentname
         shepename = prop
     End If
     
-    'ƒIƒuƒWƒFƒNƒg¶¬
+    'ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆç”Ÿæˆ
     If Not dictofdict.exists(shapename) Then
         dictofdict.Add shapename, CreateObject("scripting.dictionary")
     End If
     
-    '–¼‘O‚Í‚Ü‚¸Å‰‚Éİ’è
+    'åå‰ã¯ã¾ãšæœ€åˆã«è¨­å®š
     Debug.Print "---------------------" & shapename
     Set tgt = dictofdict(shapename)
     store tgt, "Name", shapename
@@ -249,225 +249,225 @@ Private Sub analize_shape_get(ByRef shape, ByRef dictofdict, Optional parentname
     'ok Debug.Print "BlackWhiteMode: " & shape.BlackWhiteMode '
     'ok Debug.Print "GraphicStyle: " & shape.GraphicStyle '
 
-    '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+    'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
     On Error Resume Next
-    prop = shape.Top 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-    shape.Top = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+    prop = shape.Top 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+    shape.Top = prop 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
     Err.Clear
-    store tgt, "Top", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+    store tgt, "Top", prop 'â—†â—†â—†ã“ã“ã«åå‰
     On Error GoTo 0
         
-    '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+    'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
     On Error Resume Next
-    prop = shape.Left 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-    shape.Left = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+    prop = shape.Left 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+    shape.Left = prop 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
     Err.Clear
-    store tgt, "Left", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+    store tgt, "Left", prop 'â—†â—†â—†ã“ã“ã«åå‰
     On Error GoTo 0
         
-    '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+    'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
     On Error Resume Next
-    prop = shape.Width 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-    shape.Width = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+    prop = shape.Width 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+    shape.Width = prop 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
     Err.Clear
-    store tgt, "Width", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+    store tgt, "Width", prop 'â—†â—†â—†ã“ã“ã«åå‰
     On Error GoTo 0
         
-    '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+    'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
     On Error Resume Next
-    prop = shape.Height 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-    shape.Height = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+    prop = shape.Height 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+    shape.Height = prop 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
     Err.Clear
-    store tgt, "Height", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+    store tgt, "Height", prop 'â—†â—†â—†ã“ã“ã«åå‰
     On Error GoTo 0
         
-    '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+    'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
     On Error Resume Next
-    prop = shape.HorizontalFlip 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-    shape.HorizontalFlip = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+    prop = shape.HorizontalFlip 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+    shape.HorizontalFlip = prop 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
     Err.Clear
-    store tgt, "HorizontalFlip", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+    store tgt, "HorizontalFlip", prop 'â—†â—†â—†ã“ã“ã«åå‰
     On Error GoTo 0
         
-    '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+    'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
     On Error Resume Next
-    prop = shape.VerticalFlip 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-    shape.VerticalFlip = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+    prop = shape.VerticalFlip 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+    shape.VerticalFlip = prop 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
     Err.Clear
-    store tgt, "VerticalFlip", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+    store tgt, "VerticalFlip", prop 'â—†â—†â—†ã“ã“ã«åå‰
     On Error GoTo 0
         
-    '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+    'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
     On Error Resume Next
-    prop = shape.Rotation 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-    shape.Rotation = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+    prop = shape.Rotation 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+    shape.Rotation = prop 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
     Err.Clear
-    store tgt, "Rotation", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+    store tgt, "Rotation", prop 'â—†â—†â—†ã“ã“ã«åå‰
     On Error GoTo 0
         
-    '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+    'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
     On Error Resume Next
-    prop = shape.ZOrderPosition 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-    shape.ZOrderPosition = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-    If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+    prop = shape.ZOrderPosition 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+    shape.ZOrderPosition = prop 'â—†â—†â—†ã“ã“ã«åå‰
+    If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
     Err.Clear
-    store tgt, "ZOrderPosition", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+    store tgt, "ZOrderPosition", prop 'â—†â—†â—†ã“ã“ã«åå‰
     On Error GoTo 0
     
     If Not shape.HasTable Then
-        '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“iHEXj
+        'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆHEXï¼‰
         On Error Resume Next
-        prop = Right("00000000" & Hex(shape.Fill.ForeColor.RGB), 8) 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-        shape.Fill.ForeColor.RGB = Val("&H" & prop) 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+        prop = Right("00000000" & Hex(shape.Fill.ForeColor.RGB), 8) 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+        shape.Fill.ForeColor.RGB = Val("&H" & prop) 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
         Err.Clear
-        store tgt, "Fill.ForeColor.RGB", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+        store tgt, "Fill.ForeColor.RGB", prop 'â—†â—†â—†ã“ã“ã«åå‰
         On Error GoTo 0
         
-        '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“iHEXj
+        'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆHEXï¼‰
         On Error Resume Next
-        prop = Right("00000000" & Hex(shape.Fill.BackColor.RGB), 8) 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-        shape.Fill.BackColor.RGB = Val("&H" & prop) 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+        prop = Right("00000000" & Hex(shape.Fill.BackColor.RGB), 8) 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+        shape.Fill.BackColor.RGB = Val("&H" & prop) 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
         Err.Clear
-        store tgt, "Fill.BackColor.RGB", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+        store tgt, "Fill.BackColor.RGB", prop 'â—†â—†â—†ã“ã“ã«åå‰
         On Error GoTo 0
         
-        '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+        'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
         On Error Resume Next
-        prop = shape.Fill.Transparency 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-        shape.Fill.Transparency = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+        prop = shape.Fill.Transparency 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+        shape.Fill.Transparency = prop 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
         Err.Clear
-        store tgt, "Fill.Transparency", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+        store tgt, "Fill.Transparency", prop 'â—†â—†â—†ã“ã“ã«åå‰
         On Error GoTo 0
         
-        '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“iHEXj
+        'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆHEXï¼‰
         On Error Resume Next
-        prop = Right("00000000" & Hex(shape.Line.BackColor.RGB), 8) 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-        shape.Line.BackColor.RGB = Val("&H" & prop) 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+        prop = Right("00000000" & Hex(shape.Line.BackColor.RGB), 8) 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+        shape.Line.BackColor.RGB = Val("&H" & prop) 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
         Err.Clear
-        store tgt, "Line.BackColor.RGB", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+        store tgt, "Line.BackColor.RGB", prop 'â—†â—†â—†ã“ã“ã«åå‰
         On Error GoTo 0
         
-        '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“iHEXj
+        'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆHEXï¼‰
         On Error Resume Next
-        prop = Right("00000000" & Hex(shape.Line.ForeColor.RGB), 8) 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-        shape.Line.ForeColor.RGB = Val("&H" & prop) 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+        prop = Right("00000000" & Hex(shape.Line.ForeColor.RGB), 8) 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+        shape.Line.ForeColor.RGB = Val("&H" & prop) 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
         Err.Clear
-        store tgt, "Line.ForeColor.RGB", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+        store tgt, "Line.ForeColor.RGB", prop 'â—†â—†â—†ã“ã“ã«åå‰
         On Error GoTo 0
         
-        '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+        'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
         On Error Resume Next
-        prop = shape.Line.DashStyle 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-        shape.Line.DashStyle = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+        prop = shape.Line.DashStyle 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+        shape.Line.DashStyle = prop 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
         Err.Clear
-        store tgt, "Line.DashStyle", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+        store tgt, "Line.DashStyle", prop 'â—†â—†â—†ã“ã“ã«åå‰
         On Error GoTo 0
         
-        '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+        'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
         On Error Resume Next
-        prop = shape.Line.Weight 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-        shape.Line.Weight = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+        prop = shape.Line.Weight 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+        shape.Line.Weight = prop 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
         Err.Clear
-        store tgt, "Line.Weight", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+        store tgt, "Line.Weight", prop 'â—†â—†â—†ã“ã“ã«åå‰
         On Error GoTo 0
         
-        '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+        'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
         On Error Resume Next
-        prop = shape.Line.Transparency 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-        shape.Line.Transparency = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-        If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+        prop = shape.Line.Transparency 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+        shape.Line.Transparency = prop 'â—†â—†â—†ã“ã“ã«åå‰
+        If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
         Err.Clear
-        store tgt, "Line.Transparency", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+        store tgt, "Line.Transparency", prop 'â—†â—†â—†ã“ã“ã«åå‰
         On Error GoTo 0
         
-        '    Debug.Print "Glow: " & shape.Glow 'ŒõÊ‘®ƒvƒƒpƒeƒB‚ğŠÜ‚Şw’è‚³‚ê‚½}Œ`‚Ì GlowFormat ƒIƒuƒWƒFƒNƒg
-        '    Debug.Print "Reflection: " & shape.Reflection '”½Ë‘®ƒvƒƒpƒeƒB‚ğŠÜ‚Şw’è‚³‚ê‚½}Œ`‚Ì ReflectionFormat ƒIƒuƒWƒFƒNƒg‚ğ•Ô‚µ‚Ü‚·B
-        '    Debug.Print "Shadow: " & shape.Shadow 'w’è‚³‚ê‚½}Œ`‚Ì‰e‚Ì‘®‚ğ•\‚· ShadowFormat ƒIƒuƒWƒFƒNƒg
+        '    Debug.Print "Glow: " & shape.Glow 'å…‰å½©æ›¸å¼ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å«ã‚€æŒ‡å®šã•ã‚ŒãŸå›³å½¢ã® GlowFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
+        '    Debug.Print "Reflection: " & shape.Reflection 'åå°„æ›¸å¼ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å«ã‚€æŒ‡å®šã•ã‚ŒãŸå›³å½¢ã® ReflectionFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿”ã—ã¾ã™ã€‚
+        '    Debug.Print "Shadow: " & shape.Shadow 'æŒ‡å®šã•ã‚ŒãŸå›³å½¢ã®å½±ã®æ›¸å¼ã‚’è¡¨ã™ ShadowFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
         '    Debug.Print "Model3D: " & shape.Model3D '
-        '    Debug.Print "ThreeD: " & shape.ThreeD '3-D Œø‰Ê‘®ƒvƒƒpƒeƒB‚ğŠÜ‚Ş ThreeDFormat ƒIƒuƒWƒFƒNƒg‚ğæ“¾‚µ‚Ü‚·B
+        '    Debug.Print "ThreeD: " & shape.ThreeD '3-D åŠ¹æœæ›¸å¼ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å«ã‚€ ThreeDFormat ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚
         
-        'ok    Debug.Print "ShapeStyle: " & shape.ShapeStyle '}Œ`—Ìˆæ‚É‚¨‚¯‚é}Œ`ƒXƒ^ƒCƒ‹‚ğ•\‚· MsoShapeStyleIndex ‚ğæ“¾‚Ü‚½‚Íİ’è‚µ‚Ü‚·B
+        'ok    Debug.Print "ShapeStyle: " & shape.ShapeStyle 'å›³å½¢é ˜åŸŸã«ãŠã‘ã‚‹å›³å½¢ã‚¹ã‚¿ã‚¤ãƒ«ã‚’è¡¨ã™ MsoShapeStyleIndex ã‚’å–å¾—ã¾ãŸã¯è¨­å®šã—ã¾ã™ã€‚
         
         If shape.HasTextFrame Then
             If shape.TextFrame.HasText Then
-                '“à•”\‘¢‚ª‚ ‚é‚©‚à‚µ‚ê‚È‚¢‚Ì‚Å•ÒW‚ğó‚¯“ü‚ê‚È‚¢
+                'å†…éƒ¨æ§‹é€ ãŒã‚ã‚‹ã‹ã‚‚ã—ã‚Œãªã„ã®ã§ç·¨é›†ã‚’å—ã‘å…¥ã‚Œãªã„
                 On Error Resume Next
-                prop = shape.TextFrame.TextRange.text 'ŸŸŸ‚±‚±‚É–¼‘O
-                If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-                prop = Replace(Replace(Replace(Replace(Replace(Trim(prop), vbTab, ""), vbLf, ""), vbCr, ""), " ", ""), "@", "")
-                If Len(prop) > 15 Then prop = Left(prop, 13) & "cc"
+                prop = shape.TextFrame.TextRange.text 'â—†â—†â—†ã“ã“ã«åå‰
+                If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+                prop = Replace(Replace(Replace(Replace(Replace(Trim(prop), vbTab, ""), vbLf, ""), vbCr, ""), " ", ""), "ã€€", "")
+                If Len(prop) > 15 Then prop = Left(prop, 13) & "â€¦â€¦"
                 Err.Clear
-                store tgt, "TextFrame.TextRange.Text", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+                store tgt, "TextFrame.TextRange.Text", prop 'â—†â—†â—†ã“ã“ã«åå‰
                 On Error GoTo 0
         
-                '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+                'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
                 On Error Resume Next
-                prop = shape.TextFrame.MarginTop 'ŸŸŸ‚±‚±‚É–¼‘O
-                If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-                shape.TextFrame.MarginTop = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-                If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+                prop = shape.TextFrame.MarginTop 'â—†â—†â—†ã“ã“ã«åå‰
+                If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+                shape.TextFrame.MarginTop = prop 'â—†â—†â—†ã“ã“ã«åå‰
+                If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
                 Err.Clear
-                store tgt, "TextFrame.MarginTop", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+                store tgt, "TextFrame.MarginTop", prop 'â—†â—†â—†ã“ã“ã«åå‰
                 On Error GoTo 0
                     
-                '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+                'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
                 On Error Resume Next
-                prop = shape.TextFrame.MarginLeft 'ŸŸŸ‚±‚±‚É–¼‘O
-                If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-                shape.TextFrame.MarginLeft = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-                If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+                prop = shape.TextFrame.MarginLeft 'â—†â—†â—†ã“ã“ã«åå‰
+                If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+                shape.TextFrame.MarginLeft = prop 'â—†â—†â—†ã“ã“ã«åå‰
+                If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
                 Err.Clear
-                store tgt, "TextFrame.MarginLeft", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+                store tgt, "TextFrame.MarginLeft", prop 'â—†â—†â—†ã“ã“ã«åå‰
                 On Error GoTo 0
                     
-                '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+                'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
                 On Error Resume Next
-                prop = shape.TextFrame.MarginRight 'ŸŸŸ‚±‚±‚É–¼‘O
-                If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-                shape.TextFrame.MarginRight = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-                If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+                prop = shape.TextFrame.MarginRight 'â—†â—†â—†ã“ã“ã«åå‰
+                If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+                shape.TextFrame.MarginRight = prop 'â—†â—†â—†ã“ã“ã«åå‰
+                If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
                 Err.Clear
-                store tgt, "TextFrame.MarginRight", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+                store tgt, "TextFrame.MarginRight", prop 'â—†â—†â—†ã“ã“ã«åå‰
                 On Error GoTo 0
                     
-                '‘¶İ‚µ‚È‚¢‚©‚à’m‚ê‚È‚¢ƒvƒƒpƒeƒB‚ğ‚·ê‡‚Ìƒpƒ^[ƒ“i’¼’lj
+                'å­˜åœ¨ã—ãªã„ã‹ã‚‚çŸ¥ã‚Œãªã„ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è©¦ã™å ´åˆã®ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆç›´å€¤ï¼‰
                 On Error Resume Next
-                prop = shape.TextFrame.MarginBottom 'ŸŸŸ‚±‚±‚É–¼‘O
-                If Err.Number <> 0 Then prop = "“Ç•s”\" '“Ç‚İ‚İ•s”\‚Ìê‡
-                shape.TextFrame.MarginBottom = prop 'ŸŸŸ‚±‚±‚É–¼‘O
-                If Err.Number <> 0 And prop <> "“Ç•s”\" Then prop = "‘•s”\"
+                prop = shape.TextFrame.MarginBottom 'â—†â—†â—†ã“ã“ã«åå‰
+                If Err.Number <> 0 Then prop = "èª­è¾¼ä¸èƒ½" 'èª­ã¿è¾¼ã¿ä¸èƒ½ã®å ´åˆ
+                shape.TextFrame.MarginBottom = prop 'â—†â—†â—†ã“ã“ã«åå‰
+                If Err.Number <> 0 And prop <> "èª­è¾¼ä¸èƒ½" Then prop = "æ›¸è¾¼ä¸èƒ½"
                 Err.Clear
-                store tgt, "TextFrame.MarginBottom", prop 'ŸŸŸ‚±‚±‚É–¼‘O
+                store tgt, "TextFrame.MarginBottom", prop 'â—†â—†â—†ã“ã“ã«åå‰
                 On Error GoTo 0
             End If
         End If
@@ -512,9 +512,9 @@ End Sub
 
 Private Sub analize_shapeorgroup(ByRef shape, action, ByRef dictofdict)
     
-    '}Œ`‚ªƒOƒ‹[ƒv‰»‚µ‚Ä‚¢‚é‚©”»’è
+    'å›³å½¢ãŒã‚°ãƒ«ãƒ¼ãƒ—åŒ–ã—ã¦ã„ã‚‹ã‹åˆ¤å®š
     If shape.Type = msoGroup Then
-        '‘æ2ŠK‘w‚Ì}Œ`‚ğƒ‹[ƒv
+        'ç¬¬2éšå±¤ã®å›³å½¢ã‚’ãƒ«ãƒ¼ãƒ—
         For Each b In shape.GroupItems
             analize_shape_selector b, action, dictofdict
         Next
@@ -570,23 +570,23 @@ End Sub
 
 
 
-Sub ‘I‘ğ‹zo()
+Sub é¸æŠå¸å‡º()
 
     With ActiveWindow.Selection
         If .Type = ppSelectionNone Then
-            Debug.Print "‰½‚à‘I‘ğ‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ"
+            Debug.Print "ä½•ã‚‚é¸æŠã•ã‚Œã¦ã„ã¾ã›ã‚“"
         End If
         If .Type >= ppSelectionSlides Then
-            Debug.Print "ƒXƒ‰ƒCƒh‚ª‘I‘ğ‚³‚ê‚Ä‚¢‚Ü‚·"
+            Debug.Print "ã‚¹ãƒ©ã‚¤ãƒ‰ãŒé¸æŠã•ã‚Œã¦ã„ã¾ã™"
         End If
         If .Type >= ppSelectionShapes Then
-            Debug.Print "ƒVƒFƒCƒv‚ª‘I‘ğ‚³‚ê‚Ä‚¢‚Ü‚·"
+            Debug.Print "ã‚·ã‚§ã‚¤ãƒ—ãŒé¸æŠã•ã‚Œã¦ã„ã¾ã™"
             Set dictofdict = CreateObject("scripting.dictionary")
             analize_shaperange .shaperange, "", dictofdict
             Set dictofdict = Nothing
         End If
         If .Type >= ppSelectionText Then
-            Debug.Print "ƒeƒLƒXƒg”ÍˆÍ‚ª‘I‘ğ‚³‚ê‚Ä‚¢‚Ü‚·"
+            Debug.Print "ãƒ†ã‚­ã‚¹ãƒˆç¯„å›²ãŒé¸æŠã•ã‚Œã¦ã„ã¾ã™"
         End If
     End With
 

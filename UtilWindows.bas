@@ -2,17 +2,17 @@ Attribute VB_Name = "UtilWindows"
 '=========================================================================================
 'UtilWindows 20230527
 '
-'UtilWindows‚Íå‚ÉWindows OS‚Ì§Œä‚ğˆµ‚¤AExcel VBA‚ÉˆË‘¶‚µ‚È‚¢ƒR[ƒh‚ğW‚ß‚½‚à‚Ì
+'UtilWindowsã¯ä¸»ã«Windows OSã®åˆ¶å¾¡ã‚’æ‰±ã†ã€Excel VBAã«ä¾å­˜ã—ãªã„ã‚³ãƒ¼ãƒ‰ã‚’é›†ã‚ãŸã‚‚ã®
 '=========================================================================================
-'ƒNƒŠƒbƒvƒ{[ƒh‚ÉƒvƒŒ[ƒ“ƒeƒLƒXƒg‚ğƒZƒbƒg‚·‚é
+'ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«ãƒ—ãƒ¬ãƒ¼ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã‚’ã‚»ãƒƒãƒˆã™ã‚‹
 'Public Sub SetClip(txt)
-'ƒNƒŠƒbƒvƒ{[ƒh‚©‚çƒvƒŒ[ƒ“ƒeƒLƒXƒg‚ğ“Ç‚İæ‚é
+'ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‹ã‚‰ãƒ—ãƒ¬ãƒ¼ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã‚’èª­ã¿å–ã‚‹
 'Public Function GetClip()
-'URL‚Æƒƒ\ƒbƒh‚ğw’è‚µ‚ÄƒEƒFƒu‚ÉƒAƒNƒZƒX‚µAŒ‹‰Ê‚ğ•¶š—ñ‚Å“¾‚é
+'URLã¨ãƒ¡ã‚½ãƒƒãƒ‰ã‚’æŒ‡å®šã—ã¦ã‚¦ã‚§ãƒ–ã«ã‚¢ã‚¯ã‚»ã‚¹ã—ã€çµæœã‚’æ–‡å­—åˆ—ã§å¾—ã‚‹
 'Public Function HostApplication()
-'‚±‚Ìƒ}ƒNƒ‚ª‚Ç‚ÌƒAƒvƒŠ‚É‘g‚İ‚Ü‚ê‚Ä‚¢‚é‚©"Microsoft Excel"‚Æ‚©‚Å•ªŠò‚·‚é‚½‚ß
+'ã“ã®ãƒã‚¯ãƒ­ãŒã©ã®ã‚¢ãƒ—ãƒªã«çµ„ã¿è¾¼ã¾ã‚Œã¦ã„ã‚‹ã‹"Microsoft Excel"ã¨ã‹ã§åˆ†å²ã™ã‚‹ãŸã‚
 'Public Function EscapedSplit(txt, delim)
-'‘½ŸŒ³”z—ñ‚ÌŸŒ³”‚ğ“¾‚é
+'å¤šæ¬¡å…ƒé…åˆ—ã®æ¬¡å…ƒæ•°ã‚’å¾—ã‚‹
 'Public Function GetDimension(ByRef ArrayData)
 '=========================================================================================
 'https://gist.github.com/KotorinChunChun/718da75c26de71c9e4b12afa9c19ee32
@@ -24,20 +24,20 @@ End Type
     #If Win64 Then
         Private Declare PtrSafe Function GetWindowLongPtr Lib "user32" Alias "GetWindowLongPtrA" (ByVal hwnd As LongPtr, ByVal nIndex As Long) As LongPtr
         Private Declare PtrSafe Function SetWindowLongPtr Lib "user32" Alias "SetWindowLongPtrA" (ByVal hwnd As LongPtr, ByVal nIndex As Long, ByVal dwNewLong As LongPtr) As LongPtr
-        'SetCursorPos@EEEƒ}ƒEƒX‚ğ“®‚©‚·Eƒ}ƒEƒX‚Ìƒ|ƒCƒ“ƒ^[‚Ì‘€ì‚ğs‚¤B
+        'SetCursorPosã€€ãƒ»ãƒ»ãƒ»ãƒã‚¦ã‚¹ã‚’å‹•ã‹ã™ãƒ»ãƒã‚¦ã‚¹ã®ãƒã‚¤ãƒ³ã‚¿ãƒ¼ã®æ“ä½œã‚’è¡Œã†ã€‚
         Private Declare PtrSafe Function SetCursorPos Lib "user32" (ByVal x As Long, ByVal y As Long) As Long
-        'Mouseevent@@EEEƒ}ƒEƒX‚ğƒNƒŠƒbƒN‚·‚é‘€ì‚ğs‚¤B
+        'Mouseeventã€€ã€€ãƒ»ãƒ»ãƒ»ãƒã‚¦ã‚¹ã‚’ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹æ“ä½œã‚’è¡Œã†ã€‚
         Private Declare PtrSafe Sub mouse_event Lib "user32" (ByVal dwFlags As Long, Optional ByVal dx As Long = 0, Optional ByVal dy As Long = 0, Optional ByVal dwDate As Long = 0, Optional ByVal dwExtraInfo As Long = 0)
-        'GetCursorPos@EEEƒ}ƒEƒX‚Ìƒ|ƒCƒ“ƒ^[‚ÌˆÊ’u‚ğæ“¾‚µ‚Ü‚·B
+        'GetCursorPosã€€ãƒ»ãƒ»ãƒ»ãƒã‚¦ã‚¹ã®ãƒã‚¤ãƒ³ã‚¿ãƒ¼ã®ä½ç½®ã‚’å–å¾—ã—ã¾ã™ã€‚
         Private Declare PtrSafe Function GetCursorPos Lib "user32" (lpPoint As coord) As Long
     #Else
         Private Declare PtrSafe Function GetWindowLongPtr Lib "user32" Alias "GetWindowLongA" (ByVal hwnd As LongPtr, ByVal nIndex As Long) As LongPtr
         Private Declare PtrSafe Function SetWindowLongPtr Lib "user32" Alias "SetWindowLongA" (ByVal hwnd As LongPtr, ByVal nIndex As Long, ByVal dwNewLong As LongPtr) As LongPtr
-        'SetCursorPos@EEEƒ}ƒEƒX‚ğ“®‚©‚·Eƒ}ƒEƒX‚Ìƒ|ƒCƒ“ƒ^[‚Ì‘€ì‚ğs‚¤B
+        'SetCursorPosã€€ãƒ»ãƒ»ãƒ»ãƒã‚¦ã‚¹ã‚’å‹•ã‹ã™ãƒ»ãƒã‚¦ã‚¹ã®ãƒã‚¤ãƒ³ã‚¿ãƒ¼ã®æ“ä½œã‚’è¡Œã†ã€‚
         Private Declare PtrSafe Function SetCursorPos Lib "user32" (ByVal x As Long, ByVal y As Long) As Long
-        'Mouseevent@@EEEƒ}ƒEƒX‚ğƒNƒŠƒbƒN‚·‚é‘€ì‚ğs‚¤B
+        'Mouseeventã€€ã€€ãƒ»ãƒ»ãƒ»ãƒã‚¦ã‚¹ã‚’ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹æ“ä½œã‚’è¡Œã†ã€‚
         Private Declare PtrSafe Sub mouse_event Lib "user32" (ByVal dwFlags As Long, Optional ByVal dx As Long = 0, Optional ByVal dy As Long = 0, Optional ByVal dwDate As Long = 0, Optional ByVal dwExtraInfo As Long = 0)
-        'GetCursorPos@EEEƒ}ƒEƒX‚Ìƒ|ƒCƒ“ƒ^[‚ÌˆÊ’u‚ğæ“¾‚µ‚Ü‚·B
+        'GetCursorPosã€€ãƒ»ãƒ»ãƒ»ãƒã‚¦ã‚¹ã®ãƒã‚¤ãƒ³ã‚¿ãƒ¼ã®ä½ç½®ã‚’å–å¾—ã—ã¾ã™ã€‚
         Private Declare PtrSafe Function GetCursorPos Lib "user32" (lpPoint As coord) As Long
     #End If
 #Else
@@ -47,18 +47,18 @@ End Type
 
 
 
-'d—vIExcelˆÈŠO‚Å‚à‹¤’ÊƒR[ƒh‚ÅÀs‚·‚é‚½‚ß‚É‚ÍA‰º‹L‚Ì‚æ‚¤‚É‚·‚×‚µ
+'é‡è¦ï¼Excelä»¥å¤–ã§ã‚‚å…±é€šã‚³ãƒ¼ãƒ‰ã§å®Ÿè¡Œã™ã‚‹ãŸã‚ã«ã¯ã€ä¸‹è¨˜ã®ã‚ˆã†ã«ã™ã¹ã—
 Private Sub test_multi_host()
 
-    'd—vIExcelˆÈŠO‚ÅÀs‚Å‚«‚È‚¢ƒR[ƒh‚ÌÀs‚ğ–h‚®
+    'é‡è¦ï¼Excelä»¥å¤–ã§å®Ÿè¡Œã§ããªã„ã‚³ãƒ¼ãƒ‰ã®å®Ÿè¡Œã‚’é˜²ã
     If Application.Name = "Microsoft Excel" Then
         Debug.Print ThisWorkbook.Name
-        'ƒTƒuƒ‹[ƒ`ƒ“^ŠÖ”’PˆÊ‚ÌƒRƒ“ƒpƒCƒ‹‚ÌƒGƒ‰[‚ğ–h‚®‚½‚ßAApplication‚ğQÆŒo—R‚Å’@‚­
+        'ã‚µãƒ–ãƒ«ãƒ¼ãƒãƒ³ï¼é–¢æ•°å˜ä½ã®ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«æ™‚ã®ã‚¨ãƒ©ãƒ¼ã‚’é˜²ããŸã‚ã€Applicationã‚’å‚ç…§çµŒç”±ã§å©ã
         Set xlapp = Application
-        'ƒTƒuƒ‹[ƒ`ƒ“^ŠÖ”’PˆÊ‚ÌƒRƒ“ƒpƒCƒ‹‚ÌƒGƒ‰[‚ğ–h‚®‚½‚ßAApplication‚ğQÆŒo—R‚Å’@‚­
+        'ã‚µãƒ–ãƒ«ãƒ¼ãƒãƒ³ï¼é–¢æ•°å˜ä½ã®ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«æ™‚ã®ã‚¨ãƒ©ãƒ¼ã‚’é˜²ããŸã‚ã€Applicationã‚’å‚ç…§çµŒç”±ã§å©ã
         xlapp.ActiveSheet.Range("A2") = "aaa"
         xlapp.ActiveSheet.Range("A2").Clear
-        'È—ª‹L–@‚ª‚Â‚©‚¦‚È‚¢‚¾‚¯‚ÅAŠ„‡©‘R‚É‘‚¯‚é
+        'çœç•¥è¨˜æ³•ãŒã¤ã‹ãˆãªã„ã ã‘ã§ã€å‰²åˆè‡ªç„¶ã«æ›¸ã‘ã‚‹
     End If
 
 End Sub
@@ -66,7 +66,7 @@ End Sub
 
 
 
-'ƒNƒŠƒbƒvƒ{[ƒhˆ—
+'ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰å‡¦ç†
 
 Public Sub SetClip(txt)
     'http://www.thom.jp/vbainfo/refsetting.html
@@ -86,15 +86,15 @@ Public Function GetClip()
         flag.Add fmt(i), i
         Debug.Print fmt(i)
     Next
-'0: ƒeƒLƒXƒg
-'2: ‰æ‘œ
+'0: ãƒ†ã‚­ã‚¹ãƒˆ
+'2: ç”»åƒ
 '9: BitMap
-'47: ƒtƒ@ƒCƒ‹ƒpƒX
-'14:‰æ‘œŒnH
-'17:‰æ‘œŒnH
-'22:‰æ‘œŒnH
-'31:‰æ‘œŒnH
-'45:‰æ‘œŒnH
+'47: ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹
+'14:ç”»åƒç³»ï¼Ÿ
+'17:ç”»åƒç³»ï¼Ÿ
+'22:ç”»åƒç³»ï¼Ÿ
+'31:ç”»åƒç³»ï¼Ÿ
+'45:ç”»åƒç³»ï¼Ÿ
     
     If flag.exists(0) Then
         GetClip = dao.GetText
@@ -107,8 +107,8 @@ End Function
 
 
 
-'ƒEƒFƒuƒAƒNƒZƒXi‚±‚ê‚ÍAPI’@‚­—pj
-'‘¼‚ÉEdge‚ÌDOM‚ğ”`‚­•û–@‚à‚ ‚é‚ç‚µ‚¢
+'ã‚¦ã‚§ãƒ–ã‚¢ã‚¯ã‚»ã‚¹ï¼ˆã“ã‚Œã¯APIå©ãç”¨ï¼‰
+'ä»–ã«Edgeã®DOMã‚’è¦—ãæ–¹æ³•ã‚‚ã‚ã‚‹ã‚‰ã—ã„
 
 Public Function Web(url, method)
 
@@ -132,7 +132,7 @@ End Sub
 
 
 
-'ƒI[ƒgƒpƒCƒƒbƒgŒn
+'ã‚ªãƒ¼ãƒˆãƒ‘ã‚¤ãƒ­ãƒƒãƒˆç³»
 
 Private Sub test_autoit()
 

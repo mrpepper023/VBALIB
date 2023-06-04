@@ -2,27 +2,27 @@ Attribute VB_Name = "UtilFile"
 '=========================================================================================
 'UtilFile 20230527
 '
-'UtilFile‚Íå‚Éƒtƒ@ƒCƒ‹‘€ì‚ğˆµ‚¤AExcel VBA‚ÉˆË‘¶‚µ‚È‚¢ƒR[ƒh‚ğW‚ß‚½‚à‚Ì
+'UtilFileã¯ä¸»ã«ãƒ•ã‚¡ã‚¤ãƒ«æ“ä½œã‚’æ‰±ã†ã€Excel VBAã«ä¾å­˜ã—ãªã„ã‚³ãƒ¼ãƒ‰ã‚’é›†ã‚ãŸã‚‚ã®
 '=========================================================================================
-'UTF8‚Ìƒtƒ@ƒCƒ‹‚ğSJIS‚É•ÏŠ·‚·‚é
+'UTF8ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’SJISã«å¤‰æ›ã™ã‚‹
 'Sub Utf8ToSjis(a_sFrom, a_sTo)
-'SJIS‚Ìƒtƒ@ƒCƒ‹‚ğUTF8‚É•ÏŠ·‚·‚é
+'SJISã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’UTF8ã«å¤‰æ›ã™ã‚‹
 'Sub SjisToUtf8(a_sFrom, a_sTo)
-'ƒeƒ“ƒ|ƒ‰ƒŠƒtƒHƒ‹ƒ_‚ğì¬‚µ‚ÄƒtƒHƒ‹ƒ_‚Ìu\v‚Â‚«ƒtƒ‹ƒpƒX‚ğ•Ô‚·
+'ãƒ†ãƒ³ãƒãƒ©ãƒªãƒ•ã‚©ãƒ«ãƒ€ã‚’ä½œæˆã—ã¦ãƒ•ã‚©ãƒ«ãƒ€ã®ã€Œ\ã€ã¤ããƒ•ãƒ«ãƒ‘ã‚¹ã‚’è¿”ã™
 'Public Function CreateTempFolder()
-'ƒeƒ“ƒ|ƒ‰ƒŠƒtƒHƒ‹ƒ_‚ğíœ‚·‚éiƒeƒ“ƒ|ƒ‰ƒŠƒtƒHƒ‹ƒ_‚Å‚È‚¯‚ê‚ÎÁ‚³‚È‚¢‚Ì‚ÅˆÀ‘S
+'ãƒ†ãƒ³ãƒãƒ©ãƒªãƒ•ã‚©ãƒ«ãƒ€ã‚’å‰Šé™¤ã™ã‚‹ï¼ˆãƒ†ãƒ³ãƒãƒ©ãƒªãƒ•ã‚©ãƒ«ãƒ€ã§ãªã‘ã‚Œã°æ¶ˆã•ãªã„ã®ã§å®‰å…¨
 'Public Sub DeleteTempFolder(tmp)
-'GUID‚ğ¶¬‚·‚é
+'GUIDã‚’ç”Ÿæˆã™ã‚‹
 'Public Function GetGUID()
-'ƒtƒHƒ‹ƒ_‚ğ‰ºˆÊ‚Ìƒtƒ@ƒCƒ‹‚âƒTƒuƒfƒBƒŒƒNƒgƒŠŠÜ‚ßA‰Â”\‚ÈŒÀ‚èíœ‚·‚é
+'ãƒ•ã‚©ãƒ«ãƒ€ã‚’ä¸‹ä½ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚„ã‚µãƒ–ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªå«ã‚ã€å¯èƒ½ãªé™ã‚Šå‰Šé™¤ã™ã‚‹
 'Function RmDirBestEffort(ByVal sDir As String, ByRef sMsg As String, Optional ByVal isOnlyFile As Boolean = False) As Boolean
-'ƒtƒ@ƒCƒ‹ƒŠƒXƒg‚ğ“¾‚é
+'ãƒ•ã‚¡ã‚¤ãƒ«ãƒªã‚¹ãƒˆã‚’å¾—ã‚‹
 'Public Function GetFileList(ByVal path, Optional ext = "")
-'ƒtƒ@ƒCƒ‹ƒŠƒXƒg‚ğ“¾‚éiƒtƒ@ƒCƒ‹–¼‚ğ³‹K•\Œ»‚Åw’è‚·‚éj
+'ãƒ•ã‚¡ã‚¤ãƒ«ãƒªã‚¹ãƒˆã‚’å¾—ã‚‹ï¼ˆãƒ•ã‚¡ã‚¤ãƒ«åã‚’æ­£è¦è¡¨ç¾ã§æŒ‡å®šã™ã‚‹ï¼‰
 'Public Function GetFileListRegex(ByVal path, Optional ByVal recur = False, Optional pat = ".*")
-'ƒtƒHƒ‹ƒ_‘I‘ğƒ_ƒCƒAƒƒO
+'ãƒ•ã‚©ãƒ«ãƒ€é¸æŠãƒ€ã‚¤ã‚¢ãƒ­ã‚°
 'Public Function FolderPicker(defpath)
-'ƒtƒ@ƒCƒ‹–¼‚É—Ç‚­d‚Ş•¶š—ñ
+'ãƒ•ã‚¡ã‚¤ãƒ«åã«è‰¯ãä»•è¾¼ã‚€æ™‚åˆ»æ–‡å­—åˆ—
 'Public Function TimeString()
 '=========================================================================================
 Private Type GUID_TYPE
@@ -36,60 +36,60 @@ Private Declare PtrSafe Function StringFromGUID2 Lib "ole32.dll" (guid As GUID_T
 
 
 Sub Utf8ToSjis(a_sFrom, a_sTo)
-    Dim sText                           '// ƒtƒ@ƒCƒ‹ƒf[ƒ^
+    Dim sText                           '// ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‡ãƒ¼ã‚¿
     Set streamRead = CreateObject("ADODB.Stream")
     Set streamWrite = CreateObject("ADODB.Stream")
     
-    '// ƒtƒ@ƒCƒ‹“Ç‚İ‚İ
+    '// ãƒ•ã‚¡ã‚¤ãƒ«èª­ã¿è¾¼ã¿
     streamRead.Type = 2 'adTypeText
     streamRead.Charset = "UTF-8"
     streamRead.Open
     streamRead.LoadFromFile a_sFrom
     
-    '// ‰üsƒR[ƒhLF‚ğCRLF‚É•ÏŠ·
+    '// æ”¹è¡Œã‚³ãƒ¼ãƒ‰LFã‚’CRLFã«å¤‰æ›
     sText = streamRead.ReadText
     sText = Replace(sText, vbLf, vbCrLf)
     sText = Replace(sText, vbCr & vbCr, vbCr)
     
-    '// ƒtƒ@ƒCƒ‹‘‚«‚İ
+    '// ãƒ•ã‚¡ã‚¤ãƒ«æ›¸ãè¾¼ã¿
     streamWrite.Type = 2 'adTypeText
     streamWrite.Charset = "Shift-JIS"
     streamWrite.Open
     
-    '// ƒf[ƒ^‘‚«‚İ
+    '// ãƒ‡ãƒ¼ã‚¿æ›¸ãè¾¼ã¿
     streamWrite.WriteText sText
     
-    '// •Û‘¶
+    '// ä¿å­˜
     streamWrite.SaveToFile a_sTo, 2 'adSaveCreateOverWrite
     
-    '// ƒNƒ[ƒY
+    '// ã‚¯ãƒ­ãƒ¼ã‚º
     streamRead.Close
     streamWrite.Close
 End Sub
 
 
 Sub SjisToUtf8(a_sFrom, a_sTo)
-    Dim sText                           '// ƒtƒ@ƒCƒ‹ƒf[ƒ^
+    Dim sText                           '// ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‡ãƒ¼ã‚¿
     Set streamRead = CreateObject("ADODB.Stream")
     Set streamWrite = CreateObject("ADODB.Stream")
     
-    '// ƒtƒ@ƒCƒ‹“Ç‚İ‚İ
+    '// ãƒ•ã‚¡ã‚¤ãƒ«èª­ã¿è¾¼ã¿
     streamRead.Type = 2 'adTypeText
     streamRead.Charset = "Shift_JIS"
     'streamRead.LineSeparator = adCRLF
     streamRead.Open
     Call streamRead.LoadFromFile(a_sFrom)
     
-    '// ‰üsƒR[ƒhCRLF‚ğLF‚É•ÏŠ·
+    '// æ”¹è¡Œã‚³ãƒ¼ãƒ‰CRLFã‚’LFã«å¤‰æ›
     sText = streamRead.ReadText
     sText = Replace(sText, vbCrLf, vbLf)
     
-    '// ƒtƒ@ƒCƒ‹‘‚«‚İ
+    '// ãƒ•ã‚¡ã‚¤ãƒ«æ›¸ãè¾¼ã¿
     streamWrite.Type = 2 'adTypeText
     streamWrite.Charset = "UTF-8"
     'streamWrite.LineSeparator = adLF
     streamWrite.Open
-    '// ƒf[ƒ^‘‚«‚İ
+    '// ãƒ‡ãƒ¼ã‚¿æ›¸ãè¾¼ã¿
     streamWrite.WriteText sText
     
     streamWrite.Position = 0
@@ -97,14 +97,14 @@ Sub SjisToUtf8(a_sFrom, a_sTo)
     streamWrite.Position = 3
     Dim byteData() As Byte
     byteData = streamWrite.Read
-    streamWrite.Close 'ˆê’UƒXƒgƒŠ[ƒ€‚ğ•Â‚¶‚éiƒŠƒZƒbƒgj
-    streamWrite.Open 'ƒXƒgƒŠ[ƒ€‚ğŠJ‚­
+    streamWrite.Close 'ä¸€æ—¦ã‚¹ãƒˆãƒªãƒ¼ãƒ ã‚’é–‰ã˜ã‚‹ï¼ˆãƒªã‚»ãƒƒãƒˆï¼‰
+    streamWrite.Open 'ã‚¹ãƒˆãƒªãƒ¼ãƒ ã‚’é–‹ã
     streamWrite.Write byteData
     
-    '// •Û‘¶
+    '// ä¿å­˜
     streamWrite.SaveToFile a_sTo, 2 'adSaveCreateOverWrite
     
-    '// ƒNƒ[ƒY
+    '// ã‚¯ãƒ­ãƒ¼ã‚º
     streamRead.Close
     streamWrite.Close
 End Sub
@@ -136,7 +136,7 @@ Public Sub DeleteTempFolder(tmp)
             'Pass
         End If
     Else
-        Debug.Print tmp & "‚ÍA" & tmpbase & "ˆÈ‰º‚ÌƒtƒHƒ‹ƒ_‚Å‚Í‚ ‚è‚Ü‚¹‚ñ‚Ì‚Åíœ‚µ‚Ü‚¹‚ñ"
+        Debug.Print tmp & "ã¯ã€" & tmpbase & "ä»¥ä¸‹ã®ãƒ•ã‚©ãƒ«ãƒ€ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã®ã§å‰Šé™¤ã—ã¾ã›ã‚“"
     End If
     
 End Sub
@@ -173,7 +173,7 @@ Public Function GetGUID()
     
     strGuid = Replace(Replace(strGuid, "{", ""), "}", "")
     
-    '“ä‚Ì\0‚ª––”ö‚É‚Â‚­‚Ì‚ÅAíœ‚·‚é
+    'è¬ã®\0ãŒæœ«å°¾ã«ã¤ãã®ã§ã€å‰Šé™¤ã™ã‚‹
     GetGUID = Left(strGuid, Len(strGuid) - 1)
 End Function
 
@@ -187,7 +187,7 @@ Function RmDirBestEffort(ByVal sDir As String, _
     Dim objFolder As Object
     sMsg = ""
     If Not objFSO.FolderExists(sDir) Then
-        sMsg = "w’è‚ÌƒtƒHƒ‹ƒ_‚Í‘¶İ‚µ‚Ü‚¹‚ñB"
+        sMsg = "æŒ‡å®šã®ãƒ•ã‚©ãƒ«ãƒ€ã¯å­˜åœ¨ã—ã¾ã›ã‚“ã€‚"
         RmDirBestEffort = False
         Exit Function
     End If
@@ -212,14 +212,14 @@ Private Sub RmDirBestEffortRecur(ByVal objFolder As Object, _
     For Each objFile In objFolder.Files
         objFile.Delete
         If Err.Number <> 0 Then
-            sMsg = sMsg & "ƒtƒ@ƒCƒ‹u" & objFile.path & "v‚ªíœ‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½" & vbLf
+            sMsg = sMsg & "ãƒ•ã‚¡ã‚¤ãƒ«ã€Œ" & objFile.path & "ã€ãŒå‰Šé™¤ã§ãã¾ã›ã‚“ã§ã—ãŸ" & vbLf
             Err.Clear
         End If
     Next
     If Not isOnlyFile Then
         objFolder.Delete
         If Err.Number <> 0 Then
-            sMsg = sMsg & "ƒtƒHƒ‹ƒ_u" & objFolder.path & "v‚ªíœ‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½" & vbLf
+            sMsg = sMsg & "ãƒ•ã‚©ãƒ«ãƒ€ã€Œ" & objFolder.path & "ã€ãŒå‰Šé™¤ã§ãã¾ã›ã‚“ã§ã—ãŸ" & vbLf
             Err.Clear
         End If
     End If
@@ -230,9 +230,9 @@ End Sub
 
 
 
-' ƒtƒ@ƒCƒ‹ƒpƒXw’è -----------------------------------------------------------
+' ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹æŒ‡å®š -----------------------------------------------------------
 
-'ƒtƒ@ƒCƒ‹ˆê——‚ğÄ‹A“I‚Éæ“¾‚·‚é
+'ãƒ•ã‚¡ã‚¤ãƒ«ä¸€è¦§ã‚’å†å¸°çš„ã«å–å¾—ã™ã‚‹
 Public Function GetFileList(ByVal path, Optional ext = "")
 
     Set fso = CreateObject("Scripting.FileSystemObject")
@@ -246,7 +246,7 @@ Public Function GetFileList(ByVal path, Optional ext = "")
 
 End Function
 
-'ƒtƒ@ƒCƒ‹ˆê——æ“¾‚ÌÄ‹A’PˆÊ
+'ãƒ•ã‚¡ã‚¤ãƒ«ä¸€è¦§å–å¾—ã®å†å¸°å˜ä½
 Private Sub GetFileListRecur(ByRef arr, ByRef fso, ByVal folder, ByRef ext)
     
     For Each file In folder.Files
@@ -262,7 +262,7 @@ Private Sub GetFileListRecur(ByRef arr, ByRef fso, ByVal folder, ByRef ext)
 
 End Sub
 
-'šš‚¢‚Á‚»³‹K•\Œ»”Å‚à‚Ù‚µ‚¢‚Ë
+'â˜…â˜…ã„ã£ãæ­£è¦è¡¨ç¾ç‰ˆã‚‚ã»ã—ã„ã­
 Public Function GetFileListRegex(ByVal path, Optional ByVal recur = False, Optional pat = ".*")
 
     Set fso = CreateObject("Scripting.FileSystemObject")
@@ -280,7 +280,7 @@ Public Function GetFileListRegex(ByVal path, Optional ByVal recur = False, Optio
 
 End Function
 
-'ƒtƒ@ƒCƒ‹ˆê——æ“¾
+'ãƒ•ã‚¡ã‚¤ãƒ«ä¸€è¦§å–å¾—
 Private Sub GetFileListRegexRecur(ByRef arr, ByRef fso, ByVal folder, ByVal recur, ByRef re)
     
     For Each file In folder.Files
@@ -300,17 +300,17 @@ End Sub
 
 
 
-'ƒpƒX•ÏŠ·‚ğs‚¤ŠÖ”‚Å‚ ‚Á‚½‚à‚ÌBSharePoint‚É‚±‚Ìè–@‚ÅƒAƒNƒZƒX‚Å‚«‚È‚­‚È‚Á‚Ä‚¢‚é‚Ì‚ÅA’P‚È‚éƒ”ƒ@ƒŠƒf[ƒ^
+'ãƒ‘ã‚¹å¤‰æ›ã‚’è¡Œã†é–¢æ•°ã§ã‚ã£ãŸã‚‚ã®ã€‚SharePointã«ã“ã®æ‰‹æ³•ã§ã‚¢ã‚¯ã‚»ã‚¹ã§ããªããªã£ã¦ã„ã‚‹ã®ã§ã€å˜ãªã‚‹ãƒ´ã‚¡ãƒªãƒ‡ãƒ¼ã‚¿
 Public Function cnvNetPath2Local(path As String) As String
     
     If InStr(path, "http://") > 0 Then
-        MsgBox "ƒ[ƒJƒ‹ƒtƒHƒ‹ƒ_‚ÅÀs‚µ‚Ä‚­‚¾‚³‚¢"
+        MsgBox "ãƒ­ãƒ¼ã‚«ãƒ«ãƒ•ã‚©ãƒ«ãƒ€ã§å®Ÿè¡Œã—ã¦ãã ã•ã„"
         End
     ElseIf InStr(path, "https://") > 0 Then
-        MsgBox "ƒ[ƒJƒ‹ƒtƒHƒ‹ƒ_‚ÅÀs‚µ‚Ä‚­‚¾‚³‚¢"
+        MsgBox "ãƒ­ãƒ¼ã‚«ãƒ«ãƒ•ã‚©ãƒ«ãƒ€ã§å®Ÿè¡Œã—ã¦ãã ã•ã„"
         End
     Else
-        ' ŒŸo‚Å‚«‚È‚¢ê‡‚Í‚»‚Ì‚Ü‚ÜƒpƒX‚ğ•Ô‚·
+        ' æ¤œå‡ºã§ããªã„å ´åˆã¯ãã®ã¾ã¾ãƒ‘ã‚¹ã‚’è¿”ã™
         cnvNetPath2Local = path
     End If
 
@@ -343,11 +343,11 @@ End Sub
 
 Private Sub test_FolderPicker()
 
-    basepath = ThisWorkbook.Sheets("Às").Range("B4")
+    basepath = ThisWorkbook.Sheets("å®Ÿè¡Œ").Range("B4")
     If basepath = "" Then basepath = ThisWorkbook.path
     basepath = FolderPicker(basepath)
     If basepath = "" Then End
-    ThisWorkbook.Sheets("Às").Range("B4") = basepath
+    ThisWorkbook.Sheets("å®Ÿè¡Œ").Range("B4") = basepath
 
 End Sub
 

@@ -2,14 +2,14 @@ Attribute VB_Name = "UtilZipFormat"
 '=========================================================================================
 'UtilZipFormat 20230527
 '
-'UtilZipFormat��Zip�A�[�J�C�u�݂̂��󂯎��A�v���P�[�V���������̖����kZIP�𐶐�����
+'UtilZipFormatはZipアーカイブのみを受け取るアプリケーション向けの無圧縮ZIPを生成する
 '=========================================================================================
-'�w�肵���t�@�C�����z�񂩂疳���kZIP�A�[�J�C�u�𐶐�����
+'指定したファイル名配列から無圧縮ZIPアーカイブを生成する
 'Public Sub MakeZip(Zip$, Files$())
 '=========================================================================================
 ' public domain
 ' https://gist.github.com/7shi/573576
-' �����kZIP�̏o��
+' 無圧縮ZIPの出力
 
 
 Option Explicit

@@ -1,5 +1,5 @@
 Attribute VB_Name = "PptMisc"
-'64bit”Å
+'64bitç‰ˆ
 Private Declare PtrSafe Sub keybd_event Lib "user32" ( _
     ByVal bVk As Byte, _
     ByVal bScan As Byte, _
@@ -7,7 +7,7 @@ Private Declare PtrSafe Sub keybd_event Lib "user32" ( _
     ByVal dwExtraInfo As Long _
         )
 
-'32bit”Å
+'32bitç‰ˆ
 'Private Declare Sub keybd_event Lib "user32" ( _
     ByVal bVk As Byte, _
     ByVal bScan As Byte, _
@@ -15,12 +15,12 @@ Private Declare PtrSafe Sub keybd_event Lib "user32" ( _
     ByVal dwExtraInfo As Long _
         )
 
-Public Sub ‘S‘Ì‚ğB‚é()
+Public Sub å…¨ä½“ã‚’æ’®ã‚‹()
     keybd_event vbKeySnapshot, 0&, &H1, 0&
     keybd_event vbKeySnapshot, 0&, &H1 Or &H2, 0&
 End Sub
 
-Public Sub ƒAƒNƒeƒBƒu‰æ–Ê‚ğB‚é()
+Public Sub ã‚¢ã‚¯ãƒ†ã‚£ãƒ–ç”»é¢ã‚’æ’®ã‚‹()
     keybd_event &HA4, 0&, &H1, 0&
     keybd_event vbKeySnapshot, 0&, &H1, 0&
     keybd_event vbKeySnapshot, 0&, &H1 Or &H2, 0&
@@ -30,7 +30,7 @@ End Sub
 
 
 
-Sub }Œ`‚Ì’¸“_‚ğŠŠ‚ç‚©‚É‚·‚é()
+Sub å›³å½¢ã®é ‚ç‚¹ã‚’æ»‘ã‚‰ã‹ã«ã™ã‚‹()
 
     With ActiveWindow.Selection.shaperange.Nodes
 
@@ -46,7 +46,7 @@ End Sub
 
 
 
-' n‰ñ‰ñ“]‘ÎÌ
+' nå›å›è»¢å¯¾ç§°
 
 '
 
@@ -67,8 +67,8 @@ Sub create_freeform()
     Set myDocument = ActivePresentation.Slides(1)
     With myDocument.Shapes.BuildFreeform(EditingType:=msoEditingCorner, X1:=360, Y1:=200)
         .AddNodes SegmentType:=msoSegmentCurve, EditingType:=msoEditingCorner, X1:=380, Y1:=230, X2:=400, Y2:=250, X3:=450, Y3:=300
-        .AddNodes SegmentType:=msoSegmentCurve, EditingType:=msoEditingCorner, X1:=480, Y1:=300, X2:=480, Y2:=300, X3:=480, Y3:=200 '‰Eã
-        .AddNodes SegmentType:=msoSegmentLine, EditingType:=msoEditingCorner, X1:=480, Y1:=400 'Å‰º
+        .AddNodes SegmentType:=msoSegmentCurve, EditingType:=msoEditingCorner, X1:=480, Y1:=300, X2:=480, Y2:=300, X3:=480, Y3:=200 'å³ä¸Š
+        .AddNodes SegmentType:=msoSegmentLine, EditingType:=msoEditingCorner, X1:=480, Y1:=400 'æœ€ä¸‹
         .AddNodes SegmentType:=msoSegmentLine, EditingType:=msoEditingCorner, X1:=360, Y1:=200
         .ConvertToShape
     End With
