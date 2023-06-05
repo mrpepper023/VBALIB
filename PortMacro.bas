@@ -13,7 +13,7 @@ Attribute VB_Name = "PortMacro"
 '指定フォルダからマクロをエクスポートする
 'Public Sub ExportAll(sPath)
 '=========================================================================================
-Private Type GUID_TYPEW
+Private Type GUID_TYPE
     Data1 As Long
     Data2 As Integer
     Data3 As Integer
