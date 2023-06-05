@@ -42,7 +42,7 @@ echo $newestlwt
 Expand-Archive -Path $newestnm -DestinationPath $tmp
 
 # 展開したファイルのエンコーディング変換 to SJIS
-$files = Get-ChildItem -Path $nm -Include "*.bas","*.cls","*.frm","*.frx","*.bat" -Recurse
+$files = Get-ChildItem -Path $tmp -Include "*.bas","*.cls","*.frm","*.frx","*.bat" -Recurse
 foreach ($file in $files) {
     $file.FullName
     $content = Get-Content -Path $file.FullName -Encoding UTF8
