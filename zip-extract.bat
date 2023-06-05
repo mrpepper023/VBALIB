@@ -54,8 +54,8 @@ Expand-Archive -Path $newestnm -DestinationPath $tmp
 $files = Get-ChildItem -Path $nm -Include "*.bas","*.cls","*.frm","*.frx","*.bat" -Recurse
 foreach ($file in $files) {
     $file.FullName
-    Get-Content -Path $file.FullName -Encoding UTF8 `
-    | Set-Content -Path $file.FullName -Value $content -Encoding String
+    $content = Get-Content -Path $file.FullName -Encoding UTF8
+    Set-Content -Path $file.FullName -Value $content -Encoding String
 }
 
 Pop-Location
