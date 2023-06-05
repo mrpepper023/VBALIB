@@ -124,7 +124,7 @@ Public Function Web(url, method)
 
 End Function
 
-Sub test_web()
+Private Sub test_web()
 
     Debug.Print Web("https://www.google.com/", "GET")
 
