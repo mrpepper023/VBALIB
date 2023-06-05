@@ -314,7 +314,7 @@ Public Sub ImportAll(a_sModulePath)
         Set ThisCode = app.ThisWorkbook
         pref = "XlsUtil"
     Case "Microsoft Word"
-        Set ThisCode = app.ThisDocument
+        Set ThisCode = ThisDocument
         pref = "DocUtil"
     Case "Microsoft PowerPoint"
         Set ThisCode = app.ActivePresentation
