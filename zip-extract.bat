@@ -1,13 +1,5 @@
-@(echo '> NUL
-echo off)
-setlocal enableextensions
-set "THIS_PATH=%~f0"
-set "PARAM_1=%~1"
-PowerShell.exe -Command "iex -Command ((gc \"%THIS_PATH:`=``%\") -join \"`n\")"
-exit /b %errorlevel%
--- この1つ上の行までバッチファイル
-') | sv -Name TempVar
-
+@powershell -NoProfile -ExecutionPolicy Unrestricted "$s=[scriptblock]::create((gc 
+¥"%"f0¥"|?{$_.readcount -gt 1})join¥"`n¥");&$s" %*&goto:eof
 # ここからPowerShellスクリプト
 $currentTime = [System.DateTime]::Now
 
