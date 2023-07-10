@@ -15,6 +15,8 @@ Const DANGERFAST = True
 'Public Function GetUsedMaxRow(ByRef sh)
 'シートオブジェクトを渡し、使用した最終列の列番号を取得する
 'Public Function GetUsedMaxCol(ByRef sh)
+'シートオブジェクトを渡し、連続する中身のある列のうち、最大の行番号を得る
+'Public Function GetMaxRowSequence(ByRef sh, ByRef cols)
 'シートオブジェクトと左上右下の直値を元にしてRangeオブジェクトを返す
 'Public Function RectRange(ByRef sheet, ByVal r_top, ByVal c_left, Optional ByVal r_bottom = 0, Optional ByVal c_right = 0)
 'Rangeオブジェクトを渡して、手編集セルの装飾を行う
@@ -74,7 +76,7 @@ End Function
 'シートオブジェクトと行番号を渡し、該当行の最終列の列番号を取得する
 Public Function GetMaxCol(ByRef sh, Optional ByVal row = 1)
     
-    GetMaxCol = sh.Cells(row, sh.Cells(row, sh.Columns.Count).col).End(xlToLeft).Column
+    GetMaxCol = sh.Cells(row, sh.Cells(row, sh.Columns.Count).Column).End(xlToLeft).Column
     
 End Function 'シートオブジェクトを渡し、使用した最終行の行番号を取得する
 
@@ -90,6 +92,28 @@ Public Function GetUsedMaxCol(ByRef sh)
     
     GetUsedMaxCol = sh.UsedRange.Columns(sh.UsedRange.Columns.Count).Column
     
+End Function
+
+
+'シートオブジェクトを渡し、連続する中身のある列のうち、最大の行番号を得る
+Public Function GetMaxRowSequence(ByRef sh, ByRef cols)
+    
+    maxc = 1
+    maxr = GetMaxRow(sh, 1)
+    
+    For col = 2 To sh.Columns.Count
+        maxrtemp = GetMaxRow(sh, col)
+        Debug.Print maxrtemp
+        If maxrtemp < 2 And Len(sh.Cells(1, col)) = 0 Then
+            maxc = col - 1
+            Exit For
+        End If
+        If maxr < maxrtemp Then maxr = maxrtemp
+    Next
+    
+    cols = maxc
+    GetMaxRowSequence = maxr
+        
 End Function
 
 
