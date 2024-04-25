@@ -4,10 +4,6 @@ Attribute VB_Name = "UtilWindows"
 '
 'UtilWindowsは主にWindows OSの制御を扱う、Excel VBAに依存しないコードを集めたもの
 '=========================================================================================
-'クリップボードにプレーンテキストをセットする
-'Public Sub SetClip(txt)
-'クリップボードからプレーンテキストを読み取る
-'Public Function GetClip()
 'URLとメソッドを指定してウェブにアクセスし、結果を文字列で得る
 'Public Function HostApplication()
 'このマクロがどのアプリに組み込まれているか"Microsoft Excel"とかで分岐するため
@@ -62,48 +58,6 @@ Private Sub test_multi_host()
     End If
 
 End Sub
-
-
-
-
-'クリップボード処理
-
-Public Sub SetClip(txt)
-    'http://www.thom.jp/vbainfo/refsetting.html
-    Set dao = CreateObject("new:{1C3B4210-F441-11CE-B9EA-00AA006B1A69}")
-    dao.settext txt
-    dao.PutInClipboard
-End Sub
-
-Public Function GetClip()
-    'http://www.thom.jp/vbainfo/refsetting.html
-    Set dao = CreateObject("new:{1C3B4210-F441-11CE-B9EA-00AA006B1A69}")
-    dao.GetFromClipboard
-    
-    Set flag = CreateObject("scripting.dictionary")
-    fmt = Application.ClipboardFormats
-    For i = LBound(fmt) To UBound(fmt)
-        flag.Add fmt(i), i
-        Debug.Print fmt(i)
-    Next
-'0: テキスト
-'2: 画像
-'9: BitMap
-'47: ファイルパス
-'14:画像系？
-'17:画像系？
-'22:画像系？
-'31:画像系？
-'45:画像系？
-    
-    If flag.exists(0) Then
-        GetClip = dao.GetText
-    Else
-        GetClip = ""
-    End If
-    
-    'GetClip = dao.GetImage
-End Function
 
 
 

@@ -8,10 +8,6 @@ Attribute VB_Name = "UtilFile"
 'Sub Utf8ToSjis(a_sFrom, a_sTo)
 'SJISのファイルをUTF8に変換する
 'Sub SjisToUtf8(a_sFrom, a_sTo)
-'テンポラリフォルダを作成してフォルダの「\」つきフルパスを返す
-'Public Function CreateTempFolder()
-'テンポラリフォルダを削除する（テンポラリフォルダでなければ消さないので安全
-'Public Sub DeleteTempFolder(tmp)
 'GUIDを生成する
 'Public Function GetGUID()
 'フォルダを下位のファイルやサブディレクトリ含め、可能な限り削除する
@@ -127,35 +123,6 @@ Private Sub test_sjisutf()
 
 End Sub
 
-
-
-Public Function CreateTempFolder()
-    Set fso = CreateObject("Scripting.FileSystemObject")
-    tmp = fso.GetSpecialFolder(2) & "\" & GetGUID
-
-    MkDir tmp
-        
-    CreateTempFolder = tmp & "\"
-End Function
-
-Public Sub DeleteTempFolder(tmp)
-    Set fso = CreateObject("Scripting.FileSystemObject")
-    tmpbase = fso.GetSpecialFolder(2) & "\"
-    If Left(tmp, Len(tmpbase)) = tmpbase Then
-        If RmDirBestEffort(tmp, dummymsg) Then
-            'Pass
-        End If
-    Else
-        Debug.Print tmp & "は、" & tmpbase & "以下のフォルダではありませんので削除しません"
-    End If
-    
-End Sub
-
-Private Sub test_temp()
-
-    Debug.Print CreateTempFolder
-
-End Sub
 
 
  
