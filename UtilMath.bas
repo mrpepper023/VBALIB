@@ -52,17 +52,29 @@ Function Curvature(x As Double, y As Double, x_prev As Double, y_prev As Double,
 
     x1 = x_prev - x
     y1 = y_prev - y
+    div1 = 1# / Sqr(x1 * x1 + y1 * y1)
+    x1 = x1 * div1
+    y1 = y1 * div1
     x2 = x_next - x
     y2 = y_next - y
+    div2 = 1# / Sqr(x2 * x2 + y2 * y2)
+    x2 = x2 * div2
+    y2 = y2 * div2
     innerp = x1 * x2 + y1 * y2
     outerp = x1 * y2 - y1 * x2
-    signp = Sgn(innerp) * Sgn(outerp)
+    signp = Sgn(outerp)
     If innerp > 0.99999999999999 Then
-        Curvature = 1E+20
+        Curvature = signp * 1E+20
         Exit Function
     End If
     Curvature = signp * 2# * Sqr((1 + innerp) / (1 - innerp))
 
 End Function
 
+Sub test_Curvature()
 
+    Debug.Print Curvature(0, 0, 1, 0, 0, 1) & " -> clockwise"
+    Debug.Print Curvature(1, 1, 1, 0, 0, 1) & " -> anti->clockwise"
+    
+
+End Sub
