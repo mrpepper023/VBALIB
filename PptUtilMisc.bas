@@ -1,4 +1,4 @@
-Attribute VB_Name = "PptMisc"
+Attribute VB_Name = "PptUtilMisc"
 '64bit版
 Private Declare PtrSafe Sub keybd_event Lib "user32" ( _
     ByVal bVk As Byte, _

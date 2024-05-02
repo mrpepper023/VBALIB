@@ -1,4 +1,4 @@
-Attribute VB_Name = "PptEdit"
+Attribute VB_Name = "PptUtilEdit"
 'test
 Private Sub test()
 
