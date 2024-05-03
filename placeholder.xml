@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+<ribbon startFromScratch="false">
+<tabs>
+<tab id="MyTab1" label="タブ名">
+
+<group id="Group1" label="グループ名1">
+<button id="Button1-1" label="ボタン名1" imageMso="MacroPlay" size="normal" onAction="マクロ名1" />
+<button id="Button1-2" label="ボタン名2" imageMso="MacroPlay" size="normal" onAction="マクロ名2" />
+<button id="Button1-3" label="ボタン名3" imageMso="MacroPlay" size="normal" onAction="マクロ名3" />
+</group>
+
+<group id="Group2" label="グループ名2">
+<button id="Button2-1" label="ボタン名4" imageMso="MacroPlay" size="normal" onAction="マクロ名4" />
+<button id="Button2-2" label="ボタン名5" imageMso="MacroPlay" size="normal" onAction="マクロ名5" />
+<button id="Button2-3" label="ボタン名6" imageMso="MacroPlay" size="normal" onAction="マクロ名6" />
+</group>
+
+</tab>
+</tabs>
+</ribbon>
+</customUI>
