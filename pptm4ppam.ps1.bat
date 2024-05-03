@@ -27,6 +27,9 @@ if ("$SourcePath" -eq "") {
 
 Get-Location 
 $folder = Split-Path "$SourcePath"
+if ($folder -eq "") {
+	$folder = "."
+}
 $name = [System.IO.Path]::GetFileNameWithoutExtension("$SourcePath")
 $ext = [System.IO.Path]::GetExtension("$SourcePath")
 echo $folder
@@ -43,18 +46,21 @@ If (-!(Test-Path ".\.pptm4addin\arc\customui")) {
 	New-Item ".\.pptm4addin\arc\customui" -ItemType Directory
 }
 If (Test-Path "${folder}\${name}.xml") {
+	Write-Host "${name}.xml is found!" 
 	Copy-Item -Path "${folder}\${name}.xml" -Destination ".\.pptm4addin\arc\customui"
 	if (Test-Path ".\.pptm4addin\arc\customui\customui.xml") {
 		Remove-Item -Path ".\.pptm4addin\arc\customui\customui.xml"
 	}
 	Rename-Item -Path ".\.pptm4addin\arc\customui\${name}.xml" -NewName "customui.xml"
+} Else {
+	Write-Host "${folder}\${name}.xml is not found!" 
 }
 if (Test-Path ".\.pptm4addin\arc\customui\customui.xml") {
 	if (Test-Path ".\.pptm4addin\arc\_rels\.rels") {
 		$replace_settings = ".\.pptm4addin\arc\_rels\.rels"
 		$edited = Select-String -Path "${replace_settings}" -Pattern "myCustomUI"
 		if ($edited -ne $null){
-		    echo ".rels has already edited."
+		    Write-Host ".rels has already edited."
 		}else{
 			$before = '</Relationships>'
 			$after = '<Relationship Id="myCustomUI" Type="http://schemas.microsoft.com/office/2006/relationships/ui/extensibility" Target="customui/customui.xml"/></Relationships>'
@@ -64,7 +70,7 @@ if (Test-Path ".\.pptm4addin\arc\customui\customui.xml") {
 	}
 }
 
-Compress-Archive -Path ".\.pptm4addin\arc\*" -DestinationPath ".\${name}_ppam.zip"
+Compress-Archive -Path ".\.pptm4addin\arc\*" -DestinationPath ".\${name}_ppam.zip" -Force
 If (Test-Path ".\${name}_ppam.pptm") {
 	Remove-Item ".\${name}_ppam.pptm"
 }
