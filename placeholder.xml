@@ -1,85 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
 <ribbon startFromScratch="false">
-<tabs>
-<tab id="MyTab1" label="Yokomizo1">
+	<tabs>
+		<tab id="MyTab1" label="Yokomizo1">
 
-<group id="Group1A" label="グループ名1A">
-<button id="Button1AX" label="ボタン名1AX" imageMso="MacroPlay" size="normal" onAction="Entry1AX" />
-<button id="Button1AY" label="ボタン名1AY" imageMso="MacroPlay" size="normal" onAction="Entry1AY" />
-<button id="Button1AZ" label="ボタン名1AZ" imageMso="MacroPlay" size="normal" onAction="Entry1AZ" />
-</group>
+			<group id="Group1A" label="マーカー処理">
+				<menu id="menu2" label="Menu" imageMso="HappyFace" size="large">
+					<button id="button4" label="Button 1" imageMso="FileSave" onAction="Entry1AY" />
+					<button id="button5" label="Button 2" imageMso="Bold" onAction="Entry1AY" />
+					<button id="button6" label="Button 3" imageMso="Undo" onAction="Entry1AY" />
+				</menu>
+				<!--splitButton id="mySplitButton" size="large">
+					<button id="myButton1" imageMso="HappyFace" label="Click me" onAction="MyButton1CallbackOnAction"/>
+					<menu id="mySplitMenu" itemSize="large">
+						<button id="myButton2" imageMso="TableStyleRowHeaders" label="Point 1." onAction="MyButton2CallbackOnAction" description="The 1st Point"/>
+						<button id="myButton3" imageMso="TableStyleColumnHeaders" label="Point 2." onAction="MyButton3CallbackOnAction" description="The 2nd Point"/>
+						<button id="myButton4" imageMso="TableStyleLastColumn" label="Point 3." onAction="MyButton4CallbackOnAction" description="The 3rd Point"/>
+					</menu>
+				</splitButton-->
+				<button id="Button1AY" label="マーカー非表示" imageMso="MacroPlay" size="normal" onAction="Entry1AY" />
+				<button id="Button1AZ" label="マーカー生成" imageMso="MacroPlay" size="normal" onAction="Entry1AZ" />
+				<button id="Button1AP" label="ボタン名1A" imageMso="MacroPlay" size="normal" onAction="Entry1AP" />
+				<button id="Button1AQ" label="ボタン名1AY" imageMso="MacroPlay" size="normal" onAction="Entry1AQ" />
+				<button id="Button1AR" label="ボタン名1AZ" imageMso="MacroPlay" size="normal" onAction="Entry1AR" />
+			</group>
 
-<group id="Group1B" label="グループ名1B">
-<button id="Button1BX" label="ボタン名1BX" imageMso="MacroPlay" size="normal" onAction="Entry1BX" />
-<button id="Button1BY" label="ボタン名1BY" imageMso="MacroPlay" size="normal" onAction="Entry1BY" />
-<button id="Button1BZ" label="ボタン名1BZ" imageMso="MacroPlay" size="normal" onAction="Entry1BZ" />
-</group>
+			<group id="Group1B" label="グループ名1B">
+				<menu id="menu" label="Menu" imageMso="HappyFace" size="large">
+					<button id="button1" label="Button 1" imageMso="FileSave" />
+					<button id="button2" label="Button 2" imageMso="Bold" />
+					<button id="button3" label="Button 3" imageMso="Undo" />
+				</menu>
+				<!--splitButton id="mySplitButton2" size="large">
+					<button id="myButton2" imageMso="HappyFace" label="Click me" onAction="MyButton1CallbackOnAction"/>
+					<menu id="mySplitMenu2" itemSize="large">
+						<button id="myButton5" imageMso="TableStyleRowHeaders" label="Point 1." onAction="MyButton2CallbackOnAction" description="The 1st Point"/>
+						<button id="myButton6" imageMso="TableStyleColumnHeaders" label="Point 2." onAction="MyButton3CallbackOnAction" description="The 2nd Point"/>
+						<button id="myButton7" imageMso="TableStyleLastColumn" label="Point 3." onAction="MyButton4CallbackOnAction" description="The 3rd Point"/>
+					</menu>
+				</splitButton-->
+				<button id="Button1BX" label="ボタン名1BX" imageMso="MacroPlay" size="normal" onAction="Entry1BX" />
+				<button id="Button1BY" label="ボタン名1BY" imageMso="MacroPlay" size="normal" onAction="Entry1BY" />
+				<button id="Button1BZ" label="ボタン名1BZ" imageMso="MacroPlay" size="normal" onAction="Entry1BZ" />
+			</group>
 
-<group id="Group1C" label="グループ名1C">
-<button id="Button1CX" label="ボタン名1CX" imageMso="MacroPlay" size="normal" onAction="Entry1CX" />
-<button id="Button1CY" label="ボタン名1CY" imageMso="MacroPlay" size="normal" onAction="Entry1CY" />
-<button id="Button1CZ" label="ボタン名1CZ" imageMso="MacroPlay" size="normal" onAction="Entry1CZ" />
-</group>
+			<group id="Group1C" label="グループ名1C">
+				<button id="Button1CX" label="ボタン名1CX" imageMso="MacroPlay" size="normal" onAction="Entry1CX" />
+				<button id="Button1CY" label="ボタン名1CY" imageMso="MacroPlay" size="normal" onAction="Entry1CY" />
+				<button id="Button1CZ" label="ボタン名1CZ" imageMso="MacroPlay" size="normal" onAction="Entry1CZ" />
+			</group>
 
-<group id="Group1D" label="グループ名1D">
-<button id="Button1DX" label="ボタン名1DX" imageMso="MacroPlay" size="normal" onAction="Entry1DX" />
-<button id="Button1DY" label="ボタン名1DY" imageMso="MacroPlay" size="normal" onAction="Entry1DY" />
-<button id="Button1DZ" label="ボタン名1DZ" imageMso="MacroPlay" size="normal" onAction="Entry1DZ" />
-</group>
+			<group id="Group1D" label="グループ名1D">
+				<button id="Button1DX" label="ボタン名1DX" imageMso="MacroPlay" size="normal" onAction="Entry1DX" />
+				<button id="Button1DY" label="ボタン名1DY" imageMso="MacroPlay" size="normal" onAction="Entry1DY" />
+				<button id="Button1DZ" label="ボタン名1DZ" imageMso="MacroPlay" size="normal" onAction="Entry1DZ" />
+			</group>
 
-<group id="Group1E" label="グループ名1E">
-<button id="Button1EX" label="ボタン名1EX" imageMso="MacroPlay" size="normal" onAction="Entry1EX" />
-<button id="Button1EY" label="ボタン名1EY" imageMso="MacroPlay" size="normal" onAction="Entry1EY" />
-<button id="Button1EZ" label="ボタン名1EZ" imageMso="MacroPlay" size="normal" onAction="Entry1EZ" />
-</group>
+			<group id="Group1E" label="グループ名1E">
+				<button id="Button1EX" label="ボタン名1EX" imageMso="MacroPlay" size="normal" onAction="Entry1EX" />
+				<button id="Button1EY" label="ボタン名1EY" imageMso="MacroPlay" size="normal" onAction="Entry1EY" />
+				<button id="Button1EZ" label="ボタン名1EZ" imageMso="MacroPlay" size="normal" onAction="Entry1EZ" />
+			</group>
 
-<group id="Group1F" label="グループ名1F">
-<button id="Button1FX" label="ボタン名1FX" imageMso="MacroPlay" size="normal" onAction="Entry1FX" />
-<button id="Button1FY" label="ボタン名1FY" imageMso="MacroPlay" size="normal" onAction="Entry1FY" />
-<button id="Button1FZ" label="ボタン名1FZ" imageMso="MacroPlay" size="normal" onAction="Entry1FZ" />
-</group>
+			<group id="Group1F" label="グループ名1F">
+				<button id="Button1FX" label="ボタン名1FX" imageMso="MacroPlay" size="normal" onAction="Entry1FX" />
+				<button id="Button1FY" label="ボタン名1FY" imageMso="MacroPlay" size="normal" onAction="Entry1FY" />
+				<button id="Button1FZ" label="ボタン名1FZ" imageMso="MacroPlay" size="normal" onAction="Entry1FZ" />
+			</group>
 
-</tab>
-<tab id="MyTab2" label="Yokomizo2">
+			<group id="Group1G" label="グループ名1G">
+				<button id="Button1GX" label="ボタン名1GX" imageMso="MacroPlay" size="normal" onAction="Entry1GX" />
+				<button id="Button1GY" label="ボタン名1GY" imageMso="MacroPlay" size="normal" onAction="Entry1GY" />
+				<button id="Button1GZ" label="ボタン名1GZ" imageMso="MacroPlay" size="normal" onAction="Entry1GZ" />
+			</group>
 
-<group id="Group2A" label="グループ名2A">
-<button id="Button2AX" label="ボタン名2AX" imageMso="MacroPlay" size="normal" onAction="Entry2AX" />
-<button id="Button2AY" label="ボタン名2AY" imageMso="MacroPlay" size="normal" onAction="Entry2AY" />
-<button id="Button2AZ" label="ボタン名2AZ" imageMso="MacroPlay" size="normal" onAction="Entry2AZ" />
-</group>
+			<group id="Group1H" label="グループ名1H">
+				<button id="Button1HX" label="ボタン名1HX" imageMso="MacroPlay" size="normal" onAction="Entry1HX" />
+				<button id="Button1HY" label="ボタン名1HY" imageMso="MacroPlay" size="normal" onAction="Entry1HY" />
+				<button id="Button1HZ" label="ボタン名1HZ" imageMso="MacroPlay" size="normal" onAction="Entry1HZ" />
+			</group>
 
-<group id="Group2B" label="グループ名2B">
-<button id="Button2BX" label="ボタン名2BX" imageMso="MacroPlay" size="normal" onAction="Entry2BX" />
-<button id="Button2BY" label="ボタン名2BY" imageMso="MacroPlay" size="normal" onAction="Entry2BY" />
-<button id="Button2BZ" label="ボタン名2BZ" imageMso="MacroPlay" size="normal" onAction="Entry2BZ" />
-</group>
+		</tab>
+		<tab id="MyTab2" label="Yokomizo2">
 
-<group id="Group2C" label="グループ名2C">
-<button id="Button2CX" label="ボタン名2CX" imageMso="MacroPlay" size="normal" onAction="Entry2CX" />
-<button id="Button2CY" label="ボタン名2CY" imageMso="MacroPlay" size="normal" onAction="Entry2CY" />
-<button id="Button2CZ" label="ボタン名2CZ" imageMso="MacroPlay" size="normal" onAction="Entry2CZ" />
-</group>
+			<group id="Group2A" label="グループ名2A">
+				<button id="Button2AX" label="ボタン名2AX" imageMso="MacroPlay" size="normal" onAction="Entry2AX" />
+				<button id="Button2AY" label="ボタン名2AY" imageMso="MacroPlay" size="normal" onAction="Entry2AY" />
+				<button id="Button2AZ" label="ボタン名2AZ" imageMso="MacroPlay" size="normal" onAction="Entry2AZ" />
+			</group>
 
-<group id="Group2D" label="グループ名2D">
-<button id="Button2DX" label="ボタン名2DX" imageMso="MacroPlay" size="normal" onAction="Entry2DX" />
-<button id="Button2DY" label="ボタン名2DY" imageMso="MacroPlay" size="normal" onAction="Entry2DY" />
-<button id="Button2DZ" label="ボタン名2DZ" imageMso="MacroPlay" size="normal" onAction="Entry2DZ" />
-</group>
+			<group id="Group2B" label="グループ名2B">
+				<button id="Button2BX" label="ボタン名2BX" imageMso="MacroPlay" size="normal" onAction="Entry2BX" />
+				<button id="Button2BY" label="ボタン名2BY" imageMso="MacroPlay" size="normal" onAction="Entry2BY" />
+				<button id="Button2BZ" label="ボタン名2BZ" imageMso="MacroPlay" size="normal" onAction="Entry2BZ" />
+			</group>
 
-<group id="Group2E" label="グループ名2E">
-<button id="Button2EX" label="ボタン名2EX" imageMso="MacroPlay" size="normal" onAction="Entry2EX" />
-<button id="Button2EY" label="ボタン名2EY" imageMso="MacroPlay" size="normal" onAction="Entry2EY" />
-<button id="Button2EZ" label="ボタン名2EZ" imageMso="MacroPlay" size="normal" onAction="Entry2EZ" />
-</group>
+			<group id="Group2C" label="グループ名2C">
+				<button id="Button2CX" label="ボタン名2CX" imageMso="MacroPlay" size="normal" onAction="Entry2CX" />
+				<button id="Button2CY" label="ボタン名2CY" imageMso="MacroPlay" size="normal" onAction="Entry2CY" />
+				<button id="Button2CZ" label="ボタン名2CZ" imageMso="MacroPlay" size="normal" onAction="Entry2CZ" />
+			</group>
 
-<group id="Group2F" label="グループ名2F">
-<button id="Button2FX" label="ボタン名2FX" imageMso="MacroPlay" size="normal" onAction="Entry2FX" />
-<button id="Button2FY" label="ボタン名2FY" imageMso="MacroPlay" size="normal" onAction="Entry2FY" />
-<button id="Button2FZ" label="ボタン名2FZ" imageMso="MacroPlay" size="normal" onAction="Entry2FZ" />
-</group>
+			<group id="Group2D" label="グループ名2D">
+				<button id="Button2DX" label="ボタン名2DX" imageMso="MacroPlay" size="normal" onAction="Entry2DX" />
+				<button id="Button2DY" label="ボタン名2DY" imageMso="MacroPlay" size="normal" onAction="Entry2DY" />
+				<button id="Button2DZ" label="ボタン名2DZ" imageMso="MacroPlay" size="normal" onAction="Entry2DZ" />
+			</group>
 
-</tab>
-</tabs>
+			<group id="Group2E" label="グループ名2E">
+				<button id="Button2EX" label="ボタン名2EX" imageMso="MacroPlay" size="normal" onAction="Entry2EX" />
+				<button id="Button2EY" label="ボタン名2EY" imageMso="MacroPlay" size="normal" onAction="Entry2EY" />
+				<button id="Button2EZ" label="ボタン名2EZ" imageMso="MacroPlay" size="normal" onAction="Entry2EZ" />
+			</group>
+
+			<group id="Group2F" label="グループ名2F">
+				<button id="Button2FX" label="ボタン名2FX" imageMso="MacroPlay" size="normal" onAction="Entry2FX" />
+				<button id="Button2FY" label="ボタン名2FY" imageMso="MacroPlay" size="normal" onAction="Entry2FY" />
+				<button id="Button2FZ" label="ボタン名2FZ" imageMso="MacroPlay" size="normal" onAction="Entry2FZ" />
+			</group>
+
+			<group id="Group2G" label="グループ名2G">
+				<button id="Button2GX" label="ボタン名2GX" imageMso="MacroPlay" size="normal" onAction="Entry2GX" />
+				<button id="Button2GY" label="ボタン名2GY" imageMso="MacroPlay" size="normal" onAction="Entry2GY" />
+				<button id="Button2GZ" label="ボタン名2GZ" imageMso="MacroPlay" size="normal" onAction="Entry2GZ" />
+			</group>
+
+			<group id="Group2H" label="グループ名2H">
+				<button id="Button2HX" label="ボタン名2HX" imageMso="MacroPlay" size="normal" onAction="Entry2HX" />
+				<button id="Button2HY" label="ボタン名2HY" imageMso="MacroPlay" size="normal" onAction="Entry2HY" />
+				<button id="Button2HZ" label="ボタン名2HZ" imageMso="MacroPlay" size="normal" onAction="Entry2HZ" />
+			</group>
+
+		</tab>
+	</tabs>
 </ribbon>
 </customUI>
